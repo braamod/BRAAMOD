@@ -1,0 +1,949 @@
+/* =========================================================
+   BRAAMOD
+   NEGRO + DORADO + LUJO
+========================================================= */
+
+
+/* ==============================
+   CONFIGURACIÓN
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #050505;
+
+    color: white;
+
+    line-height: 1.6;
+
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+header {
+
+    width: 100%;
+
+    height: 82px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(5, 5, 5, 0.96);
+
+    border-bottom:
+        1px solid rgba(212, 175, 55, 0.3);
+
+    backdrop-filter: blur(12px);
+
+}
+
+.activo {
+    font-size: 18px;
+       background:
+
+        linear-gradient(
+
+            90deg,
+
+            #eddfba,
+
+            #f5d66a,
+
+            #d4af37,
+
+            #ffe38a,
+
+            #b88620
+
+        );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: #000000;
+
+    animation:
+        doradoBrillo 3s linear infinite;
+}
+
+.activo2{
+    font-size: 18px;
+      background:
+
+        linear-gradient(
+
+            90deg,
+
+            #eddfba,
+
+            #f5d66a,
+
+            #d4af37,
+
+            #ffe38a,
+
+            #b88620
+
+        );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: #000000;
+
+    animation:
+        doradoBrillo 3s linear infinite;
+}
+
+.activo3{
+    color: #ffffff;
+    font-size: 18px;
+      animation:
+        doradoBrillo 5s linear infinite;
+}
+
+
+.activo4{
+    color: #fffefb;
+    font-size: 18px;
+      animation:doradoBrillo 5s linear infinite;
+}
+
+/* ==============================
+   LOGO
+============================== */
+
+.logo {
+
+    font-size: 27px;
+
+    letter-spacing: 7px;
+
+    font-weight: 600;
+
+    color: #d4af37;
+
+    text-shadow:
+
+        0 0 10px rgba(255,255,255,0.1),
+
+        0 0 20px rgba(212,175,55,0.2);
+
+}
+
+
+/* ==============================
+   MENÚ
+============================== */
+
+nav {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+nav a {
+
+    color: #d0d0d0;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: 1.5px;
+
+    position: relative;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: #d4af37;
+
+}
+
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #d4af37;
+
+    left: 50%;
+
+    bottom: -8px;
+
+    transform: translateX(-50%);
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* ==============================
+   INICIO
+============================== */
+
+#inicio {
+
+    min-height:
+        calc(100vh - 82px);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 80px 10%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+
+            ellipse at 75% 50%,
+
+            rgba(212,175,55,0.30),
+
+            rgba(212,175,55,0.12) 25%,
+
+            transparent 65%
+
+        ),
+
+        linear-gradient(
+
+            110deg,
+
+            #020202,
+
+            #090909 50%,
+
+            #100e08
+
+        );
+
+}
+
+
+/* ==============================
+   LUZ DORADA
+============================== */
+
+#inicio::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+
+    height: 650px;
+
+    right: -80px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(235,201,90,0.30),
+
+            rgba(212,175,55,0.12) 40%,
+
+            transparent 70%
+
+        );
+
+    filter: blur(20px);
+
+    animation: luz 7s ease-in-out infinite;
+
+}
+
+
+/* ==============================
+   ANIMACIÓN DE LUZ
+============================== */
+
+@keyframes luz {
+
+    0% {
+
+        opacity: 0.6;
+
+        transform:
+            translateY(-50%)
+            scale(0.95);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translateY(-50%)
+            scale(1.05);
+
+    }
+
+    100% {
+
+        opacity: 0.6;
+
+        transform:
+            translateY(-50%)
+            scale(0.95);
+
+    }
+
+}
+
+
+/* ==============================
+   CONTENIDO
+============================== */
+
+.contenido-inicio {
+
+    max-width: 700px;
+
+    position: relative;
+
+    z-index: 5
+
+
+}
+
+
+/* ==============================
+   MARCA
+============================== */
+
+.marca {
+
+    color: #cc9e05;
+
+    font-size: 13px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ==============================
+   TÍTULO
+============================== */
+
+.contenido-inicio h1 {
+
+    font-size:
+        clamp(50px, 6vw, 85px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ==============================
+   DORADO
+============================== */
+
+.dorado {
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #eddfba,
+
+            #f5d66a,
+
+            #d4af37,
+
+            #ffe38a,
+
+            #b88620
+
+        );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: #000000;
+
+    animation:
+        doradoBrillo 3s linear infinite;
+
+}
+
+
+@keyframes doradoBrillo {
+
+    from {
+
+        background-position:
+            0% center;
+
+    }
+
+    to {
+
+        background-position:
+            200% center;
+
+    }
+
+}
+
+
+/* ==============================
+   CURSIVA
+============================== */
+
+.cursiva {
+
+    font-family:
+        "Great Vibes",
+        "Brush Script MT",
+        cursive;
+
+    font-weight: 400px;
+
+    font-style: normal;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* ==============================
+   BLANCO
+============================== */
+
+.blanco {
+
+    color: white;
+
+}
+
+
+/* ==============================
+   TEXTO PRINCIPAL
+============================== */
+
+.contenido-inicio > p {
+
+    max-width: 540px;
+
+    color: #b5b5b5;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 40px;
+
+}
+
+
+/* ==============================
+   BOTÓN
+============================== */
+
+.boton,
+button {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border: 1px solid #e8ae03;
+
+    background:
+
+        rgba(212,175,55,0.08);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+
+}
+
+
+.boton:hover,
+button:hover {
+
+    background: #d4af37;
+
+    color: #050505;
+
+    box-shadow:
+
+        0 0 30px
+        rgba(212,175,55,0.35);
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* ==============================
+   PRODUCTOS
+============================== */
+
+#productos {
+
+    padding: 120px 8%;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+
+            ellipse at top,
+
+            rgba(212,175,55,0.09),
+
+            transparent 50%
+
+        ),
+
+        #080808;
+
+}
+
+
+/* ==============================
+   TÍTULOS
+============================== */
+
+.titulo-seccion {
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+
+}
+
+
+.subtitulo {
+
+    color: #888;
+
+    margin-bottom: 60px;
+
+}
+
+
+/* ==============================
+   PRODUCTOS GRID
+============================== */
+
+.productos {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+/* ==============================
+   TARJETAS
+============================== */
+
+.producto {
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #151515,
+
+            #080808
+
+        );
+
+    border:
+        1px solid #252525;
+
+    padding: 25px;
+
+    text-align: left;
+
+    transition: 0.4s;
+
+}
+
+
+.producto:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(212,175,55,0.7);
+
+    box-shadow:
+
+        0 20px 40px
+        rgba(0,0,0,0.6),
+
+        0 0 25px
+        rgba(212,175,55,0.08);
+
+}
+
+
+/* ==============================
+   IMAGEN
+============================== */
+
+.imagen-producto {
+
+    width: 100%;
+
+    height: 300px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(212,175,55,0.12),
+
+            transparent 60%
+
+        ),
+
+        #0b0b0b;
+
+    border:
+        1px solid #252525;
+
+}
+
+
+.imagen-producto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+.imagen-producto:hover img {
+
+    transform:
+        scale(1.06);
+
+}
+
+
+/* ==============================
+   INFORMACIÓN
+============================== */
+
+.producto h3 {
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    margin-bottom: 12px;
+
+}
+
+
+.producto p {
+
+    color: #888;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.precio {
+
+    display: block;
+
+    color: #d4af37;
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ==============================
+   NOSOTROS
+============================== */
+
+#nosotros {
+
+    padding: 120px 15%;
+
+    text-align: center;
+
+    background: #050505;
+
+}
+
+
+#nosotros p {
+
+    max-width: 700px;
+
+    margin: 30px auto 0;
+
+    color: #8c8c8c;
+
+    line-height: 1.9;
+
+}
+
+
+/* ==============================
+   CONTACTO
+============================== */
+
+#contacto {
+
+    padding: 120px 15%;
+
+    text-align: center;
+
+    background: #101010;
+
+}
+
+
+#contacto p {
+
+    color: #888;
+
+    margin:
+        25px 0 30px;
+
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: #020202;
+
+    border-top:
+        1px solid
+        rgba(212,175,55,0.2);
+
+    color: #666;
+
+    font-size: 13px;
+
+}
+
+
+footer p:last-child {
+
+    margin-top: 8px;
+
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 800px) {
+
+    header {
+
+        height: auto;
+
+        padding:
+            25px 6%;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    nav {
+
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    #inicio {
+
+        padding:
+            80px 8%;
+
+    }
+
+
+    .contenido-inicio h1 {
+
+        font-size: 50px;
+
+    }
+
+
+    .productos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    #nosotros,
+    #contacto {
+
+        padding:
+            90px 8%;
+
+    }
+
+}
