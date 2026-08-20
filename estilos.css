@@ -22,13 +22,34 @@ html {
 
 body {
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
 
     background: #050505;
 
     color: white;
 
     line-height: 1.6;
+
+}
+
+
+/* ==============================
+   UTILITARIA (mayúsculas, tracking)
+============================== */
+
+.logo,
+nav a,
+.marca,
+.boton,
+button,
+.numero,
+.contacto-etiqueta {
+
+    font-family: "Cinzel", Georgia, serif;
 
 }
 
@@ -520,7 +541,7 @@ nav a:hover::after {
 
     color: #b5b5b5;
 
-    font-size: 16px;
+    font-size: 19px;
 
     line-height: 1.9;
 
@@ -612,9 +633,9 @@ button:hover {
 
 .titulo-seccion {
 
-    font-size: 40px;
+    font-size: clamp(34px, 4vw, 46px);
 
-    font-weight: 400;
+    font-weight: 500;
 
     margin-bottom: 15px;
 
@@ -623,7 +644,11 @@ button:hover {
 
 .subtitulo {
 
-    color: #888;
+    color: #999;
+
+    font-size: 19px;
+
+    font-style: italic;
 
     margin-bottom: 60px;
 
@@ -780,9 +805,9 @@ button:hover {
 
 .producto p {
 
-    color: #888;
+    color: #999;
 
-    font-size: 14px;
+    font-size: 17px;
 
     margin-bottom: 20px;
 
@@ -798,6 +823,187 @@ button:hover {
     font-size: 20px;
 
     margin-bottom: 20px;
+
+}
+
+
+/* ==============================
+   ELABORACIÓN
+============================== */
+
+#elaboracion {
+
+    padding: 130px 15% 120px;
+
+    text-align: center;
+
+    background: #070707;
+
+    border-top:
+        1px solid rgba(212,175,55,0.08);
+
+}
+
+
+#elaboracion > p {
+
+    max-width: 700px;
+
+    margin: 0 auto 22px;
+
+    color: #999;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+}
+
+
+/* ==============================
+   PROCESO / PASOS
+============================== */
+
+.proceso {
+
+    max-width: 1100px;
+
+    margin: 70px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 50px;
+
+    text-align: left;
+
+}
+
+
+.paso {
+
+    position: relative;
+
+    padding-top: 10px;
+
+    border-top:
+        1px solid rgba(212,175,55,0.25);
+
+}
+
+
+.numero {
+
+    display: block;
+
+    font-size: 46px;
+
+    letter-spacing: 1px;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(212,175,55,0.55);
+
+    margin-bottom: 18px;
+
+}
+
+
+.paso h3 {
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    margin-bottom: 10px;
+
+}
+
+
+.paso p {
+
+    color: #909090;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==============================
+   NOTAS OLFATIVAS
+============================== */
+
+#notas {
+
+    padding: 120px 8%;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            ellipse at bottom,
+            rgba(212,175,55,0.07),
+            transparent 55%
+        ),
+        #050505;
+
+}
+
+
+.notas-contenedor {
+
+    max-width: 1000px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+}
+
+
+.nota {
+
+    padding: 0 40px;
+
+    border-left:
+        1px solid rgba(212,175,55,0.18);
+
+}
+
+
+.nota:first-child {
+
+    border-left: none;
+
+}
+
+
+.nota > span {
+
+    display: block;
+
+    font-size: 24px;
+
+    margin-bottom: 16px;
+
+}
+
+
+.nota p {
+
+    color: #909090;
+
+    font-size: 16px;
+
+    line-height: 1.8;
 
 }
 
@@ -825,7 +1031,28 @@ button:hover {
 
     color: #8c8c8c;
 
+    font-size: 18px;
+
     line-height: 1.9;
+
+}
+
+
+.frase-final {
+
+    margin-top: 50px !important;
+
+    padding-top: 40px;
+
+    border-top:
+        1px solid rgba(212,175,55,0.2);
+
+}
+
+
+.frase-final .dorado {
+
+    font-size: 26px;
 
 }
 
@@ -845,12 +1072,71 @@ button:hover {
 }
 
 
-#contacto p {
+#contacto > p {
 
-    color: #888;
+    color: #999;
+
+    font-size: 18px;
 
     margin:
-        25px 0 30px;
+        25px 0 55px;
+
+}
+
+
+.contactos {
+
+    max-width: 640px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 60px;
+
+}
+
+
+.contacto-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.contacto-etiqueta {
+
+    font-size: 12px;
+
+    letter-spacing: 2.5px;
+
+    color: #d4af37;
+
+}
+
+
+.contacto-valor {
+
+    color: #ccc;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+}
+
+
+.contacto-item:hover .contacto-valor {
+
+    color: #f5d66a;
 
 }
 
@@ -939,10 +1225,60 @@ footer p:last-child {
 
 
     #nosotros,
-    #contacto {
+    #contacto,
+    #elaboracion,
+    #notas {
 
         padding:
             90px 8%;
+
+    }
+
+
+    .proceso {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .notas-contenedor {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .nota {
+
+        border-left: none;
+
+        border-top:
+            1px solid rgba(212,175,55,0.18);
+
+        padding: 30px 10px 0;
+
+    }
+
+
+    .nota:first-child {
+
+        border-top: none;
+
+        padding-top: 0;
+
+    }
+
+
+    .contactos {
+
+        flex-direction: column;
+
+        gap: 30px;
 
     }
 

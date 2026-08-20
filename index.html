@@ -3,22 +3,68 @@
 
 <head>
 
+    <!-- =====================================================
+         CONFIGURACIÓN BÁSICA
+    ====================================================== -->
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BRAAMOD | Tu presencia, nuestra esencia</title>
 
-    <!-- FUENTE CALIGRÁFICA -->
+    <!-- =====================================================
+         INFORMACIÓN PARA GOOGLE
+    ====================================================== -->
+
+    <title>BRAAMOD | Perfumes y Fragancias</title>
+
+    <meta
+        name="description"
+        content="BRAAMOD es una marca de perfumes y fragancias preparados con aceites aromáticos. Descubre nuestra esencia, conoce nuestras fragancias y la filosofía detrás de cada creación."
+    >
+
+    <meta
+        name="keywords"
+        content="BRAAMOD, perfumes, fragancias, perfumería, aceites aromáticos, perfumes con aceites"
+    >
+
+    <meta
+        name="author"
+        content="BRAAMOD"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+
+    <!-- =====================================================
+         FUENTE CALIGRÁFICA
+    ====================================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-        rel="stylesheet">
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="estilos.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cinzel:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./estilos.css"
+    >
 
 </head>
 
@@ -26,9 +72,9 @@
 <body>
 
 
-    <!-- ==============================
-         HEADER
-    =============================== -->
+    <!-- =====================================================
+         ENCABEZADO
+    ====================================================== -->
 
     <header>
 
@@ -39,19 +85,23 @@
 
         <nav>
 
-            <a href="#" class="activo">
+            <a href="#inicio">
                 Inicio
             </a>
 
-            <a href="#productos" class="activo4">
-                Productos
+            <a href="#productos">
+                Fragancias
             </a>
 
-            <a href="#" class="activo2">
+            <a href="#elaboracion">
+                Elaboración
+            </a>
+
+            <a href="#nosotros">
                 Nosotros
             </a>
 
-            <a href="#" class="activo3">
+            <a href="#contacto">
                 Contacto
             </a>
 
@@ -61,15 +111,19 @@
 
 
 
-    <!-- ==============================
-         INICIO
-    =============================== -->
+    <!-- =====================================================
+         PORTADA
+    ====================================================== -->
 
     <section id="inicio">
 
         <div class="contenido-inicio">
 
-        
+
+            <div class="marca">
+                BRAAMOD
+            </div>
+
 
             <h1>
 
@@ -92,28 +146,26 @@
 
             <p>
 
-                Descubre una colección de
+                Descubre el universo de
 
                 <span class="dorado cursiva">
-                    fragancias únicas
-                </span>
+                    BRAAMOD
+                </span>,
 
-                creadas para quienes desean
+                una marca dedicada a crear fragancias
+                que buscan transmitir
 
                 <span class="dorado cursiva">
-                    dejar una impresión inolvidable.
+                    elegancia, carácter y personalidad.
                 </span>
 
             </p>
 
 
-            <a
-                href="#productos"
-                class="boton">
-
-                Descubrir colección
-
+            <a href="#productos" class="boton">
+                Descubrir fragancias
             </a>
+
 
         </div>
 
@@ -121,16 +173,17 @@
 
 
 
-    <!-- ==============================
-         PRODUCTOS
-    =============================== -->
+    <!-- =====================================================
+         NUESTRAS FRAGANCIAS
+    ====================================================== -->
 
     <section id="productos">
+
 
         <h2 class="titulo-seccion">
 
             <span class="dorado cursiva">
-                Nuestra colección
+                Nuestras fragancias
             </span>
 
         </h2>
@@ -138,10 +191,10 @@
 
         <p class="subtitulo">
 
-            Fragancias creadas para
+            Esencias creadas para expresar
 
             <span class="dorado cursiva">
-                destacar tu esencia.
+                tu personalidad.
             </span>
 
         </p>
@@ -151,15 +204,19 @@
         <div class="productos">
 
 
-            <!-- PRODUCTO 1 -->
+            <!-- =================================================
+                 PERFUME 1
+            ================================================== -->
 
             <article class="producto">
+
 
                 <div class="imagen-producto">
 
                     <img
                         src="./imagenes/perfume1.jpg"
-                        alt="Perfume BRAAMOD">
+                        alt="Perfume BRAAMOD"
+                    >
 
                 </div>
 
@@ -167,7 +224,7 @@
                 <h3>
 
                     <span class="dorado cursiva">
-                        Perfume miss dior
+                        BRAAMOD GOLD
                     </span>
 
                 </h3>
@@ -175,35 +232,32 @@
 
                 <p>
 
-                    Una fragancia elegante creada para
+                    Una fragancia pensada para transmitir
 
                     <span class="dorado cursiva">
-                        destacar tu presencia.
+                        elegancia y presencia.
                     </span>
 
                 </p>
 
 
-                <span class="precio">
-                    $89.900
-                </span>
-
-
-               
-
             </article>
 
 
 
-            <!-- PRODUCTO 2 -->
+            <!-- =================================================
+                 PERFUME 2
+            ================================================== -->
 
             <article class="producto">
+
 
                 <div class="imagen-producto">
 
                     <img
                         src="./imagenes/perfume2.jpg"
-                        alt="Perfume BRAAMOD">
+                        alt="Fragancia BRAAMOD"
+                    >
 
                 </div>
 
@@ -211,7 +265,7 @@
                 <h3>
 
                     <span class="dorado cursiva">
-                        Perfume valentino
+                        BRAAMOD BLACK
                     </span>
 
                 </h3>
@@ -219,35 +273,33 @@
 
                 <p>
 
-                    Una esencia diseñada para dejar
+                    Una esencia con carácter,
+                    creada para quienes buscan
 
                     <span class="dorado cursiva">
-                        un recuerdo inolvidable.
+                        una presencia inolvidable.
                     </span>
 
                 </p>
 
-
-                <span class="precio">
-                    $105.900
-                </span>
-
-
-           
 
             </article>
 
 
 
-            <!-- PRODUCTO 3 -->
+            <!-- =================================================
+                 PERFUME 3
+            ================================================== -->
 
             <article class="producto">
+
 
                 <div class="imagen-producto">
 
                     <img
                         src="./imagenes/perfume3.jpg"
-                        alt="Perfume BRAAMOD">
+                        alt="Colección de perfumes BRAAMOD"
+                    >
 
                 </div>
 
@@ -255,7 +307,7 @@
                 <h3>
 
                     <span class="dorado cursiva">
-                        Envase braamod
+                        BRAAMOD COLLECTION
                     </span>
 
                 </h3>
@@ -263,21 +315,15 @@
 
                 <p>
 
-                    50 ml y 100ml
+                    Una propuesta que reúne diferentes
+                    perfiles aromáticos para expresar
 
                     <span class="dorado cursiva">
-                        carácter y personalidad.
+                        distintas personalidades.
                     </span>
 
                 </p>
 
-
-                <span class="precio">
-                    $25.900-45.900
-                </span>
-
-
-            
 
             </article>
 
@@ -288,11 +334,217 @@
 
 
 
-    <!-- ==============================
+    <!-- =====================================================
+         ELABORACIÓN
+    ====================================================== -->
+
+    <section id="elaboracion">
+
+
+        <h2 class="titulo-seccion">
+
+            <span class="dorado cursiva">
+                El arte de nuestra esencia
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            En BRAAMOD creemos que una fragancia comienza
+            mucho antes de llegar a convertirse en un aroma.
+
+            Nuestras preparaciones parten de
+
+            <span class="dorado cursiva">
+                aceites aromáticos
+            </span>
+
+            seleccionados para construir diferentes
+            perfiles de fragancia.
+
+
+        </p>
+
+
+        <p>
+
+            Cada preparación es realizada cuidadosamente,
+            buscando conseguir una combinación equilibrada
+            y agradable de aromas.
+
+            Nuestro objetivo es crear fragancias que puedan
+            convertirse en parte de la identidad de quienes
+            las utilizan.
+
+
+        </p>
+
+
+        <div class="proceso">
+
+
+            <div class="paso">
+
+                <span class="numero">
+                    01
+                </span>
+
+                <h3>
+
+                    <span class="dorado cursiva">
+                        Selección
+                    </span>
+
+                </h3>
+
+                <p>
+                    Seleccionamos los aceites aromáticos
+                    utilizados en nuestras preparaciones.
+                </p>
+
+            </div>
+
+
+
+            <div class="paso">
+
+                <span class="numero">
+                    02
+                </span>
+
+                <h3>
+
+                    <span class="dorado cursiva">
+                        Preparación
+                    </span>
+
+                </h3>
+
+                <p>
+                    Combinamos cuidadosamente los elementos
+                    que forman parte de cada fragancia.
+                </p>
+
+            </div>
+
+
+
+            <div class="paso">
+
+                <span class="numero">
+                    03
+                </span>
+
+                <h3>
+
+                    <span class="dorado cursiva">
+                        Esencia
+                    </span>
+
+                </h3>
+
+                <p>
+                    El resultado es una fragancia creada
+                    para transmitir personalidad y presencia.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NOTAS OLFATIVAS
+    ====================================================== -->
+
+    <section id="notas">
+
+
+        <h2 class="titulo-seccion">
+
+            <span class="dorado cursiva">
+                El lenguaje de una fragancia
+            </span>
+
+        </h2>
+
+
+        <p class="subtitulo">
+
+            Una fragancia puede estar formada por diferentes
+            notas que aparecen progresivamente.
+
+        </p>
+
+
+
+        <div class="notas-contenedor">
+
+
+            <div class="nota">
+
+                <span class="dorado cursiva">
+                    Notas de salida
+                </span>
+
+                <p>
+                    Son los primeros aromas que se perciben
+                    al entrar en contacto con la fragancia.
+                </p>
+
+            </div>
+
+
+
+            <div class="nota">
+
+                <span class="dorado cursiva">
+                    Notas de corazón
+                </span>
+
+                <p>
+                    Representan el carácter principal de
+                    la composición aromática.
+                </p>
+
+            </div>
+
+
+
+            <div class="nota">
+
+                <span class="dorado cursiva">
+                    Notas de fondo
+                </span>
+
+                <p>
+                    Son los aromas que permanecen y aportan
+                    profundidad a la fragancia.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
          NOSOTROS
-    =============================== -->
+    ====================================================== -->
 
     <section id="nosotros">
+
 
         <h2 class="titulo-seccion">
 
@@ -305,32 +557,60 @@
 
         <p>
 
-            En BRAAMOD creemos que una fragancia es mucho más
-            que un simple aroma.
+            BRAAMOD nace de la pasión por las fragancias
+            y de la idea de que un aroma puede convertirse
+            en parte de nuestra identidad.
+
+
+        </p>
+
+
+        <p>
+
+            Para nosotros, un perfume no es solamente un aroma.
 
             <span class="dorado cursiva">
                 Es presencia, personalidad y recuerdo.
             </span>
 
-            Nuestra colección nace para acompañar momentos
-            especiales y convertirlos en recuerdos.
 
         </p>
+
+
+        <p>
+
+            Nuestra filosofía busca transmitir una imagen
+            de elegancia y autenticidad a través de cada
+            una de nuestras fragancias.
+
+
+        </p>
+
+
+        <p class="frase-final">
+
+            <span class="dorado cursiva">
+                “Tu presencia, nuestra esencia.”
+            </span>
+
+        </p>
+
 
     </section>
 
 
 
-    <!-- ==============================
+    <!-- =====================================================
          CONTACTO
-    =============================== -->
+    ====================================================== -->
 
     <section id="contacto">
+
 
         <h2 class="titulo-seccion">
 
             <span class="dorado cursiva">
-                Hablemos
+                Conoce BRAAMOD
             </span>
 
         </h2>
@@ -338,39 +618,63 @@
 
         <p>
 
-            ¿Tienes alguna pregunta?
-
-            <span class="dorado cursiva">
-                Estamos para ayudarte.
-            </span>
+            Descubre nuestras fragancias y conoce más
+            sobre la esencia que representa a BRAAMOD.
 
         </p>
 
 
-        <button>
-            Contactar
-        </button>
+        <div class="contactos">
+
+
+            <div class="contacto-item">
+                <span class="contacto-etiqueta">Instagram</span>
+                <a href="https://instagram.com/braa_mod" target="_blank" rel="noopener" class="contacto-valor">
+    @braa_mod
+</a>
+
+
+            <div class="contacto-item">
+                <span class="contacto-etiqueta">WhatsApp</span>
+                <!-- Reemplaza 573001234567 por tu número con código de país, sin +, sin espacios -->
+<a href="https://wa.me/573001234567" target="_blank" rel="noopener" class="contacto-valor">
+    Escríbenos
+</a>
+
+
+            
+
+        </div>
+
 
     </section>
 
 
 
-    <!-- ==============================
+    <!-- =====================================================
          FOOTER
-    =============================== -->
+    ====================================================== -->
 
     <footer>
 
+
         <p>
-            © 2026 BRAAMOD. Todos los derechos reservados.
+            © 2026 BRAAMOD.
+            Todos los derechos reservados.
         </p>
 
 
-        <p class="dorado cursiva">
-            Tu presencia, nuestra esencia.
+        <p>
+
+            <span class="dorado cursiva">
+                Tu presencia, nuestra esencia.
+            </span>
+
         </p>
+
 
     </footer>
+
 
 
 </body>
