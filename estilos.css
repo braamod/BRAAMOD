@@ -1068,13 +1068,27 @@ footer p:last-child {
    RESPONSIVE - TABLET
 ========================================================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 500px) {
 
     .catalogo {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
 
-        grid-template-columns:
-            repeat(3, 1fr);
+    .producto {
+        padding: 8px;
+    }
 
+    .imagen-producto {
+        height: 150px;
+    }
+
+    .producto h3 {
+        font-size: 15px;
+    }
+
+    .producto p {
+        font-size: 10px;
     }
 
 }
