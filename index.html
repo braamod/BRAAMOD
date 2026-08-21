@@ -5,52 +5,23 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>BRAAMOD | Perfumes y Fragancias</title>
-
     <meta
-        name="description"
-        content="BRAAMOD es una marca de perfumes y fragancias preparados con aceites aromáticos. Descubre nuestra colección de fragancias para mujer y hombre."
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
     >
 
-    <meta
-        name="keywords"
-        content="BRAAMOD, perfumes, fragancias, perfumería, perfumes mujer, perfumes hombre, aceites aromáticos"
-    >
+    <title>BRAAMOD | Perfumería</title>
 
-    <meta
-        name="author"
-        content="BRAAMOD"
-    >
-
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-
-    <!-- FUENTE CALIGRÁFICA -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
+    <!-- FUENTE CURSIVA -->
     <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet"
     >
-
 
     <!-- CSS -->
-
     <link
         rel="stylesheet"
-        href="./estilos.css"
+        href="estilos.css"
     >
 
 </head>
@@ -59,1543 +30,1257 @@
 <body>
 
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
-    <header>
+<header>
 
-        <div class="logo">
-            BRAAMOD
-        </div>
-
-
-        <nav>
-
-            <a href="#inicio">
-                Inicio
-            </a>
-
-            <a href="#productos">
-                Fragancias
-            </a>
-
-            <a href="#elaboracion">
-                Elaboración
-            </a>
-
-            <a href="#nosotros">
-                Nosotros
-            </a>
-
-            <a href="#contacto">
-                Contacto
-            </a>
-
-        </nav>
-
-    </header>
+    <a href="#inicio" class="logo">
+        BRAAMOD
+    </a>
 
 
+    <nav>
 
-    <!-- =====================================================
-         INICIO
-    ====================================================== -->
+        <a href="#inicio">
+            Inicio
+        </a>
 
-    <section id="inicio">
+        <a href="#catalogo">
+            Catálogo
+        </a>
 
-        <div class="contenido-inicio">
+        <a href="#nosotros">
+            Nosotros
+        </a>
 
-            <div class="marca">
-                BRAAMOD
+        <a href="#elaboracion">
+            Elaboración
+        </a>
+
+        <a href="#contacto">
+            Contacto
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     INICIO
+====================================================== -->
+
+<section id="inicio" class="hero">
+
+    <div class="luces luz1"></div>
+    <div class="luces luz2"></div>
+    <div class="luces luz3"></div>
+
+
+    <div class="contenido-inicio">
+
+        <p class="subtitulo">
+            ESENCIA · ELEGANCIA · DISTINCIÓN
+        </p>
+
+
+        <h1>
+
+            La esencia de
+            <span class="destacado">BRAAMOD</span>
+
+        </h1>
+
+
+        <p class="texto-inicio">
+
+            Fragancias creadas para personas
+            que buscan dejar una huella
+            inolvidable.
+
+        </p>
+
+
+        <a
+            href="#catalogo"
+            class="boton-dorado"
+        >
+
+            Descubrir colección
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATALOGO
+====================================================== -->
+
+<section id="catalogo">
+
+    <div class="encabezado-seccion">
+
+        <p class="mini-titulo">
+            NUESTRA COLECCIÓN
+        </p>
+
+        <h2 class="titulo-seccion">
+
+            <span>
+                Catálogo
+            </span>
+
+        </h2>
+
+        <p>
+
+            Descubre nuestras fragancias
+            cuidadosamente seleccionadas.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         BOTONES MUJER / HOMBRE
+    ================================================== -->
+
+    <div class="categorias">
+
+        <button
+            class="boton-categoria activo"
+            onclick="mostrarCatalogo('mujer', this)"
+        >
+
+            Mujer
+
+        </button>
+
+
+        <button
+            class="boton-categoria"
+            onclick="mostrarCatalogo('hombre', this)"
+        >
+
+            Hombre
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CATALOGO MUJER
+    ================================================== -->
+
+    <div
+        id="catalogo-mujer"
+        class="catalogo activo"
+    >
+
+
+        <!-- MUJER 01 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img
+                    src="imagenes/mujer/mujer01.jpg"
+                    alt="Loción mujer 01"
+                >
+
             </div>
 
 
-            <h1>
+            <h3 class="nombre-locion">
+                lucky 7 passion
+            </h3>
 
-                <span class="dorado cursiva">
-                    Tu presencia,
+
+            <p class="descripcion-locion">
+               Perfume para mujer de la familia dulce, frutal y floral
+                Ejemplo: floral, dulce y elegante.
+            </p>
+
+
+            <div class="precios">
+
+                <span class="precio-anterior">
+                    $102.000
                 </span>
 
-                <br>
-
-                <span class="blanco">
-                    nuestra
+                <span class="precio-promocion">
+                    $90.000
                 </span>
 
-                <span class="dorado cursiva">
-                    esencia.
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 02 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img
+                    src="imagenes/mujer/mujer02.jpg"
+                    alt="Loción mujer 02"
+                >
+
+            </div>
+
+            <h3 class="nombre-locion">
+           victoria secret bombshell
+            </h3>
+
+            <p class="descripcion-locion">
+                Fragancia de la familia olfativa floral frutal, con notas de salida de maracuyá, lichi y piña, notas de corazón de orquídea, fresia y rosa, y notas de fondo de almizcle, ámbar y madera.
+            </p>
+
+            <div class="precios">
+
+                <span class="precio-anterior">
+                    $102.000
                 </span>
 
-            </h1>
+                <span class="precio-promocion">
+                    $90.000
+                </span>
 
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 03 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img
+                    src="imagenes/mujer/mujer03.jpg"
+                    alt="Loción mujer 03"
+                >
+
+            </div>
+
+            <h3 class="nombre-locion">
+                felling chic
+            </h3>
+
+            <p class="descripcion-locion">
+               Fragancia femenina fresca y vibrante con notas de manzana verde, pepino y limón
+            </p>
+
+            <div class="precios">
+
+                <span class="precio-anterior">
+                    $124.900
+                </span>
+
+                <span class="precio-promocion">
+                    $90.000
+                </span>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 04 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img
+                    src="imagenes/mujer/mujer04.jpg"
+                    alt="Loción mujer 04"
+                >
+
+            </div>
+
+            <h3 class="nombre-locion">
+                scandal
+            </h3>
+
+            <p class="descripcion-locion">
+                Es una fragancia de la familia olfativa Chipre Floral, destacada por un aroma audaz, sensual y dulce donde predomina la nota de miel combinada con naranja sanguina, gardenia y pachuli
+            </p>
+
+            <div class="precios">
+
+                <span class="precio-anterior">
+                    $135.900
+                </span>
+
+                <span class="precio-promocion">
+                    $90.000
+                </span>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 05 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img
+                    src="imagenes/mujer/mujer05.jpg"
+                    alt="Loción mujer 05"
+                >
+
+            </div>
+
+            <h3 class="nombre-locion">
+              dolce & gabbana the only one
+            </h3>
+
+            <p class="descripcion-locion">
+               Perfume femenino de la familia olfativa ambar vainilla,destaca por su mezcla única y sofisticada de violeta y café , creando un aroma dulce, atalcado y muy envolvente
+            </p>
+
+            <div class="precios">
+
+                <span class="precio-anterior">
+                    $156.900
+                </span>
+
+                <span class="precio-promocion">
+                    $90.000
+                </span>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 06 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer06.jpg" alt="Loción mujer 06">
+
+            </div>
+
+            <h3 class="nombre-locion">hawas</h3>
+
+            <p class="descripcion-locion">
+               Un perfume árabe de mujer que mezcla notas dulces, frutales y florales con un toque elegante. Tiene una gran fijación en la piel y una estela muy potente que deja huella.
+            </p>
+
+            <div class="precios">
+                <span class="precio-anterior">$1.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 07 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer07.jpg" alt="Loción mujer 07">
+
+            </div>
+
+            <h3 class="nombre-locion">ariana grande thnk u next</h3>
+
+            <p class="descripcion-locion">
+                Es un perfume de la familia olfativa floral frutal gourmand
+                Salida: Frambuesa jugosa y pera fresca.
+            </p>
+
+            <div class="precios">
+                <span class="precio-anterior">$125.900</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 08 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer08.jpg" alt="Loción mujer 08">
+
+            </div>
+
+            <h3 class="nombre-locion">dolce & gabbana light blue</h3>
+
+            <p class="descripcion-locion">
+              Es una fragancia icónica conocida por su carácter chispeante, limpio y veraniego 
+              Notas de Salida (frescas y frutales): Limón siciliano, manzana Granny Smith, cedro y campanilla.
+            </p>
+
+            <div class="precios">
+                <span class="precio-anterior">$115.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 09 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer09.jpg" alt="Loción mujer 09">
+
+            </div>
+
+            <h3 class="nombre-locion">shilimak</h3>
+
+            <p class="descripcion-locion">
+                Es el primer perfume ambarino y oriental de la historia. Creado en 1925 e inspirado en la legendaria historia de amor del Taj Mahal, combina notas de bergamota, iris, rosa y una sobredosis de vainilla para ofrecer una estela profunda, sensual y eterna.
+            </p>
+
+            <div class="precios">
+                <span class="precio-anterior">$118.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 10 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer10.jpg" alt="Loción mujer 10">
+
+            </div>
+
+            <h3 class="nombre-locion">coco chanel girl</h3>
+
+            <p class="descripcion-locion">
+                Es un perfume de mujerámbar floral, fresco y sensual. Combina notas de salida de naranja y mandarina con un corazón de jazmín y rosa, sobre un fondo cálido de pachulí y vainilla. Representa a una mujer libre, audaz, elegante y moderna.
+            </p>
+
+            <div class="precios">
+                <span class="precio-anterior">$128.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 11 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer11.jpg" alt="Loción mujer 11">
+
+            </div>
+
+            <h3 class="nombre-locion">aqua allegora</h3>
+
+            <p class="descripcion-locion">Es una colección de perfumes femeninos frescos y alegres que rinde homenaje a la naturaleza. Estas fragancias combinan notas cítricas, florales y frutales con materias primas de alta calidad, ofreciendo aromas luminosos, elegantes y perfectos para el uso diario.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$115.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 12 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer12.jpg" alt="Loción mujer 12">
+
+            </div>
+
+            <h3 class="nombre-locion">chanel n5</h3>
+
+            <p class="descripcion-locion">Es el perfume más famoso del mundo. Creada en 1921 por Ernest Beaux para Coco Chanel, revolucionó la perfumería al ser el primer bouquet floral con un uso intenso de aldehídos , que dan un toque jabonoso y limpio.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$127.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 13 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer13.jpg" alt="Loción mujer 13">
+
+            </div>
+
+            <h3 class="nombre-locion">black xs</h3>
+
+            <p class="descripcion-locion">Se define como unaroma audaz, intenso, rebelde y profundamente sensual, pensado para la noche y los climas</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$115.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 14 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer14.jpg" alt="Loción mujer 14">
+
+            </div>
+
+            <h3 class="nombre-locion">good girl</h3>
+
+            <p class="descripcion-locion">Representa la dualidad de la mujer moderna: audaz y sexy, elegante y misteriosa, combinando notas luminosas de jazmín y nardos con otras oscuras e intensas de haba tonka y cacao dentro de su característico frasco en forma de tacón de aguja.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$135.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 15 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer15.jpg" alt="Loción mujer 15">
+
+            </div>
+
+            <h3 class="nombre-locion">rome melancholia </h3>
+
+            <p class="descripcion-locion">Combina una salida fresca de cítricos y especias con un corazón cremoso de coco y lavanda, cerrando con un fondo cálido de maderas y ámbar.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$118.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 16 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer16.jpg" alt="Loción mujer 16">
+
+            </div>
+
+            <h3 class="nombre-locion">flower by kenzo</h3>
+
+            <p class="descripcion-locion"> Floral atalcado para mujer. Creado en el año 2000, mezcla notas de rosa de Bulgaria, violeta, mandarina, vainilla y almizcles blancos, creando un aroma limpio, cálido y suave que evoca la sensación de talco de bebé</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$122.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 17 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer17.jpg" alt="Loción mujer 17">
+
+            </div>
+
+            <h3 class="nombre-locion">very good girl</h3>
+
+            <p class="descripcion-locion"> Es una fragancia de la familia olfativafloral frutal para mujereslanzada en 2021. Presentada en su icónico frasco con forma de tacón de aguja en color rojo brillante, redefine la dualidad de la feminidad moderna con un aroma osado, divertido y muy seductor.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$129.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 18 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer18.jpg" alt="Loción mujer 18">
+
+            </div>
+
+            <h3 class="nombre-locion">miss dior</h3>
+
+            <p class="descripcion-locion">Creado originalmente en 1947 por Christian Dior. Se define como unafragancia elegante, romántica y profundamente vinculada al optimismo y al amor, combinando acordes florales, frutales y de estilo chipre..</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$120.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 19 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer19.jpg" alt="Loción mujer 19">
+
+            </div>
+
+            <h3 class="nombre-locion">botica 214</h3>
+
+            <p class="descripcion-locion">Eau de Parfum de alta sofisticación que combina contrastes naturales, notas amaderadas y frescura intensa inspirada en viajes y descubrimientos globales.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$115.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+
+        <!-- MUJER 20 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="imagenes/mujer/mujer20.jpg" alt="Loción mujer 20">
+
+            </div>
+
+            <h3 class="nombre-locion">la vida es bella</h3>
+
+            <p class="descripcion-locion">Aroma dulce, elegante y muy duradero, diseñado para representar la alegría, la libertad y la elección de la propia felicidad.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$139.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CATALOGO HOMBRE
+    ================================================== -->
+
+    <div
+        id="catalogo-hombre"
+        class="catalogo"
+    >
+
+
+        <!-- HOMBRE 01 - 20 -->
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre01.jpg" alt="Loción hombre 01">
+            </div>
+
+            <h3 class="nombre-locion">clash</h3>
+
+            <p class="descripcion-locion">
+               Es unperfume masculino de la familia olfativa Aromática Acuática (Fougère Acuosa), creado por el perfumista Dominique Ropion. Ofrece un frescor potente y moderno diseñado para el uso diario, el trabajo o la actividad física.
+            </p>
+
+            <div class="precios">
+                <span class="precio-anterior">$119.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre02.jpg" alt="Loción hombre 02">
+            </div>
+
+            <h3 class="nombre-locion">asad</h3>
+
+            <p class="descripcion-locion"> Destaca por unaroma intenso, cálido y especiado</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$135.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre03.jpg" alt="Loción hombre 03">
+            </div>
+
+            <h3 class="nombre-locion">eternity</h3>
+
+            <p class="descripcion-locion">Destaca por su frescura limpia, un estilo varonil y una sensación reconfortante que evoca un baño matutino. Es una fragancia versátil, elegante y segura que nunca pasa de moda.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$118.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre04.jpg" alt="Loción hombre 04">
+            </div>
+
+            <h3 class="nombre-locion">valentino uomo</h3>
+
+            <p class="descripcion-locion">Es un perfume para hombre de estilo clásico y elegante. Tiene unaroma dulce y amaderado, con notas de chocolate, café y avellana. Es ideal para usar en días fríos.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$129.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre05.jpg" alt="Loción hombre 05">
+            </div>
+
+            <h3 class="nombre-locion">212 men nyc </h3>
+
+            <p class="descripcion-locion">Huele a césped recién cortado, hojas de cítricos, jengibre y especias verdes, con un fondo cálido de sándalo e incienso.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$139.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre06.jpg" alt="Loción hombre 06">
+            </div>
+
+            <h3 class="nombre-locion">khamrah</h3>
+
+            <p class="descripcion-locion">Es un perfume unisex de la familia oriental especiada, lanzado en 2022. Destaca por suaroma dulce, cálido y avainillado con un toque de licor y especias, ideal para hombres que buscan una estela intensa, elegante y nocturna.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$125.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre07.jpg" alt="Loción hombre 07">
+            </div>
+
+            <h3 class="nombre-locion">invictus</h3>
+
+            <p class="descripcion-locion">Encarna la victoria, la energía y el dinamismo mediante un choque entre la frescura marina y una sensualidad amaderada y cálida.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$138.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre08.jpg" alt="Loción hombre 08">
+            </div>
+
+            <h3 class="nombre-locion">nautica voyage</h3>
+
+            <p class="descripcion-locion"> Destaca por suaroma limpio, fresco y frutal que evoca la sensación de salir de la ducha</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$115.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre09.jpg" alt="Loción hombre 09">
+            </div>
+
+            <h3 class="nombre-locion">creed</h3>
+
+            <p class="descripcion-locion">Perfume de la familia olfativa Chipre Frutal, famoso por evocar fuerza, éxito, elegancia y liderazgo</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$149.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre10.jpg" alt="Loción hombre 10">
+            </div>
+
+            <h3 class="nombre-locion">versace pour homme</h3>
+
+            <p class="descripcion-locion">Este aroma de la familia Aromática Fougère evoca la brisa del mar Mediterráneo con un estilo limpio, elegante y muy versátil</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$125.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre11.jpg" alt="Loción hombre 11">
+            </div>
+
+            <h3 class="nombre-locion">valentino intense</h3>
+
+            <p class="descripcion-locion">Destaca por suaroma profundo, cómodo y ligeramente atalcado, ideal para climas frescos y ocasiones nocturnas.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$125.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre12.jpg" alt="Loción hombre 12">
+            </div>
+
+            <h3 class="nombre-locion">dolce y gabana light blue forever</h3>
+
+            <p class="descripcion-locion">Destaca por una explosión ultra realista, jugosa y amarga de toronja (pomelo) y bergamota en la salida, matices ozónicos en el corazón y una base seca de vetiver de Java y almizcle blanco.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$136.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre13.jpg" alt="Loción hombre 13">
+            </div>
+
+            <h3 class="nombre-locion">fahrenheit</h3>
+
+            <p class="descripcion-locion">Mezcla notas de mandarina de Sicilia, violeta, cuero y maderas cálidas, creando un aroma inconfundible, maduro y con un toque sutilmente amaderado y petroleado muy característico.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$119.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre14.jpg" alt="Loción hombre 14">
+            </div>
+
+            <h3 class="nombre-locion">solo elixir</h3>
+
+            <p class="descripcion-locion">Combina notas balsámicas cremosas, el olíbano provocativo y la elegancia de la madera de Oud.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$129.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre15.jpg" alt="Loción hombre 15">
+            </div>
+
+            <h3 class="nombre-locion">jean paul gaultier le male</h3>
+
+            <p class="descripcion-locion">Mezcla notas frescas de menta y lavanda con un fondo cálido y dulce de vainilla</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$129.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre16.jpg" alt="Loción hombre 16">
+            </div>
+
+            <h3 class="nombre-locion">bleu de chanel</h3>
+
+            <p class="descripcion-locion">fragancia amaderada y aromática para hombre que representa la libertad y la elegancia moderna.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$117.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre17.jpg" alt="Loción hombre 17">
+            </div>
+
+            <h3 class="nombre-locion">versace eros</h3>
+
+            <p class="descripcion-locion">Destaca por ser un aroma intenso, dulce y muy sensual, diseñado para hombres seguros de sí mismos que buscan acaparar miradas.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$147.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre18.jpg" alt="Loción hombre 18">
+            </div>
+
+            <h3 class="nombre-locion">magnate exclusive</h3>
+
+            <p class="descripcion-locion">Perfume masculino de alta concentración y muy larga duración, perteneciente a la familia olfativa herbal aromática con dejos orientales y de cuero. Está inspirado en el hombre exitoso, moderno y seguro de sí mismo que disfruta de experiencias exclusivas.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$100.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre19.jpg" alt="Loción hombre 19">
+            </div>
+
+            <h3 class="nombre-locion">1 millon</h3>
+
+            <p class="descripcion-locion">Destaca por unaroma audaz, dulce y seductor con notas de menta, mandarina, canela y cuero, ideal para la noche y climas templados o fríos.</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$148.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <div class="imagen-producto">
+                <img src="imagenes/hombre/hombre20.jpg" alt="Loción hombre 20">
+            </div>
+
+            <h3 class="nombre-locion">sauvage</h3>
+
+            <p class="descripcion-locion">Mezcla notas cítricas chispeantes con un fondo de maderas ambarinas y especias, inspirada en los grandes espacios abiertos bajo un cielo nocturno. Su estela es intensa, seductora y de gran fijación en la piel</p>
+
+            <div class="precios">
+                <span class="precio-anterior">$178.000</span>
+                <span class="precio-promocion">$90.000</span>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NOSOTROS
+====================================================== -->
+
+<section id="nosotros">
+
+    <div class="encabezado-seccion">
+
+        <p class="mini-titulo">
+            NUESTRA ESENCIA
+        </p>
+
+        <h2 class="titulo-seccion">
+
+            <span>
+                Sobre BRAAMOD
+            </span>
+
+        </h2>
+
+    </div>
+
+
+    <div class="texto-nosotros">
+
+        <p>
+
+            En <strong>BRAAMOD</strong> creemos que una
+            fragancia es mucho más que un aroma.
+
+            Es una forma de expresar personalidad,
+            elegancia y estilo.
+
+        </p>
+
+
+        <p>
+
+            Nuestras lociones son preparadas
+            cuidadosamente utilizando aceites
+            y diferentes combinaciones aromáticas
+            para crear experiencias únicas.
+
+        </p>
+
+
+        <p>
+
+            Cada fragancia busca representar
+            una esencia diferente, permitiendo
+            encontrar el aroma ideal para cada
+            personalidad y ocasión.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ELABORACIÓN
+====================================================== -->
+
+<section id="elaboracion">
+
+    <div class="encabezado-seccion">
+
+        <p class="mini-titulo">
+            EL ARTE DE CREAR
+        </p>
+
+        <h2 class="titulo-seccion">
+
+            <span>
+                Nuestra elaboración
+            </span>
+
+        </h2>
+
+    </div>
+
+
+    <div class="proceso">
+
+
+        <div class="paso">
+
+            <span>01</span>
+
+            <h3>
+                Selección
+            </h3>
 
             <p>
-
-                Descubre el universo de
-
-                <span class="dorado cursiva">
-                    BRAAMOD
-                </span>,
-
-                una marca dedicada a crear fragancias
-                que buscan transmitir
-
-                <span class="dorado cursiva">
-                    elegancia, carácter y personalidad.
-                </span>
-
+                Seleccionamos cuidadosamente
+                los aceites y componentes
+                utilizados en nuestras fragancias.
             </p>
 
         </div>
 
-    </section>
 
+        <div class="paso">
 
+            <span>02</span>
 
-    <!-- =====================================================
-         CATÁLOGO
-    ====================================================== -->
+            <h3>
+                Preparación
+            </h3>
 
-    <section id="productos">
-
-
-        <h2 class="titulo-seccion">
-
-            <span class="dorado cursiva">
-                Nuestra colección
-            </span>
-
-        </h2>
-
-
-        <p class="subtitulo">
-
-            Descubre nuestras fragancias para
-
-            <span class="dorado cursiva">
-                mujer y hombre.
-            </span>
-
-        </p>
-
-
-
-        <!-- =================================================
-             SELECTOR DE CATEGORÍAS
-        ================================================== -->
-
-        <div class="categorias">
-
-            <button
-                class="boton-categoria activo"
-                onclick="mostrarCategoria('mujer', this)"
-            >
-
-                Mujer
-
-            </button>
-
-
-            <button
-                class="boton-categoria"
-                onclick="mostrarCategoria('hombre', this)"
-            >
-
-                Hombre
-
-            </button>
+            <p>
+                Combinamos los diferentes
+                componentes buscando conseguir
+                un aroma equilibrado y agradable.
+            </p>
 
         </div>
 
 
-
-        <!-- =================================================
-             CATÁLOGO MUJER
-        ================================================== -->
-
-        <div
-            id="catalogo-mujer"
-            class="catalogo activo"
-        >
-
-
-            <!-- MUJER 01 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer01.jpg"
-                        alt="Fragancia BRAAMOD Mujer 01"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD ÉLITE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 02 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer02.jpg"
-                        alt="Fragancia BRAAMOD Mujer 02"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD ROSE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 03 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer03.jpg"
-                        alt="Fragancia BRAAMOD Mujer 03"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD GOLD
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 04 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer04.jpg"
-                        alt="Fragancia BRAAMOD Mujer 04"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD FEMME
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 05 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer05.jpg"
-                        alt="Fragancia BRAAMOD Mujer 05"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD LUXE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 06 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer06.jpg"
-                        alt="Fragancia BRAAMOD Mujer 06"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD AMBER
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 07 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer07.jpg"
-                        alt="Fragancia BRAAMOD Mujer 07"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD DIAMOND
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 08 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer08.jpg"
-                        alt="Fragancia BRAAMOD Mujer 08"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD BLANC
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 09 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer09.jpg"
-                        alt="Fragancia BRAAMOD Mujer 09"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD VELVET
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 10 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer10.jpg"
-                        alt="Fragancia BRAAMOD Mujer 10"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD ÉCLAT
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 11 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer11.jpg"
-                        alt="Fragancia BRAAMOD Mujer 11"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD PASSION
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 12 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer12.jpg"
-                        alt="Fragancia BRAAMOD Mujer 12"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD MYSTIC
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 13 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer13.jpg"
-                        alt="Fragancia BRAAMOD Mujer 13"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD PURE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 14 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer14.jpg"
-                        alt="Fragancia BRAAMOD Mujer 14"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD IRIS
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 15 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer15.jpg"
-                        alt="Fragancia BRAAMOD Mujer 15"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD BLOOM
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 16 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer16.jpg"
-                        alt="Fragancia BRAAMOD Mujer 16"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD NOIR
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 17 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer17.jpg"
-                        alt="Fragancia BRAAMOD Mujer 17"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD AURA
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 18 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer18.jpg"
-                        alt="Fragancia BRAAMOD Mujer 18"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD GRACE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 19 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer19.jpg"
-                        alt="Fragancia BRAAMOD Mujer 19"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD ROYAL
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- MUJER 20 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/mujer/mujer20.jpg"
-                        alt="Fragancia BRAAMOD Mujer 20"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD SIGNATURE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia femenina BRAAMOD.
-                </p>
-
-            </article>
-
+        <div class="paso">
+
+            <span>03</span>
+
+            <h3>
+                Creación
+            </h3>
+
+            <p>
+                Cada fragancia es preparada
+                pensando en ofrecer una
+                experiencia especial.
+            </p>
 
         </div>
 
 
+    </div>
 
-        <!-- =================================================
-             CATÁLOGO HOMBRE
-        ================================================== -->
+</section>
 
-        <div
-            id="catalogo-hombre"
-            class="catalogo"
-        >
 
 
-            <!-- HOMBRE 01 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre01.jpg"
-                        alt="Fragancia BRAAMOD Hombre 01"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD BLACK
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 02 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre02.jpg"
-                        alt="Fragancia BRAAMOD Hombre 02"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD GOLD
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 03 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre03.jpg"
-                        alt="Fragancia BRAAMOD Hombre 03"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD ÉLITE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 04 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre04.jpg"
-                        alt="Fragancia BRAAMOD Hombre 04"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD NOIR
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 05 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre05.jpg"
-                        alt="Fragancia BRAAMOD Hombre 05"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD ROYAL
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 06 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre06.jpg"
-                        alt="Fragancia BRAAMOD Hombre 06"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD INTENSE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 07 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre07.jpg"
-                        alt="Fragancia BRAAMOD Hombre 07"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD TITAN
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 08 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre08.jpg"
-                        alt="Fragancia BRAAMOD Hombre 08"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD OUD
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 09 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre09.jpg"
-                        alt="Fragancia BRAAMOD Hombre 09"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD URBAN
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 10 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre10.jpg"
-                        alt="Fragancia BRAAMOD Hombre 10"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD IMPERIAL
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 11 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre11.jpg"
-                        alt="Fragancia BRAAMOD Hombre 11"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD VELVET
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 12 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre12.jpg"
-                        alt="Fragancia BRAAMOD Hombre 12"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD FORCE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 13 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre13.jpg"
-                        alt="Fragancia BRAAMOD Hombre 13"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD SIGNATURE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 14 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre14.jpg"
-                        alt="Fragancia BRAAMOD Hombre 14"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD ABSOLUTE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 15 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre15.jpg"
-                        alt="Fragancia BRAAMOD Hombre 15"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD LEGACY
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 16 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre16.jpg"
-                        alt="Fragancia BRAAMOD Hombre 16"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD DARK
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 17 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre17.jpg"
-                        alt="Fragancia BRAAMOD Hombre 17"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD PRESTIGE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 18 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre18.jpg"
-                        alt="Fragancia BRAAMOD Hombre 18"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD ICON
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 19 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre19.jpg"
-                        alt="Fragancia BRAAMOD Hombre 19"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD CROWN
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-
-            <!-- HOMBRE 20 -->
-
-            <article class="producto">
-
-                <div class="imagen-producto">
-
-                    <img
-                        src="./imagenes/hombre/hombre20.jpg"
-                        alt="Fragancia BRAAMOD Hombre 20"
-                    >
-
-                </div>
-
-                <h3>
-                    <span class="dorado cursiva">
-                        BRAAMOD ESSENCE
-                    </span>
-                </h3>
-
-                <p>
-                    Fragancia masculina BRAAMOD.
-                </p>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         ELABORACIÓN
-    ====================================================== -->
-
-    <section id="elaboracion">
-
-
-        <h2 class="titulo-seccion">
-
-            <span class="dorado cursiva">
-                El arte de nuestra esencia
-            </span>
-
-        </h2>
-
-
-        <p>
-
-            En BRAAMOD creemos que una fragancia comienza
-            mucho antes de convertirse en un aroma.
-
-            Nuestras preparaciones parten de
-
-            <span class="dorado cursiva">
-                aceites aromáticos
-            </span>
-
-            seleccionados para construir diferentes
-            perfiles de fragancia.
-
-        </p>
-
-
-        <p>
-
-            Cada preparación es realizada cuidadosamente,
-            buscando conseguir una combinación equilibrada
-            y agradable de aromas.
-
-        </p>
-
-
-        <div class="proceso">
-
-
-            <div class="paso">
-
-                <span class="numero">
-                    01
-                </span>
-
-                <h3>
-
-                    <span class="dorado cursiva">
-                        Selección
-                    </span>
-
-                </h3>
-
-                <p>
-                    Seleccionamos los aceites aromáticos
-                    utilizados en nuestras preparaciones.
-                </p>
-
-            </div>
-
-
-
-            <div class="paso">
-
-                <span class="numero">
-                    02
-                </span>
-
-                <h3>
-
-                    <span class="dorado cursiva">
-                        Preparación
-                    </span>
-
-                </h3>
-
-                <p>
-                    Combinamos cuidadosamente los elementos
-                    que forman parte de cada fragancia.
-                </p>
-
-            </div>
-
-
-
-            <div class="paso">
-
-                <span class="numero">
-                    03
-                </span>
-
-                <h3>
-
-                    <span class="dorado cursiva">
-                        Esencia
-                    </span>
-
-                </h3>
-
-                <p>
-                    El resultado es una fragancia creada
-                    para transmitir personalidad y presencia.
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         NOTAS OLFATIVAS
-    ====================================================== -->
-
-    <section id="notas">
-
-
-        <h2 class="titulo-seccion">
-
-            <span class="dorado cursiva">
-                El lenguaje de una fragancia
-            </span>
-
-        </h2>
-
-
-        <p class="subtitulo">
-
-            Una fragancia puede estar formada por diferentes
-            notas que aparecen progresivamente.
-
-        </p>
-
-
-        <div class="notas-contenedor">
-
-
-            <div class="nota">
-
-                <span class="dorado cursiva">
-                    Notas de salida
-                </span>
-
-                <p>
-                    Son los primeros aromas que se perciben
-                    al entrar en contacto con la fragancia.
-                </p>
-
-            </div>
-
-
-
-            <div class="nota">
-
-                <span class="dorado cursiva">
-                    Notas de corazón
-                </span>
-
-                <p>
-                    Representan el carácter principal de
-                    la composición aromática.
-                </p>
-
-            </div>
-
-
-
-            <div class="nota">
-
-                <span class="dorado cursiva">
-                    Notas de fondo
-                </span>
-
-                <p>
-                    Son los aromas que permanecen y aportan
-                    profundidad a la fragancia.
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         NOSOTROS
-    ====================================================== -->
-
-    <section id="nosotros">
-
-
-        <h2 class="titulo-seccion">
-
-            <span class="dorado cursiva">
-                La esencia de BRAAMOD
-            </span>
-
-        </h2>
-
-
-        <p>
-
-            BRAAMOD nace de la pasión por las fragancias
-            y de la idea de que un aroma puede convertirse
-            en parte de nuestra identidad.
-
-        </p>
-
-
-        <p>
-
-            Para nosotros, un perfume no es solamente un aroma.
-
-            <span class="dorado cursiva">
-                Es presencia, personalidad y recuerdo.
-            </span>
-
-        </p>
-
-
-        <p>
-
-            Nuestra filosofía busca transmitir una imagen
-            de elegancia y autenticidad a través de cada
-            una de nuestras fragancias.
-
-        </p>
-
-
-        <p class="frase-final">
-
-            <span class="dorado cursiva">
-                “Tu presencia, nuestra esencia.”
-            </span>
-
-        </p>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         CONTACTO
-    ====================================================== -->
-
-    <!-- =====================================================
+<!-- =====================================================
      CONTACTO
 ====================================================== -->
 
 <section id="contacto">
 
-    <h2 class="titulo-seccion">
+    <div class="encabezado-seccion">
 
-        <span class="dorado cursiva">
-            Conoce BRAAMOD
-        </span>
+        <p class="mini-titulo">
+            CONECTA CON NOSOTROS
+        </p>
 
-    </h2>
+        <h2 class="titulo-seccion">
 
-    <p>
-        Descubre nuestras fragancias y conoce más
-        sobre la esencia que representa a BRAAMOD.
-    </p>
+            <span>
+                Contacto
+            </span>
+
+        </h2>
+
+    </div>
 
 
     <div class="contactos">
@@ -1604,7 +1289,7 @@
         <!-- WHATSAPP -->
 
         <a
-            href="https://wa.me/573214978435"
+            href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias."
             target="_blank"
             rel="noopener noreferrer"
             class="contacto-link"
@@ -1647,86 +1332,73 @@
 </section>
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
 
-    <footer>
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
-        <p>
-            © 2026 BRAAMOD.
-            Todos los derechos reservados.
-        </p>
+<footer>
 
-        <p>
-
-            <span class="dorado cursiva">
-                Tu presencia, nuestra esencia.
-            </span>
-
-        </p>
-
-    </footer>
+    <div class="logo-footer">
+        BRAAMOD
+    </div>
 
 
-
-    <!-- =====================================================
-         JAVASCRIPT PARA CAMBIAR ENTRE MUJER Y HOMBRE
-    ====================================================== -->
-
-    <script>
-
-        function mostrarCategoria(categoria, boton) {
-
-            const mujer =
-                document.getElementById("catalogo-mujer");
-
-            const hombre =
-                document.getElementById("catalogo-hombre");
-
-            const botones =
-                document.querySelectorAll(".boton-categoria");
+    <p>
+        La esencia que deja una huella.
+    </p>
 
 
-            /* Ocultar los dos catálogos */
+    <p class="copyright">
 
-            mujer.classList.remove("activo");
+        © 2026 BRAAMOD.
+        Todos los derechos reservados.
 
-            hombre.classList.remove("activo");
+    </p>
 
-
-            /* Quitar estado activo de los botones */
-
-            botones.forEach(function(btn) {
-
-                btn.classList.remove("activo");
-
-            });
+</footer>
 
 
-            /* Mostrar categoría seleccionada */
 
-            if (categoria === "mujer") {
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
 
-                mujer.classList.add("activo");
+<script>
 
-            }
+function mostrarCatalogo(tipo, boton) {
+
+    const catalogos =
+        document.querySelectorAll(".catalogo");
+
+    const botones =
+        document.querySelectorAll(".boton-categoria");
 
 
-            if (categoria === "hombre") {
+    catalogos.forEach(function(catalogo) {
 
-                hombre.classList.add("activo");
+        catalogo.classList.remove("activo");
 
-            }
+    });
 
 
-            /* Activar botón */
+    botones.forEach(function(botonActual) {
 
-            boton.classList.add("activo");
+        botonActual.classList.remove("activo");
 
-        }
+    });
 
-    </script>
+
+    document
+        .getElementById("catalogo-" + tipo)
+        .classList.add("activo");
+
+
+    boton.classList.add("activo");
+
+}
+
+</script>
 
 
 </body>

@@ -1,11 +1,4 @@
 /* =========================================================
-   BRAAMOD
-   DISEÑO DE LUJO
-   NEGRO + DORADO
-========================================================= */
-
-
-/* =========================================================
    CONFIGURACIÓN GENERAL
 ========================================================= */
 
@@ -29,18 +22,86 @@ html {
 
 body {
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
     background: #050505;
 
-    color: white;
+    color: #e8e8e8;
 
-    line-height: 1.6;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
 
 }
+
+
+a {
+
+    color: inherit;
+
+}
+
+
+::selection {
+
+    background: #d4af37;
+
+    color: #050505;
+
+}
+
+
+
+/* =========================================================
+   EFECTO DORADO
+========================================================= */
+
+.dorado {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #8d6417,
+            #d4af37,
+            #ffe89a,
+            #d4af37,
+            #9b711d
+        );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.cursiva {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+}
+
+
+@keyframes doradoBrillo {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+
+}
+
 
 
 /* =========================================================
@@ -49,11 +110,18 @@ body {
 
 header {
 
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
     width: 100%;
 
-    height: 82px;
+    height: 80px;
 
-    padding: 0 7%;
+    padding:
+        0 7%;
 
     display: flex;
 
@@ -61,50 +129,60 @@ header {
 
     justify-content: space-between;
 
-    position: sticky;
-
-    top: 0;
-
     z-index: 1000;
 
     background:
-        rgba(5, 5, 5, 0.96);
 
-    border-bottom:
-        1px solid
-        rgba(212, 175, 55, 0.3);
-
-    backdrop-filter: blur(12px);
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.96),
+            rgba(0,0,0,.75),
+            transparent
+        );
 
 }
 
-
-/* LOGO */
 
 .logo {
 
-    font-size: 27px;
+    text-decoration: none;
 
-    letter-spacing: 7px;
+    font-family:
+        "Great Vibes",
+        cursive;
 
-    font-weight: 600;
+    font-size: 36px;
 
-    color: white;
+    background:
 
-    text-shadow:
-        0 0 15px
-        rgba(212, 175, 55, 0.2);
+        linear-gradient(
+            90deg,
+            #9b711d,
+            #f6d86b,
+            #fff0a8,
+            #d4af37,
+            #9b711d
+        );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation:
+        doradoBrillo 5s linear infinite;
 
 }
 
-
-/* =========================================================
-   MENÚ
-========================================================= */
 
 nav {
 
     display: flex;
+
+    align-items: center;
 
     gap: 35px;
 
@@ -113,17 +191,18 @@ nav {
 
 nav a {
 
-    color: #d0d0d0;
+    position: relative;
 
     text-decoration: none;
 
-    font-size: 14px;
+    color: #d0d0d0;
 
-    letter-spacing: 1.5px;
+    font-size: 13px;
 
-    position: relative;
+    letter-spacing: 1px;
 
-    transition: 0.3s;
+    transition:
+        .3s ease;
 
 }
 
@@ -141,20 +220,17 @@ nav a::after {
 
     position: absolute;
 
+    bottom: -7px;
+
+    left: 0;
+
     width: 0;
 
     height: 1px;
 
     background: #d4af37;
 
-    left: 50%;
-
-    bottom: -8px;
-
-    transform:
-        translateX(-50%);
-
-    transition: 0.3s;
+    transition: .3s ease;
 
 }
 
@@ -166,57 +242,41 @@ nav a:hover::after {
 }
 
 
+
 /* =========================================================
-   PORTADA
+   INICIO
 ========================================================= */
 
-#inicio {
+.hero {
 
-    min-height:
-        calc(100vh - 82px);
+    position: relative;
+
+    min-height: 100vh;
 
     display: flex;
 
+    justify-content: center;
+
     align-items: center;
 
-    padding: 80px 10%;
-
-    position: relative;
+    text-align: center;
 
     overflow: hidden;
 
     background:
 
         radial-gradient(
-
-            ellipse at 75% 50%,
-
-            rgba(212,175,55,0.30),
-
-            rgba(212,175,55,0.12) 25%,
-
-            transparent 65%
-
+            circle at 50% 50%,
+            rgba(212,175,55,.12),
+            transparent 35%
         ),
 
-        linear-gradient(
-
-            110deg,
-
-            #020202,
-
-            #090909 50%,
-
-            #100e08
-
-        );
+        #050505;
 
 }
 
 
-/* LUZ */
-
-#inicio::before {
+.hero::before {
 
     content: "";
 
@@ -226,94 +286,66 @@ nav a:hover::after {
 
     height: 650px;
 
-    right: -80px;
-
-    top: 50%;
-
-    transform:
-        translateY(-50%);
-
     border-radius: 50%;
 
     background:
 
         radial-gradient(
-
             circle,
-
-            rgba(235,201,90,0.30),
-
-            rgba(212,175,55,0.12) 40%,
-
+            rgba(212,175,55,.15),
             transparent 70%
-
         );
 
     filter: blur(20px);
 
     animation:
-        luz 7s ease-in-out infinite;
+        respirar 6s ease-in-out infinite;
 
 }
 
 
-@keyframes luz {
+@keyframes respirar {
 
-    0% {
+    0%,
+    100% {
 
-        opacity: 0.6;
+        transform: scale(1);
 
-        transform:
-            translateY(-50%)
-            scale(0.95);
+        opacity: .5;
 
     }
 
     50% {
 
-        opacity: 1;
+        transform: scale(1.15);
 
-        transform:
-            translateY(-50%)
-            scale(1.05);
-
-    }
-
-    100% {
-
-        opacity: 0.6;
-
-        transform:
-            translateY(-50%)
-            scale(0.95);
+        opacity: .8;
 
     }
 
 }
 
-
-/* =========================================================
-   CONTENIDO PORTADA
-========================================================= */
 
 .contenido-inicio {
 
-    max-width: 700px;
-
     position: relative;
 
-    z-index: 5;
+    z-index: 2;
+
+    max-width: 800px;
+
+    padding: 20px;
 
 }
 
 
-.marca {
+.subtitulo {
 
-    color: #d4af37;
+    color: #c6a23a;
 
-    font-size: 13px;
+    letter-spacing: 5px;
 
-    letter-spacing: 8px;
+    font-size: 11px;
 
     margin-bottom: 25px;
 
@@ -321,41 +353,221 @@ nav a:hover::after {
 
 
 .contenido-inicio h1 {
+    font-size: clamp(55px, 8vw, 75px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin: 0;
+}
 
-    font-size:
-        clamp(50px, 6vw, 85px);
+.contenido-inicio h1 span {
+    display: block;
 
-    font-weight: 400;
+    font-family: "Great Vibes", cursive;
 
-    line-height: 1.05;
+    font-size: 1.15em;
 
-    margin-bottom: 30px;
+    line-height: 1.3;
+
+    padding-bottom: 10px;
+
+    margin-top: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8c6415,
+            #f3d05a,
+            #fff0a6,
+            #d4af37,
+            #9d741f
+        );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: doradoBrillo 5s linear infinite;
+}
+
+
+.texto-inicio {
+
+    max-width: 550px;
+
+    margin:
+        35px auto;
+
+    color: #aaa;
+
+    line-height: 1.8;
+
+    font-size: 14px;
 
 }
 
 
+.boton-dorado {
+
+    display: inline-block;
+
+    padding:
+        15px 35px;
+
+    border: 1px solid #c7a13a;
+
+    text-decoration: none;
+
+    color: #e0c25b;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition:
+        .4s ease;
+
+}
+
+
+.boton-dorado:hover {
+
+    background: #d4af37;
+
+    color: #050505;
+
+    box-shadow:
+        0 0 30px
+        rgba(212,175,55,.3);
+
+}
+
+
+
 /* =========================================================
-   DORADO
+   LUCES
 ========================================================= */
 
-.dorado {
+.luces {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: #d4af37;
+
+    filter: blur(80px);
+
+    opacity: .12;
+
+}
+
+
+.luz1 {
+
+    width: 250px;
+
+    height: 250px;
+
+    top: 15%;
+
+    left: 5%;
+
+}
+
+
+.luz2 {
+
+    width: 300px;
+
+    height: 300px;
+
+    bottom: 10%;
+
+    right: 5%;
+
+}
+
+
+.luz3 {
+
+    width: 180px;
+
+    height: 180px;
+
+    top: 45%;
+
+    right: 35%;
+
+}
+
+
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+section {
+
+    padding:
+        120px 7%;
+
+}
+
+
+.encabezado-seccion {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin:
+        0 auto 60px;
+
+}
+
+
+.mini-titulo {
+
+    color: #b68b2c;
+
+    letter-spacing: 4px;
+
+    font-size: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.titulo-seccion {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 60px;
+
+    font-weight: 400;
+
+    margin-bottom: 20px;
+
+}
+
+
+.titulo-seccion span {
 
     background:
 
         linear-gradient(
-
             90deg,
-
             #a87916,
-
             #f5d66a,
-
             #d4af37,
-
             #ffe38a,
-
             #b88620
-
         );
 
     background-size: 200% auto;
@@ -366,128 +578,26 @@ nav a:hover::after {
 
     -webkit-text-fill-color: transparent;
 
-    color: #d4af37;
-
     animation:
         doradoBrillo 5s linear infinite;
 
 }
 
 
-@keyframes doradoBrillo {
-
-    from {
-
-        background-position:
-            0% center;
-
-    }
-
-    to {
-
-        background-position:
-            200% center;
-
-    }
-
-}
-
-
-/* =========================================================
-   CURSIVA
-========================================================= */
-
-.cursiva {
-
-    font-family:
-        "Great Vibes",
-        "Brush Script MT",
-        cursive;
-
-    font-weight: 400;
-
-    font-style: normal;
-
-    letter-spacing: 1px;
-
-}
-
-
-.blanco {
-
-    color: white;
-
-}
-
-
-/* =========================================================
-   TEXTO PORTADA
-========================================================= */
-
-.contenido-inicio > p {
-
-    max-width: 540px;
-
-    color: #b5b5b5;
-
-    font-size: 16px;
-
-    line-height: 1.9;
-
-    margin-bottom: 40px;
-
-}
-
-
-/* =========================================================
-   SECCIÓN CATÁLOGO
-========================================================= */
-
-#productos {
-
-    padding: 120px 7%;
-
-    text-align: center;
-
-    background:
-
-        radial-gradient(
-
-            ellipse at top,
-
-            rgba(212,175,55,0.09),
-
-            transparent 50%
-
-        ),
-
-        #080808;
-
-}
-
-
-.titulo-seccion {
-
-    font-size: 40px;
-
-    font-weight: 400;
-
-    margin-bottom: 15px;
-
-}
-
-
-.subtitulo {
+.encabezado-seccion > p:last-child {
 
     color: #888;
 
-    margin-bottom: 45px;
+    font-size: 13px;
+
+    line-height: 1.7;
 
 }
 
 
+
 /* =========================================================
-   BOTONES MUJER / HOMBRE
+   CATEGORÍAS
 ========================================================= */
 
 .categorias {
@@ -496,79 +606,60 @@ nav a:hover::after {
 
     justify-content: center;
 
-    align-items: center;
-
     gap: 15px;
 
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 
 }
 
 
 .boton-categoria {
 
-    min-width: 150px;
+    padding:
+        14px 35px;
 
-    padding: 14px 35px;
+    background: transparent;
 
-    border: 1px solid #6d571c;
+    border: 1px solid #292929;
 
-    background:
-        rgba(212,175,55,0.04);
-
-    color: #aaa;
-
-    font-size: 13px;
-
-    letter-spacing: 3px;
-
-    text-transform: uppercase;
+    color: #777;
 
     cursor: pointer;
 
-    transition: 0.4s;
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    letter-spacing: 2px;
+
+    font-size: 11px;
+
+    transition:
+        .4s ease;
 
 }
 
 
-.boton-categoria:hover {
+.boton-categoria:hover,
+.boton-categoria.activo {
+
+    border-color: #d4af37;
 
     color: #d4af37;
 
-    border-color: #d4af37;
-
     box-shadow:
         0 0 20px
-        rgba(212,175,55,0.12);
+        rgba(212,175,55,.08);
 
 }
 
-
-.boton-categoria.activo {
-
-    color: #080808;
-
-    background: #d4af37;
-
-    border-color: #d4af37;
-
-    box-shadow:
-
-        0 0 25px
-        rgba(212,175,55,0.20);
-
-}
 
 
 /* =========================================================
-   CATÁLOGOS
+   CATÁLOGO
 ========================================================= */
 
 .catalogo {
-
-    max-width: 1250px;
-
-    margin: auto;
 
     display: none;
 
@@ -576,6 +667,10 @@ nav a:hover::after {
         repeat(4, 1fr);
 
     gap: 25px;
+
+    max-width: 1400px;
+
+    margin: auto;
 
 }
 
@@ -587,35 +682,22 @@ nav a:hover::after {
 }
 
 
+
 /* =========================================================
-   TARJETAS
+   PRODUCTOS
 ========================================================= */
 
 .producto {
 
+    padding: 15px;
+
     background:
+        rgba(255,255,255,.015);
 
-        linear-gradient(
-
-            145deg,
-
-            #151515,
-
-            #080808
-
-        );
-
-    border:
-        1px solid #252525;
-
-    padding: 18px;
-
-    text-align: left;
+    border: 1px solid #181818;
 
     transition:
-        transform 0.45s ease,
-        border-color 0.45s ease,
-        box-shadow 0.45s ease;
+        .4s ease;
 
 }
 
@@ -623,20 +705,21 @@ nav a:hover::after {
 .producto:hover {
 
     transform:
-        translateY(-8px);
+        translateY(-7px);
 
     border-color:
-        rgba(212,175,55,0.65);
+        rgba(212,175,55,.45);
 
     box-shadow:
 
-        0 18px 40px
-        rgba(0,0,0,0.65),
+        0 15px 40px
+        rgba(0,0,0,.4),
 
         0 0 25px
-        rgba(212,175,55,0.08);
+        rgba(212,175,55,.06);
 
 }
+
 
 
 /* =========================================================
@@ -647,34 +730,20 @@ nav a:hover::after {
 
     width: 100%;
 
-    height: 280px;
+    height: 300px;
 
     display: flex;
 
-    align-items: center;
-
     justify-content: center;
+
+    align-items: center;
 
     overflow: hidden;
 
-    margin-bottom: 20px;
-
     background:
+        #080808;
 
-        radial-gradient(
-
-            circle,
-
-            rgba(212,175,55,0.13),
-
-            transparent 65%
-
-        ),
-
-        #0b0b0b;
-
-    border:
-        1px solid #252525;
+    margin-bottom: 20px;
 
 }
 
@@ -687,10 +756,8 @@ nav a:hover::after {
 
     object-fit: contain;
 
-    display: block;
-
     transition:
-        transform 0.5s ease;
+        transform .5s ease;
 
 }
 
@@ -699,124 +766,228 @@ nav a:hover::after {
 .imagen-producto img {
 
     transform:
-        scale(1.06);
+        scale(1.05);
 
 }
 
 
+
 /* =========================================================
-   INFORMACIÓN PRODUCTO
+   NOMBRE DE LA LOCIÓN
 ========================================================= */
 
-.producto h3 {
+.nombre-locion {
 
-    font-size: 21px;
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 26px;
 
     font-weight: 400;
 
     margin-bottom: 8px;
 
+    background:
+
+        linear-gradient(
+            90deg,
+            #a87916,
+            #f5d66a,
+            #d4af37,
+            #ffe38a,
+            #b88620
+        );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation:
+        doradoBrillo 5s linear infinite;
+
 }
 
 
-.producto p {
 
-    color: #777;
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
+
+.descripcion-locion {
+
+    color: #999;
 
     font-size: 13px;
 
     line-height: 1.6;
 
+    min-height: 42px;
+
+    margin-bottom: 14px;
+
 }
+
+
+
+/* =========================================================
+   PRECIOS
+========================================================= */
+
+.precios {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.precio-anterior {
+
+    color: #777;
+
+    font-size: 13px;
+
+    text-decoration:
+        line-through;
+
+    text-decoration-thickness: 1px;
+
+}
+
+
+.precio-promocion {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #a87916,
+            #f5d66a,
+            #d4af37,
+            #ffe38a
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+
+/* =========================================================
+   NOSOTROS
+========================================================= */
+
+#nosotros {
+
+    background:
+        #080808;
+
+}
+
+
+.texto-nosotros {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.texto-nosotros p {
+
+    color: #999;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+
+}
+
+
+.texto-nosotros strong {
+
+    color: #d4af37;
+
+}
+
 
 
 /* =========================================================
    ELABORACIÓN
 ========================================================= */
 
-#elaboracion {
-
-    padding: 120px 12%;
-
-    text-align: center;
-
-    background: #050505;
-
-}
-
-
-#elaboracion > p {
-
-    max-width: 800px;
-
-    margin:
-        25px auto;
-
-    color: #888;
-
-    line-height: 1.9;
-
-}
-
-
-/* =========================================================
-   PROCESO
-========================================================= */
-
 .proceso {
-
-    max-width: 1100px;
-
-    margin:
-        70px auto 0;
 
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 25px;
+    gap: 30px;
+
+    max-width: 1100px;
+
+    margin: auto;
 
 }
 
 
 .paso {
 
+    text-align: center;
+
     padding: 35px 25px;
 
     border:
-        1px solid #252525;
+        1px solid #181818;
 
-    background:
-        linear-gradient(
-            145deg,
-            #111,
-            #070707
-        );
-
-    transition: 0.4s;
+    transition:
+        .4s ease;
 
 }
 
 
 .paso:hover {
 
-    transform:
-        translateY(-7px);
-
     border-color:
-        rgba(212,175,55,0.55);
+        rgba(212,175,55,.4);
+
+    transform:
+        translateY(-5px);
 
 }
 
 
-.numero {
+.paso > span {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 40px;
 
     color: #d4af37;
-
-    font-size: 13px;
-
-    letter-spacing: 3px;
 
 }
 
@@ -826,149 +997,27 @@ nav a:hover::after {
     margin:
         15px 0;
 
-    font-size: 25px;
+    font-family:
+        "Great Vibes",
+        cursive;
 
-    font-weight: 400;
+    font-size: 30px;
+
+    color: #d4af37;
 
 }
 
 
 .paso p {
 
-    color: #777;
+    color: #888;
 
-    font-size: 14px;
-
-}
-
-
-/* =========================================================
-   NOTAS
-========================================================= */
-
-#notas {
-
-    padding: 120px 10%;
-
-    text-align: center;
-
-    background:
-
-        radial-gradient(
-
-            ellipse at center,
-
-            rgba(212,175,55,0.07),
-
-            transparent 60%
-
-        ),
-
-        #090909;
-
-}
-
-
-.notas-contenedor {
-
-    max-width: 1100px;
-
-    margin:
-        60px auto 0;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 25px;
-
-}
-
-
-.nota {
-
-    padding: 35px 25px;
-
-    border:
-        1px solid #252525;
-
-    background: #080808;
-
-    transition: 0.4s;
-
-}
-
-
-.nota:hover {
-
-    border-color:
-        rgba(212,175,55,0.5);
-
-    transform:
-        translateY(-7px);
-
-}
-
-
-.nota > span {
-
-    display: block;
-
-    font-size: 27px;
-
-    margin-bottom: 15px;
-
-}
-
-
-.nota p {
-
-    color: #777;
-
-    font-size: 14px;
+    font-size: 13px;
 
     line-height: 1.8;
 
 }
 
-
-/* =========================================================
-   NOSOTROS
-========================================================= */
-
-#nosotros {
-
-    padding: 120px 15%;
-
-    text-align: center;
-
-    background: #050505;
-
-}
-
-
-#nosotros p {
-
-    max-width: 750px;
-
-    margin:
-        25px auto;
-
-    color: #888;
-
-    line-height: 1.9;
-
-}
-
-
-.frase-final {
-
-    font-size: 34px;
-
-    margin-top: 50px !important;
-
-}
 
 
 /* =========================================================
@@ -977,346 +1026,11 @@ nav a:hover::after {
 
 #contacto {
 
-    padding: 120px 10%;
-
-    text-align: center;
-
-    background: #101010;
+    background:
+        #080808;
 
 }
 
-
-#contacto > p {
-
-    color: #888;
-
-    margin:
-        25px auto 35px;
-
-}
-
-
-.contactos {
-
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 20px;
-
-}
-
-
-.contactos p {
-
-    padding:
-        15px 25px;
-
-    border:
-        1px solid #292929;
-
-    color: #888;
-
-    transition: 0.3s;
-
-}
-
-
-.contactos p:hover {
-
-    border-color:
-        #d4af37;
-
-    color: #d4af37;
-
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer {
-
-    padding: 40px;
-
-    text-align: center;
-
-    background: #020202;
-
-    border-top:
-        1px solid
-        rgba(212,175,55,0.2);
-
-    color: #666;
-
-    font-size: 13px;
-
-}
-
-
-footer p:last-child {
-
-    margin-top: 8px;
-
-}
-
-
-/* =========================================================
-   RESPONSIVE - TABLET
-========================================================= */
-
-@media (max-width: 1050px) {
-
-    .catalogo {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE - CELULAR
-   3 PERFUMES POR FILA
-========================================================= */
-
-@media (max-width: 800px) {
-
-    header {
-        height: auto;
-        padding: 25px 6%;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    nav {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 12px;
-    }
-
-
-    #inicio {
-        padding: 80px 8%;
-    }
-
-
-    .contenido-inicio h1 {
-        font-size: 50px;
-    }
-
-
-    .titulo-seccion {
-        font-size: 34px;
-    }
-
-
-    /* BOTONES MUJER / HOMBRE */
-
-    .categorias {
-        gap: 10px;
-    }
-
-    .boton-categoria {
-        min-width: 130px;
-        padding: 13px 20px;
-    }
-
-
-    /* =====================================================
-       CATÁLOGO EN 3 COLUMNAS
-    ====================================================== */
-
-    .catalogo {
-        display: none;
-
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
-        gap: 12px;
-
-        width: 100%;
-    }
-
-
-    .catalogo.activo {
-        display: grid;
-    }
-
-
-    /* TARJETAS */
-
-    .producto {
-        width: 100%;
-        padding: 8px;
-    }
-
-
-    /* IMÁGENES */
-
-    .imagen-producto {
-        width: 100%;
-        height: 180px;
-        margin-bottom: 10px;
-    }
-
-
-    .imagen-producto img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-
-    /* NOMBRE DEL PERFUME */
-
-    .producto h3 {
-        font-size: 15px;
-        line-height: 1.2;
-        margin-bottom: 5px;
-    }
-
-
-    /* DESCRIPCIÓN */
-
-    .producto p {
-        font-size: 10px;
-        line-height: 1.4;
-    }
-
-
-    /* =====================================================
-       RESTO DE LA PÁGINA
-    ====================================================== */
-
-    .proceso {
-        grid-template-columns: 1fr;
-    }
-
-
-    .notas-contenedor {
-        grid-template-columns: 1fr;
-    }
-
-
-    #elaboracion,
-    #notas,
-    #nosotros,
-    #contacto {
-        padding: 90px 7%;
-    }
-
-
-    .frase-final {
-        font-size: 28px;
-    }
-
-}
-
-
-/* =========================================================
-   CELULARES PEQUEÑOS
-   TAMBIÉN 3 PERFUMES POR FILA
-========================================================= */
-
-@media (max-width: 500px) {
-
-    .catalogo {
-
-        display: none;
-
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
-        gap: 7px;
-
-    }
-
-
-    .catalogo.activo {
-        display: grid;
-    }
-
-
-    .producto {
-        padding: 6px;
-    }
-
-
-    .imagen-producto {
-
-        height: 145px;
-
-        margin-bottom: 8px;
-
-    }
-
-
-    .producto h3 {
-
-        font-size: 13px;
-
-        line-height: 1.1;
-
-    }
-
-
-    .producto p {
-
-        font-size: 9px;
-
-        line-height: 1.3;
-
-    }
-
-
-    .categorias {
-
-        flex-direction: row;
-
-        gap: 8px;
-
-    }
-
-
-    .boton-categoria {
-
-        width: auto;
-
-        min-width: 120px;
-
-        padding: 12px 15px;
-
-        font-size: 11px;
-
-    }
-
-
-    .contenido-inicio h1 {
-
-        font-size: 44px;
-
-    }
-
-
-    .logo {
-
-        font-size: 23px;
-
-    }
-
-}
-
-/* =========================================================
-   ENLACES DE CONTACTO
-========================================================= */
 
 .contactos {
 
@@ -1339,7 +1053,8 @@ footer p:last-child {
 
     min-width: 230px;
 
-    padding: 18px 28px;
+    padding:
+        18px 28px;
 
     display: flex;
 
@@ -1351,28 +1066,34 @@ footer p:last-child {
 
     text-decoration: none;
 
-    border: 1px solid #292929;
+    border:
+        1px solid #292929;
 
-    background: #080808;
+    background:
+        #080808;
 
     color: #888;
 
-    transition: all 0.4s ease;
+    transition:
+        all .4s ease;
 
 }
 
 
 .contacto-link:hover {
 
-    transform: translateY(-6px);
+    transform:
+        translateY(-6px);
 
-    border-color: #d4af37;
+    border-color:
+        #d4af37;
 
-    color: #d4af37;
+    color:
+        #d4af37;
 
     box-shadow:
         0 0 25px
-        rgba(212,175,55,0.15);
+        rgba(212,175,55,.15);
 
 }
 
@@ -1388,19 +1109,12 @@ footer p:last-child {
     background:
 
         linear-gradient(
-
             90deg,
-
             #a87916,
-
             #f5d66a,
-
             #d4af37,
-
             #ffe38a,
-
             #b88620
-
         );
 
     -webkit-background-clip: text;
@@ -1408,5 +1122,357 @@ footer p:last-child {
     background-clip: text;
 
     -webkit-text-fill-color: transparent;
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding:
+        60px 7%;
+
+    text-align: center;
+
+    border-top:
+        1px solid #171717;
+
+}
+
+
+.logo-footer {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 45px;
+
+    color: #d4af37;
+
+    margin-bottom: 15px;
+
+}
+
+
+footer p {
+
+    color: #666;
+
+    font-size: 12px;
+
+}
+
+
+.copyright {
+
+    margin-top: 25px;
+
+    font-size: 10px;
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .catalogo {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 20px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE - CELULAR
+   3 PERFUMES POR FILA
+========================================================= */
+
+@media (max-width: 800px) {
+
+    header {
+
+        height: auto;
+
+        padding:
+            20px 6%;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    nav {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    nav a {
+
+        font-size: 11px;
+
+    }
+
+
+    #inicio {
+
+        padding:
+            80px 8%;
+
+    }
+
+
+    .contenido-inicio h1 {
+
+        font-size: 50px;
+
+    }
+
+
+    .titulo-seccion {
+
+        font-size: 45px;
+
+    }
+
+
+    .catalogo {
+
+        display: none;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 12px;
+
+        width: 100%;
+
+    }
+
+
+    .catalogo.activo {
+
+        display: grid;
+
+    }
+
+
+    .producto {
+
+        width: 100%;
+
+        padding: 8px;
+
+    }
+
+
+    .imagen-producto {
+
+        height: 180px;
+
+    }
+
+
+    .nombre-locion {
+
+        font-size: 20px;
+
+    }
+
+
+    .descripcion-locion {
+
+        font-size: 10px;
+
+        min-height: 45px;
+
+    }
+
+
+    .precio-anterior {
+
+        font-size: 9px;
+
+    }
+
+
+    .precio-promocion {
+
+        font-size: 13px;
+
+    }
+
+
+    .precios {
+
+        gap: 5px;
+
+    }
+
+
+    .proceso {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    #elaboracion,
+    #nosotros,
+    #contacto {
+
+        padding:
+            90px 7%;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+   3 PERFUMES POR FILA
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .catalogo {
+
+        display: none;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 7px;
+
+    }
+
+
+    .catalogo.activo {
+
+        display: grid;
+
+    }
+
+
+    .producto {
+
+        padding: 6px;
+
+    }
+
+
+    .imagen-producto {
+
+        height: 145px;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .nombre-locion {
+
+        font-size: 17px;
+
+    }
+
+
+    .descripcion-locion {
+
+        font-size: 9px;
+
+        line-height: 1.35;
+
+        min-height: 48px;
+
+    }
+
+
+    .precio-anterior {
+
+        font-size: 8px;
+
+    }
+
+
+    .precio-promocion {
+
+        font-size: 12px;
+
+    }
+
+
+    .precios {
+
+        gap: 5px;
+
+    }
+
+
+    .categorias {
+
+        flex-direction: row;
+
+        gap: 8px;
+
+    }
+
+
+    .boton-categoria {
+
+        min-width: 120px;
+
+        padding:
+            12px 15px;
+
+        font-size: 10px;
+
+    }
+
+
+    .contenido-inicio h1 {
+
+        font-size: 44px;
+
+    }
+
+
+    .logo {
+
+        font-size: 30px;
+
+    }
+
+
+    nav {
+
+        gap: 10px;
+
+    }
 
 }
