@@ -1,32 +1,38 @@
 /* =========================================================
    BRAAMOD
-   NEGRO + DORADO + LUJO
+   DISEÑO DE LUJO
+   NEGRO + DORADO
 ========================================================= */
 
 
-/* ==============================
-   CONFIGURACIÓN
-============================== */
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
 
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
 
 body {
 
-    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-
-    font-size: 18px;
-
-    font-weight: 400;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
     background: #050505;
 
@@ -37,26 +43,9 @@ body {
 }
 
 
-/* ==============================
-   UTILITARIA (mayúsculas, tracking)
-============================== */
-
-.logo,
-nav a,
-.marca,
-.boton,
-button,
-.numero,
-.contacto-etiqueta {
-
-    font-family: "Cinzel", Georgia, serif;
-
-}
-
-
-/* ==============================
+/* =========================================================
    HEADER
-============================== */
+========================================================= */
 
 header {
 
@@ -78,100 +67,19 @@ header {
 
     z-index: 1000;
 
-    background: rgba(5, 5, 5, 0.96);
+    background:
+        rgba(5, 5, 5, 0.96);
 
     border-bottom:
-        1px solid rgba(212, 175, 55, 0.3);
+        1px solid
+        rgba(212, 175, 55, 0.3);
 
     backdrop-filter: blur(12px);
 
 }
 
-.activo {
-    font-size: 18px;
-       background:
 
-        linear-gradient(
-
-            90deg,
-
-            #eddfba,
-
-            #f5d66a,
-
-            #d4af37,
-
-            #ffe38a,
-
-            #b88620
-
-        );
-
-    background-size: 200% auto;
-
-    -webkit-background-clip: text;
-
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    color: #000000;
-
-    animation:
-        doradoBrillo 3s linear infinite;
-}
-
-.activo2{
-    font-size: 18px;
-      background:
-
-        linear-gradient(
-
-            90deg,
-
-            #eddfba,
-
-            #f5d66a,
-
-            #d4af37,
-
-            #ffe38a,
-
-            #b88620
-
-        );
-
-    background-size: 200% auto;
-
-    -webkit-background-clip: text;
-
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    color: #000000;
-
-    animation:
-        doradoBrillo 3s linear infinite;
-}
-
-.activo3{
-    color: #ffffff;
-    font-size: 18px;
-      animation:
-        doradoBrillo 5s linear infinite;
-}
-
-
-.activo4{
-    color: #fffefb;
-    font-size: 18px;
-      animation:doradoBrillo 5s linear infinite;
-}
-
-/* ==============================
-   LOGO
-============================== */
+/* LOGO */
 
 .logo {
 
@@ -181,20 +89,18 @@ header {
 
     font-weight: 600;
 
-    color: #d4af37;
+    color: white;
 
     text-shadow:
-
-        0 0 10px rgba(255,255,255,0.1),
-
-        0 0 20px rgba(212,175,55,0.2);
+        0 0 15px
+        rgba(212, 175, 55, 0.2);
 
 }
 
 
-/* ==============================
+/* =========================================================
    MENÚ
-============================== */
+========================================================= */
 
 nav {
 
@@ -245,7 +151,8 @@ nav a::after {
 
     bottom: -8px;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     transition: 0.3s;
 
@@ -259,9 +166,9 @@ nav a:hover::after {
 }
 
 
-/* ==============================
-   INICIO
-============================== */
+/* =========================================================
+   PORTADA
+========================================================= */
 
 #inicio {
 
@@ -307,9 +214,7 @@ nav a:hover::after {
 }
 
 
-/* ==============================
-   LUZ DORADA
-============================== */
+/* LUZ */
 
 #inicio::before {
 
@@ -346,14 +251,11 @@ nav a:hover::after {
 
     filter: blur(20px);
 
-    animation: luz 7s ease-in-out infinite;
+    animation:
+        luz 7s ease-in-out infinite;
 
 }
 
-
-/* ==============================
-   ANIMACIÓN DE LUZ
-============================== */
 
 @keyframes luz {
 
@@ -390,9 +292,9 @@ nav a:hover::after {
 }
 
 
-/* ==============================
-   CONTENIDO
-============================== */
+/* =========================================================
+   CONTENIDO PORTADA
+========================================================= */
 
 .contenido-inicio {
 
@@ -400,19 +302,14 @@ nav a:hover::after {
 
     position: relative;
 
-    z-index: 5
-
+    z-index: 5;
 
 }
 
 
-/* ==============================
-   MARCA
-============================== */
-
 .marca {
 
-    color: #cc9e05;
+    color: #d4af37;
 
     font-size: 13px;
 
@@ -422,10 +319,6 @@ nav a:hover::after {
 
 }
 
-
-/* ==============================
-   TÍTULO
-============================== */
 
 .contenido-inicio h1 {
 
@@ -441,9 +334,9 @@ nav a:hover::after {
 }
 
 
-/* ==============================
+/* =========================================================
    DORADO
-============================== */
+========================================================= */
 
 .dorado {
 
@@ -453,7 +346,7 @@ nav a:hover::after {
 
             90deg,
 
-            #eddfba,
+            #a87916,
 
             #f5d66a,
 
@@ -473,10 +366,10 @@ nav a:hover::after {
 
     -webkit-text-fill-color: transparent;
 
-    color: #000000;
+    color: #d4af37;
 
     animation:
-        doradoBrillo 3s linear infinite;
+        doradoBrillo 5s linear infinite;
 
 }
 
@@ -500,9 +393,9 @@ nav a:hover::after {
 }
 
 
-/* ==============================
+/* =========================================================
    CURSIVA
-============================== */
+========================================================= */
 
 .cursiva {
 
@@ -511,18 +404,14 @@ nav a:hover::after {
         "Brush Script MT",
         cursive;
 
-    font-weight: 400px;
+    font-weight: 400;
 
     font-style: normal;
 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 
 }
 
-
-/* ==============================
-   BLANCO
-============================== */
 
 .blanco {
 
@@ -531,9 +420,9 @@ nav a:hover::after {
 }
 
 
-/* ==============================
-   TEXTO PRINCIPAL
-============================== */
+/* =========================================================
+   TEXTO PORTADA
+========================================================= */
 
 .contenido-inicio > p {
 
@@ -541,7 +430,7 @@ nav a:hover::after {
 
     color: #b5b5b5;
 
-    font-size: 19px;
+    font-size: 16px;
 
     line-height: 1.9;
 
@@ -550,63 +439,13 @@ nav a:hover::after {
 }
 
 
-/* ==============================
-   BOTÓN
-============================== */
-
-.boton,
-button {
-
-    display: inline-block;
-
-    padding: 15px 35px;
-
-    border: 1px solid #e8ae03;
-
-    background:
-
-        rgba(212,175,55,0.08);
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 13px;
-
-    letter-spacing: 2px;
-
-    cursor: pointer;
-
-    transition: 0.4s;
-
-}
-
-
-.boton:hover,
-button:hover {
-
-    background: #d4af37;
-
-    color: #050505;
-
-    box-shadow:
-
-        0 0 30px
-        rgba(212,175,55,0.35);
-
-    transform:
-        translateY(-3px);
-
-}
-
-
-/* ==============================
-   PRODUCTOS
-============================== */
+/* =========================================================
+   SECCIÓN CATÁLOGO
+========================================================= */
 
 #productos {
 
-    padding: 120px 8%;
+    padding: 120px 7%;
 
     text-align: center;
 
@@ -627,15 +466,11 @@ button:hover {
 }
 
 
-/* ==============================
-   TÍTULOS
-============================== */
-
 .titulo-seccion {
 
-    font-size: clamp(34px, 4vw, 46px);
+    font-size: 40px;
 
-    font-weight: 500;
+    font-weight: 400;
 
     margin-bottom: 15px;
 
@@ -644,40 +479,117 @@ button:hover {
 
 .subtitulo {
 
-    color: #999;
+    color: #888;
 
-    font-size: 19px;
-
-    font-style: italic;
-
-    margin-bottom: 60px;
+    margin-bottom: 45px;
 
 }
 
 
-/* ==============================
-   PRODUCTOS GRID
-============================== */
+/* =========================================================
+   BOTONES MUJER / HOMBRE
+========================================================= */
 
-.productos {
+.categorias {
 
-    max-width: 1200px;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 55px;
+
+}
+
+
+.boton-categoria {
+
+    min-width: 150px;
+
+    padding: 14px 35px;
+
+    border: 1px solid #6d571c;
+
+    background:
+        rgba(212,175,55,0.04);
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+
+}
+
+
+.boton-categoria:hover {
+
+    color: #d4af37;
+
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 20px
+        rgba(212,175,55,0.12);
+
+}
+
+
+.boton-categoria.activo {
+
+    color: #080808;
+
+    background: #d4af37;
+
+    border-color: #d4af37;
+
+    box-shadow:
+
+        0 0 25px
+        rgba(212,175,55,0.20);
+
+}
+
+
+/* =========================================================
+   CATÁLOGOS
+========================================================= */
+
+.catalogo {
+
+    max-width: 1250px;
 
     margin: auto;
 
-    display: grid;
+    display: none;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(4, 1fr);
 
-    gap: 30px;
+    gap: 25px;
 
 }
 
 
-/* ==============================
+.catalogo.activo {
+
+    display: grid;
+
+}
+
+
+/* =========================================================
    TARJETAS
-============================== */
+========================================================= */
 
 .producto {
 
@@ -696,11 +608,14 @@ button:hover {
     border:
         1px solid #252525;
 
-    padding: 25px;
+    padding: 18px;
 
     text-align: left;
 
-    transition: 0.4s;
+    transition:
+        transform 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
 
 }
 
@@ -708,15 +623,15 @@ button:hover {
 .producto:hover {
 
     transform:
-        translateY(-10px);
+        translateY(-8px);
 
     border-color:
-        rgba(212,175,55,0.7);
+        rgba(212,175,55,0.65);
 
     box-shadow:
 
-        0 20px 40px
-        rgba(0,0,0,0.6),
+        0 18px 40px
+        rgba(0,0,0,0.65),
 
         0 0 25px
         rgba(212,175,55,0.08);
@@ -724,15 +639,15 @@ button:hover {
 }
 
 
-/* ==============================
-   IMAGEN
-============================== */
+/* =========================================================
+   IMÁGENES
+========================================================= */
 
 .imagen-producto {
 
     width: 100%;
 
-    height: 300px;
+    height: 280px;
 
     display: flex;
 
@@ -740,9 +655,9 @@ button:hover {
 
     justify-content: center;
 
-    margin-bottom: 25px;
-
     overflow: hidden;
+
+    margin-bottom: 20px;
 
     background:
 
@@ -750,9 +665,9 @@ button:hover {
 
             circle,
 
-            rgba(212,175,55,0.12),
+            rgba(212,175,55,0.13),
 
-            transparent 60%
+            transparent 65%
 
         ),
 
@@ -780,7 +695,8 @@ button:hover {
 }
 
 
-.imagen-producto:hover img {
+.producto:hover
+.imagen-producto img {
 
     transform:
         scale(1.06);
@@ -788,200 +704,209 @@ button:hover {
 }
 
 
-/* ==============================
-   INFORMACIÓN
-============================== */
+/* =========================================================
+   INFORMACIÓN PRODUCTO
+========================================================= */
 
 .producto h3 {
 
-    font-size: 20px;
+    font-size: 21px;
 
     font-weight: 400;
 
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
 }
 
 
 .producto p {
 
-    color: #999;
+    color: #777;
 
-    font-size: 17px;
+    font-size: 13px;
 
-    margin-bottom: 20px;
-
-}
-
-
-.precio {
-
-    display: block;
-
-    color: #d4af37;
-
-    font-size: 20px;
-
-    margin-bottom: 20px;
+    line-height: 1.6;
 
 }
 
 
-/* ==============================
+/* =========================================================
    ELABORACIÓN
-============================== */
+========================================================= */
 
 #elaboracion {
 
-    padding: 130px 15% 120px;
+    padding: 120px 12%;
 
     text-align: center;
 
-    background: #070707;
-
-    border-top:
-        1px solid rgba(212,175,55,0.08);
+    background: #050505;
 
 }
 
 
 #elaboracion > p {
 
-    max-width: 700px;
+    max-width: 800px;
 
-    margin: 0 auto 22px;
+    margin:
+        25px auto;
 
-    color: #999;
-
-    font-size: 18px;
+    color: #888;
 
     line-height: 1.9;
 
 }
 
 
-/* ==============================
-   PROCESO / PASOS
-============================== */
+/* =========================================================
+   PROCESO
+========================================================= */
 
 .proceso {
 
     max-width: 1100px;
 
-    margin: 70px auto 0;
+    margin:
+        70px auto 0;
 
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 50px;
-
-    text-align: left;
+    gap: 25px;
 
 }
 
 
 .paso {
 
-    position: relative;
+    padding: 35px 25px;
 
-    padding-top: 10px;
+    border:
+        1px solid #252525;
 
-    border-top:
-        1px solid rgba(212,175,55,0.25);
+    background:
+        linear-gradient(
+            145deg,
+            #111,
+            #070707
+        );
+
+    transition: 0.4s;
+
+}
+
+
+.paso:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(212,175,55,0.55);
 
 }
 
 
 .numero {
 
-    display: block;
+    color: #d4af37;
 
-    font-size: 46px;
+    font-size: 13px;
 
-    letter-spacing: 1px;
-
-    color: transparent;
-
-    -webkit-text-stroke:
-        1px rgba(212,175,55,0.55);
-
-    margin-bottom: 18px;
+    letter-spacing: 3px;
 
 }
 
 
 .paso h3 {
 
-    font-size: 21px;
+    margin:
+        15px 0;
 
-    font-weight: 500;
+    font-size: 25px;
 
-    margin-bottom: 10px;
+    font-weight: 400;
 
 }
 
 
 .paso p {
 
-    color: #909090;
+    color: #777;
 
-    font-size: 16px;
-
-    line-height: 1.8;
+    font-size: 14px;
 
 }
 
 
-/* ==============================
-   NOTAS OLFATIVAS
-============================== */
+/* =========================================================
+   NOTAS
+========================================================= */
 
 #notas {
 
-    padding: 120px 8%;
+    padding: 120px 10%;
 
     text-align: center;
 
     background:
+
         radial-gradient(
-            ellipse at bottom,
+
+            ellipse at center,
+
             rgba(212,175,55,0.07),
-            transparent 55%
+
+            transparent 60%
+
         ),
-        #050505;
+
+        #090909;
 
 }
 
 
 .notas-contenedor {
 
-    max-width: 1000px;
+    max-width: 1100px;
 
-    margin: 60px auto 0;
+    margin:
+        60px auto 0;
 
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
+    gap: 25px;
+
 }
 
 
 .nota {
 
-    padding: 0 40px;
+    padding: 35px 25px;
 
-    border-left:
-        1px solid rgba(212,175,55,0.18);
+    border:
+        1px solid #252525;
+
+    background: #080808;
+
+    transition: 0.4s;
 
 }
 
 
-.nota:first-child {
+.nota:hover {
 
-    border-left: none;
+    border-color:
+        rgba(212,175,55,0.5);
+
+    transform:
+        translateY(-7px);
 
 }
 
@@ -990,27 +915,27 @@ button:hover {
 
     display: block;
 
-    font-size: 24px;
+    font-size: 27px;
 
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 
 }
 
 
 .nota p {
 
-    color: #909090;
+    color: #777;
 
-    font-size: 16px;
+    font-size: 14px;
 
     line-height: 1.8;
 
 }
 
 
-/* ==============================
+/* =========================================================
    NOSOTROS
-============================== */
+========================================================= */
 
 #nosotros {
 
@@ -1025,13 +950,12 @@ button:hover {
 
 #nosotros p {
 
-    max-width: 700px;
+    max-width: 750px;
 
-    margin: 30px auto 0;
+    margin:
+        25px auto;
 
-    color: #8c8c8c;
-
-    font-size: 18px;
+    color: #888;
 
     line-height: 1.9;
 
@@ -1040,30 +964,20 @@ button:hover {
 
 .frase-final {
 
+    font-size: 34px;
+
     margin-top: 50px !important;
 
-    padding-top: 40px;
-
-    border-top:
-        1px solid rgba(212,175,55,0.2);
-
 }
 
 
-.frase-final .dorado {
-
-    font-size: 26px;
-
-}
-
-
-/* ==============================
+/* =========================================================
    CONTACTO
-============================== */
+========================================================= */
 
 #contacto {
 
-    padding: 120px 15%;
+    padding: 120px 10%;
 
     text-align: center;
 
@@ -1074,76 +988,55 @@ button:hover {
 
 #contacto > p {
 
-    color: #999;
-
-    font-size: 18px;
+    color: #888;
 
     margin:
-        25px 0 55px;
+        25px auto 35px;
 
 }
 
 
 .contactos {
 
-    max-width: 640px;
-
-    margin: 0 auto;
-
     display: flex;
 
     justify-content: center;
 
-    gap: 60px;
+    flex-wrap: wrap;
+
+    gap: 20px;
 
 }
 
 
-.contacto-item {
+.contactos p {
 
-    display: flex;
+    padding:
+        15px 25px;
 
-    flex-direction: column;
+    border:
+        1px solid #292929;
 
-    align-items: center;
-
-    gap: 10px;
-
-}
-
-
-.contacto-etiqueta {
-
-    font-size: 12px;
-
-    letter-spacing: 2.5px;
-
-    color: #d4af37;
-
-}
-
-
-.contacto-valor {
-
-    color: #ccc;
-
-    font-size: 16px;
+    color: #888;
 
     transition: 0.3s;
 
 }
 
 
-.contacto-item:hover .contacto-valor {
+.contactos p:hover {
 
-    color: #f5d66a;
+    border-color:
+        #d4af37;
+
+    color: #d4af37;
 
 }
 
 
-/* ==============================
+/* =========================================================
    FOOTER
-============================== */
+========================================================= */
 
 footer {
 
@@ -1171,11 +1064,28 @@ footer p:last-child {
 }
 
 
-/* ==============================
-   RESPONSIVE
-============================== */
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .catalogo {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULAR
+========================================================= */
 
 @media (max-width: 800px) {
+
 
     header {
 
@@ -1193,11 +1103,18 @@ footer p:last-child {
 
     nav {
 
-        gap: 18px;
+        gap: 15px;
 
         flex-wrap: wrap;
 
         justify-content: center;
+
+    }
+
+
+    nav a {
+
+        font-size: 12px;
 
     }
 
@@ -1217,20 +1134,57 @@ footer p:last-child {
     }
 
 
-    .productos {
+    .titulo-seccion {
 
-        grid-template-columns: 1fr;
+        font-size: 34px;
 
     }
 
 
-    #nosotros,
-    #contacto,
-    #elaboracion,
-    #notas {
+    .categorias {
+
+        gap: 10px;
+
+    }
+
+
+    .boton-categoria {
+
+        min-width: 130px;
 
         padding:
-            90px 8%;
+            13px 20px;
+
+    }
+
+
+    .catalogo {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+
+    .imagen-producto {
+
+        height: 230px;
+
+    }
+
+
+    .producto {
+
+        padding: 12px;
+
+    }
+
+
+    .producto h3 {
+
+        font-size: 18px;
 
     }
 
@@ -1239,8 +1193,6 @@ footer p:last-child {
 
         grid-template-columns: 1fr;
 
-        gap: 40px;
-
     }
 
 
@@ -1248,38 +1200,172 @@ footer p:last-child {
 
         grid-template-columns: 1fr;
 
-        gap: 40px;
+    }
+
+
+    #elaboracion,
+    #notas,
+    #nosotros,
+    #contacto {
+
+        padding:
+            90px 7%;
 
     }
 
 
-    .nota {
+    .frase-final {
 
-        border-left: none;
+        font-size: 28px;
 
-        border-top:
-            1px solid rgba(212,175,55,0.18);
+    }
 
-        padding: 30px 10px 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 500px) {
+
+
+    .catalogo {
+
+        grid-template-columns: 1fr;
 
     }
 
 
-    .nota:first-child {
+    .imagen-producto {
 
-        border-top: none;
-
-        padding-top: 0;
+        height: 300px;
 
     }
 
 
-    .contactos {
+    .categorias {
 
         flex-direction: column;
 
-        gap: 30px;
+    }
+
+
+    .boton-categoria {
+
+        width: 200px;
 
     }
+
+
+    .contenido-inicio h1 {
+
+        font-size: 44px;
+
+    }
+
+
+    .logo {
+
+        font-size: 23px;
+
+    }
+
+}
+
+/* =========================================================
+   ENLACES DE CONTACTO
+========================================================= */
+
+.contactos {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-top: 40px;
+
+}
+
+
+.contacto-link {
+
+    min-width: 230px;
+
+    padding: 18px 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    border: 1px solid #292929;
+
+    background: #080808;
+
+    color: #888;
+
+    transition: all 0.4s ease;
+
+}
+
+
+.contacto-link:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #d4af37;
+
+    color: #d4af37;
+
+    box-shadow:
+        0 0 25px
+        rgba(212,175,55,0.15);
+
+}
+
+
+.contacto-icono {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 30px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #a87916,
+
+            #f5d66a,
+
+            #d4af37,
+
+            #ffe38a,
+
+            #b88620
+
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
 
 }

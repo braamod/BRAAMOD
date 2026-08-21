@@ -3,29 +3,20 @@
 
 <head>
 
-    <!-- =====================================================
-         CONFIGURACIÓN BÁSICA
-    ====================================================== -->
-
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <!-- =====================================================
-         INFORMACIÓN PARA GOOGLE
-    ====================================================== -->
 
     <title>BRAAMOD | Perfumes y Fragancias</title>
 
     <meta
         name="description"
-        content="BRAAMOD es una marca de perfumes y fragancias preparados con aceites aromáticos. Descubre nuestra esencia, conoce nuestras fragancias y la filosofía detrás de cada creación."
+        content="BRAAMOD es una marca de perfumes y fragancias preparados con aceites aromáticos. Descubre nuestra colección de fragancias para mujer y hombre."
     >
 
     <meta
         name="keywords"
-        content="BRAAMOD, perfumes, fragancias, perfumería, aceites aromáticos, perfumes con aceites"
+        content="BRAAMOD, perfumes, fragancias, perfumería, perfumes mujer, perfumes hombre, aceites aromáticos"
     >
 
     <meta
@@ -39,9 +30,7 @@
     >
 
 
-    <!-- =====================================================
-         FUENTE CALIGRÁFICA
-    ====================================================== -->
+    <!-- FUENTE CALIGRÁFICA -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -52,14 +41,12 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cinzel:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
         rel="stylesheet"
     >
 
 
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
+    <!-- CSS -->
 
     <link
         rel="stylesheet"
@@ -73,7 +60,7 @@
 
 
     <!-- =====================================================
-         ENCABEZADO
+         HEADER
     ====================================================== -->
 
     <header>
@@ -112,13 +99,12 @@
 
 
     <!-- =====================================================
-         PORTADA
+         INICIO
     ====================================================== -->
 
     <section id="inicio">
 
         <div class="contenido-inicio">
-
 
             <div class="marca">
                 BRAAMOD
@@ -161,12 +147,6 @@
 
             </p>
 
-
-            <a href="#productos" class="boton">
-                Descubrir fragancias
-            </a>
-
-
         </div>
 
     </section>
@@ -174,7 +154,7 @@
 
 
     <!-- =====================================================
-         NUESTRAS FRAGANCIAS
+         CATÁLOGO
     ====================================================== -->
 
     <section id="productos">
@@ -183,7 +163,7 @@
         <h2 class="titulo-seccion">
 
             <span class="dorado cursiva">
-                Nuestras fragancias
+                Nuestra colección
             </span>
 
         </h2>
@@ -191,139 +171,1143 @@
 
         <p class="subtitulo">
 
-            Esencias creadas para expresar
+            Descubre nuestras fragancias para
 
             <span class="dorado cursiva">
-                tu personalidad.
+                mujer y hombre.
             </span>
 
         </p>
 
 
 
-        <div class="productos">
+        <!-- =================================================
+             SELECTOR DE CATEGORÍAS
+        ================================================== -->
+
+        <div class="categorias">
+
+            <button
+                class="boton-categoria activo"
+                onclick="mostrarCategoria('mujer', this)"
+            >
+
+                Mujer
+
+            </button>
 
 
-            <!-- =================================================
-                 PERFUME 1
-            ================================================== -->
+            <button
+                class="boton-categoria"
+                onclick="mostrarCategoria('hombre', this)"
+            >
+
+                Hombre
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CATÁLOGO MUJER
+        ================================================== -->
+
+        <div
+            id="catalogo-mujer"
+            class="catalogo activo"
+        >
+
+
+            <!-- MUJER 01 -->
 
             <article class="producto">
-
 
                 <div class="imagen-producto">
 
                     <img
-                        src="./imagenes/perfume1.jpg"
-                        alt="Perfume BRAAMOD"
+                        src="./imagenes/mujer/mujer01.jpg"
+                        alt="Fragancia BRAAMOD Mujer 01"
                     >
 
                 </div>
 
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD ÉLITE
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 02 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer02.jpg"
+                        alt="Fragancia BRAAMOD Mujer 02"
+                    >
+
+                </div>
 
                 <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD ROSE
+                    </span>
+                </h3>
 
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 03 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer03.jpg"
+                        alt="Fragancia BRAAMOD Mujer 03"
+                    >
+
+                </div>
+
+                <h3>
                     <span class="dorado cursiva">
                         BRAAMOD GOLD
                     </span>
-
                 </h3>
 
-
                 <p>
-
-                    Una fragancia pensada para transmitir
-
-                    <span class="dorado cursiva">
-                        elegancia y presencia.
-                    </span>
-
+                    Fragancia femenina BRAAMOD.
                 </p>
-
 
             </article>
 
 
 
-            <!-- =================================================
-                 PERFUME 2
-            ================================================== -->
+            <!-- MUJER 04 -->
 
             <article class="producto">
-
 
                 <div class="imagen-producto">
 
                     <img
-                        src="./imagenes/perfume2.jpg"
-                        alt="Fragancia BRAAMOD"
+                        src="./imagenes/mujer/mujer04.jpg"
+                        alt="Fragancia BRAAMOD Mujer 04"
                     >
 
                 </div>
 
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD FEMME
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 05 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer05.jpg"
+                        alt="Fragancia BRAAMOD Mujer 05"
+                    >
+
+                </div>
 
                 <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD LUXE
+                    </span>
+                </h3>
 
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 06 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer06.jpg"
+                        alt="Fragancia BRAAMOD Mujer 06"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD AMBER
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 07 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer07.jpg"
+                        alt="Fragancia BRAAMOD Mujer 07"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD DIAMOND
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 08 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer08.jpg"
+                        alt="Fragancia BRAAMOD Mujer 08"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD BLANC
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 09 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer09.jpg"
+                        alt="Fragancia BRAAMOD Mujer 09"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD VELVET
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 10 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer10.jpg"
+                        alt="Fragancia BRAAMOD Mujer 10"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD ÉCLAT
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 11 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer11.jpg"
+                        alt="Fragancia BRAAMOD Mujer 11"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD PASSION
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 12 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer12.jpg"
+                        alt="Fragancia BRAAMOD Mujer 12"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD MYSTIC
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 13 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer13.jpg"
+                        alt="Fragancia BRAAMOD Mujer 13"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD PURE
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 14 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer14.jpg"
+                        alt="Fragancia BRAAMOD Mujer 14"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD IRIS
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 15 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer15.jpg"
+                        alt="Fragancia BRAAMOD Mujer 15"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD BLOOM
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 16 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer16.jpg"
+                        alt="Fragancia BRAAMOD Mujer 16"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD NOIR
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 17 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer17.jpg"
+                        alt="Fragancia BRAAMOD Mujer 17"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD AURA
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 18 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer18.jpg"
+                        alt="Fragancia BRAAMOD Mujer 18"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD GRACE
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 19 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer19.jpg"
+                        alt="Fragancia BRAAMOD Mujer 19"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD ROYAL
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- MUJER 20 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/mujer/mujer20.jpg"
+                        alt="Fragancia BRAAMOD Mujer 20"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD SIGNATURE
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia femenina BRAAMOD.
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             CATÁLOGO HOMBRE
+        ================================================== -->
+
+        <div
+            id="catalogo-hombre"
+            class="catalogo"
+        >
+
+
+            <!-- HOMBRE 01 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre01.jpg"
+                        alt="Fragancia BRAAMOD Hombre 01"
+                    >
+
+                </div>
+
+                <h3>
                     <span class="dorado cursiva">
                         BRAAMOD BLACK
                     </span>
-
                 </h3>
 
-
                 <p>
-
-                    Una esencia con carácter,
-                    creada para quienes buscan
-
-                    <span class="dorado cursiva">
-                        una presencia inolvidable.
-                    </span>
-
+                    Fragancia masculina BRAAMOD.
                 </p>
-
 
             </article>
 
 
 
-            <!-- =================================================
-                 PERFUME 3
-            ================================================== -->
+            <!-- HOMBRE 02 -->
 
             <article class="producto">
-
 
                 <div class="imagen-producto">
 
                     <img
-                        src="./imagenes/perfume3.jpg"
-                        alt="Colección de perfumes BRAAMOD"
+                        src="./imagenes/hombre/hombre02.jpg"
+                        alt="Fragancia BRAAMOD Hombre 02"
                     >
 
                 </div>
 
-
                 <h3>
-
                     <span class="dorado cursiva">
-                        BRAAMOD COLLECTION
+                        BRAAMOD GOLD
                     </span>
-
                 </h3>
 
-
                 <p>
-
-                    Una propuesta que reúne diferentes
-                    perfiles aromáticos para expresar
-
-                    <span class="dorado cursiva">
-                        distintas personalidades.
-                    </span>
-
+                    Fragancia masculina BRAAMOD.
                 </p>
 
+            </article>
+
+
+
+            <!-- HOMBRE 03 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre03.jpg"
+                        alt="Fragancia BRAAMOD Hombre 03"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD ÉLITE
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 04 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre04.jpg"
+                        alt="Fragancia BRAAMOD Hombre 04"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD NOIR
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 05 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre05.jpg"
+                        alt="Fragancia BRAAMOD Hombre 05"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD ROYAL
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 06 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre06.jpg"
+                        alt="Fragancia BRAAMOD Hombre 06"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD INTENSE
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 07 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre07.jpg"
+                        alt="Fragancia BRAAMOD Hombre 07"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD TITAN
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 08 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre08.jpg"
+                        alt="Fragancia BRAAMOD Hombre 08"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD OUD
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 09 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre09.jpg"
+                        alt="Fragancia BRAAMOD Hombre 09"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD URBAN
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 10 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre10.jpg"
+                        alt="Fragancia BRAAMOD Hombre 10"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD IMPERIAL
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 11 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre11.jpg"
+                        alt="Fragancia BRAAMOD Hombre 11"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD VELVET
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 12 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre12.jpg"
+                        alt="Fragancia BRAAMOD Hombre 12"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD FORCE
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 13 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre13.jpg"
+                        alt="Fragancia BRAAMOD Hombre 13"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD SIGNATURE
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 14 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre14.jpg"
+                        alt="Fragancia BRAAMOD Hombre 14"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD ABSOLUTE
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 15 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre15.jpg"
+                        alt="Fragancia BRAAMOD Hombre 15"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD LEGACY
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 16 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre16.jpg"
+                        alt="Fragancia BRAAMOD Hombre 16"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD DARK
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 17 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre17.jpg"
+                        alt="Fragancia BRAAMOD Hombre 17"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD PRESTIGE
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 18 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre18.jpg"
+                        alt="Fragancia BRAAMOD Hombre 18"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD ICON
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 19 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre19.jpg"
+                        alt="Fragancia BRAAMOD Hombre 19"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD CROWN
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
+
+            </article>
+
+
+
+            <!-- HOMBRE 20 -->
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="./imagenes/hombre/hombre20.jpg"
+                        alt="Fragancia BRAAMOD Hombre 20"
+                    >
+
+                </div>
+
+                <h3>
+                    <span class="dorado cursiva">
+                        BRAAMOD ESSENCE
+                    </span>
+                </h3>
+
+                <p>
+                    Fragancia masculina BRAAMOD.
+                </p>
 
             </article>
 
@@ -353,7 +1337,7 @@
         <p>
 
             En BRAAMOD creemos que una fragancia comienza
-            mucho antes de llegar a convertirse en un aroma.
+            mucho antes de convertirse en un aroma.
 
             Nuestras preparaciones parten de
 
@@ -364,7 +1348,6 @@
             seleccionados para construir diferentes
             perfiles de fragancia.
 
-
         </p>
 
 
@@ -373,11 +1356,6 @@
             Cada preparación es realizada cuidadosamente,
             buscando conseguir una combinación equilibrada
             y agradable de aromas.
-
-            Nuestro objetivo es crear fragancias que puedan
-            convertirse en parte de la identidad de quienes
-            las utilizan.
-
 
         </p>
 
@@ -484,7 +1462,6 @@
         </p>
 
 
-
         <div class="notas-contenedor">
 
 
@@ -561,7 +1538,6 @@
             y de la idea de que un aroma puede convertirse
             en parte de nuestra identidad.
 
-
         </p>
 
 
@@ -573,7 +1549,6 @@
                 Es presencia, personalidad y recuerdo.
             </span>
 
-
         </p>
 
 
@@ -582,7 +1557,6 @@
             Nuestra filosofía busca transmitir una imagen
             de elegancia y autenticidad a través de cada
             una de nuestras fragancias.
-
 
         </p>
 
@@ -604,51 +1578,73 @@
          CONTACTO
     ====================================================== -->
 
-    <section id="contacto">
+    <!-- =====================================================
+     CONTACTO
+====================================================== -->
+
+<section id="contacto">
+
+    <h2 class="titulo-seccion">
+
+        <span class="dorado cursiva">
+            Conoce BRAAMOD
+        </span>
+
+    </h2>
+
+    <p>
+        Descubre nuestras fragancias y conoce más
+        sobre la esencia que representa a BRAAMOD.
+    </p>
 
 
-        <h2 class="titulo-seccion">
+    <div class="contactos">
 
-            <span class="dorado cursiva">
-                Conoce BRAAMOD
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="https://wa.me/573214978435"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contacto-link"
+        >
+
+            <span class="contacto-icono">
+                WhatsApp
             </span>
 
-        </h2>
+            <span>
+                Escríbenos por WhatsApp
+            </span>
+
+        </a>
 
 
-        <p>
 
-            Descubre nuestras fragancias y conoce más
-            sobre la esencia que representa a BRAAMOD.
+        <!-- INSTAGRAM -->
 
-        </p>
+        <a
+            href="https://www.instagram.com/braa_mod/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contacto-link"
+        >
 
+            <span class="contacto-icono">
+                Instagram
+            </span>
 
-        <div class="contactos">
+            <span>
+                Síguenos en Instagram
+            </span>
 
-
-            <div class="contacto-item">
-                <span class="contacto-etiqueta">Instagram</span>
-                <a href="https://instagram.com/braa_mod" target="_blank" rel="noopener" class="contacto-valor">
-    @braa_mod
-</a>
-
-
-            <div class="contacto-item">
-                <span class="contacto-etiqueta">WhatsApp</span>
-                <!-- Reemplaza 573001234567 por tu número con código de país, sin +, sin espacios -->
-<a href="https://wa.me/573214978435" target="_blank" rel="noopener" class="contacto-valor">
-    Escríbenos
-</a>
+        </a>
 
 
-            
+    </div>
 
-        </div>
-
-
-    </section>
-
+</section>
 
 
     <!-- =====================================================
@@ -657,12 +1653,10 @@
 
     <footer>
 
-
         <p>
             © 2026 BRAAMOD.
             Todos los derechos reservados.
         </p>
-
 
         <p>
 
@@ -672,9 +1666,67 @@
 
         </p>
 
-
     </footer>
 
+
+
+    <!-- =====================================================
+         JAVASCRIPT PARA CAMBIAR ENTRE MUJER Y HOMBRE
+    ====================================================== -->
+
+    <script>
+
+        function mostrarCategoria(categoria, boton) {
+
+            const mujer =
+                document.getElementById("catalogo-mujer");
+
+            const hombre =
+                document.getElementById("catalogo-hombre");
+
+            const botones =
+                document.querySelectorAll(".boton-categoria");
+
+
+            /* Ocultar los dos catálogos */
+
+            mujer.classList.remove("activo");
+
+            hombre.classList.remove("activo");
+
+
+            /* Quitar estado activo de los botones */
+
+            botones.forEach(function(btn) {
+
+                btn.classList.remove("activo");
+
+            });
+
+
+            /* Mostrar categoría seleccionada */
+
+            if (categoria === "mujer") {
+
+                mujer.classList.add("activo");
+
+            }
+
+
+            if (categoria === "hombre") {
+
+                hombre.classList.add("activo");
+
+            }
+
+
+            /* Activar botón */
+
+            boton.classList.add("activo");
+
+        }
+
+    </script>
 
 
 </body>
