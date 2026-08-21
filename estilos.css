@@ -1068,27 +1068,11 @@ footer p:last-child {
    RESPONSIVE - TABLET
 ========================================================= */
 
-@media (max-width: 500px) {
+@media (max-width: 1050px) {
 
     .catalogo {
         grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-    }
-
-    .producto {
-        padding: 8px;
-    }
-
-    .imagen-producto {
-        height: 150px;
-    }
-
-    .producto h3 {
-        font-size: 15px;
-    }
-
-    .producto p {
-        font-size: 10px;
+        gap: 20px;
     }
 
 }
@@ -1096,124 +1080,129 @@ footer p:last-child {
 
 /* =========================================================
    RESPONSIVE - CELULAR
+   3 PERFUMES POR FILA
 ========================================================= */
 
 @media (max-width: 800px) {
 
-
     header {
-
         height: auto;
-
-        padding:
-            25px 6%;
-
+        padding: 25px 6%;
         flex-direction: column;
-
         gap: 20px;
-
     }
-
 
     nav {
-
         gap: 15px;
-
         flex-wrap: wrap;
-
         justify-content: center;
-
     }
 
-
     nav a {
-
         font-size: 12px;
-
     }
 
 
     #inicio {
-
-        padding:
-            80px 8%;
-
+        padding: 80px 8%;
     }
 
 
     .contenido-inicio h1 {
-
         font-size: 50px;
-
     }
 
 
     .titulo-seccion {
-
         font-size: 34px;
-
     }
 
+
+    /* BOTONES MUJER / HOMBRE */
 
     .categorias {
-
         gap: 10px;
-
     }
-
 
     .boton-categoria {
-
         min-width: 130px;
-
-        padding:
-            13px 20px;
-
+        padding: 13px 20px;
     }
 
+
+    /* =====================================================
+       CATÁLOGO EN 3 COLUMNAS
+    ====================================================== */
 
     .catalogo {
+        display: none;
 
         grid-template-columns:
-            repeat(2, 1fr);
+            repeat(3, minmax(0, 1fr));
 
-        gap: 15px;
+        gap: 12px;
 
+        width: 100%;
     }
 
 
-    .imagen-producto {
-
-        height: 230px;
-
+    .catalogo.activo {
+        display: grid;
     }
 
+
+    /* TARJETAS */
 
     .producto {
-
-        padding: 12px;
-
+        width: 100%;
+        padding: 8px;
     }
 
+
+    /* IMÁGENES */
+
+    .imagen-producto {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 10px;
+    }
+
+
+    .imagen-producto img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+
+    /* NOMBRE DEL PERFUME */
 
     .producto h3 {
-
-        font-size: 18px;
-
+        font-size: 15px;
+        line-height: 1.2;
+        margin-bottom: 5px;
     }
 
 
+    /* DESCRIPCIÓN */
+
+    .producto p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+
+    /* =====================================================
+       RESTO DE LA PÁGINA
+    ====================================================== */
+
     .proceso {
-
         grid-template-columns: 1fr;
-
     }
 
 
     .notas-contenedor {
-
         grid-template-columns: 1fr;
-
     }
 
 
@@ -1221,53 +1210,91 @@ footer p:last-child {
     #notas,
     #nosotros,
     #contacto {
-
-        padding:
-            90px 7%;
-
+        padding: 90px 7%;
     }
 
 
     .frase-final {
-
         font-size: 28px;
-
     }
 
 }
 
 
 /* =========================================================
-   RESPONSIVE - CELULARES PEQUEÑOS
+   CELULARES PEQUEÑOS
+   TAMBIÉN 3 PERFUMES POR FILA
 ========================================================= */
 
 @media (max-width: 500px) {
 
-
     .catalogo {
 
-        grid-template-columns: 1fr;
+        display: none;
 
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 7px;
+
+    }
+
+
+    .catalogo.activo {
+        display: grid;
+    }
+
+
+    .producto {
+        padding: 6px;
     }
 
 
     .imagen-producto {
 
-        height: 300px;
+        height: 145px;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .producto h3 {
+
+        font-size: 13px;
+
+        line-height: 1.1;
+
+    }
+
+
+    .producto p {
+
+        font-size: 9px;
+
+        line-height: 1.3;
 
     }
 
 
     .categorias {
 
-        flex-direction: column;
+        flex-direction: row;
+
+        gap: 8px;
 
     }
 
 
     .boton-categoria {
 
-        width: 200px;
+        width: auto;
+
+        min-width: 120px;
+
+        padding: 12px 15px;
+
+        font-size: 11px;
 
     }
 
