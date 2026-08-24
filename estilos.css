@@ -1,360 +1,171 @@
 /* =========================================================
    CONFIGURACIÓN GENERAL
 ========================================================= */
-
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
 }
-
 
 html {
-
     scroll-behavior: smooth;
-
 }
-
 
 body {
-
     background: #050505;
-
     color: #e8e8e8;
-
-    font-family:
-        "Montserrat",
-        Arial,
-        sans-serif;
-
+    font-family: "Montserrat", Arial, sans-serif;
     overflow-x: hidden;
-
 }
-
 
 a {
-
     color: inherit;
-
 }
-
 
 ::selection {
-
     background: #d4af37;
-
     color: #050505;
-
 }
-
-
 
 /* =========================================================
    EFECTO DORADO
 ========================================================= */
-
 .dorado {
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #8d6417,
-            #d4af37,
-            #ffe89a,
-            #d4af37,
-            #9b711d
-        );
-
+    background: linear-gradient(90deg, #8d6417, #d4af37, #ffe89a, #d4af37, #9b711d);
     background-size: 200% auto;
-
     -webkit-background-clip: text;
-
     background-clip: text;
-
     -webkit-text-fill-color: transparent;
-
 }
-
 
 .cursiva {
-
-    font-family:
-        "Bodoni Moda",
-        serif;
-
+    font-family: "Bodoni Moda", serif;
     font-style: italic;
-
 }
 
-
 @keyframes doradoBrillo {
-
     0% {
         background-position: 0% center;
     }
-
     100% {
         background-position: 200% center;
     }
-
 }
-
-
 
 /* =========================================================
    HEADER
 ========================================================= */
-
 header {
-
     position: fixed;
-
     top: 0;
-
     left: 0;
-
     width: 100%;
-
     height: 80px;
-
-    padding:
-        0 7%;
-
+    padding: 0 7%;
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     z-index: 1000;
-
-    background:
-
-        linear-gradient(
-            180deg,
-            rgba(0,0,0,.96),
-            rgba(0,0,0,.75),
-            transparent
-        );
-
+    background: linear-gradient(180deg, rgba(0, 0, 0, .96), rgba(0, 0, 0, .75), transparent);
 }
-
 
 .logo {
-
     text-decoration: none;
-
-    font-family:
-        "Bodoni Moda",
-        serif;
-
+    font-family: "Bodoni Moda", serif;
     font-style: italic;
-
     font-size: 36px;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #9b711d,
-            #f6d86b,
-            #fff0a8,
-            #d4af37,
-            #9b711d
-        );
-
+    background: linear-gradient(90deg, #9b711d, #f6d86b, #fff0a8, #d4af37, #9b711d);
     background-size: 200% auto;
-
     -webkit-background-clip: text;
-
     background-clip: text;
-
     -webkit-text-fill-color: transparent;
-
-    animation:
-        doradoBrillo 5s linear infinite;
-
+    animation: doradoBrillo 5s linear infinite;
 }
-
 
 nav {
-
     display: flex;
-
     align-items: center;
-
     gap: 35px;
-
 }
-
 
 nav a {
-
     position: relative;
-
     text-decoration: none;
-
     color: #d0d0d0;
-
     font-size: 13px;
-
     letter-spacing: 1px;
-
-    transition:
-        .3s ease;
-
+    transition: .3s ease;
 }
-
 
 nav a:hover {
-
     color: #d4af37;
-
 }
-
 
 nav a::after {
-
     content: "";
-
     position: absolute;
-
     bottom: -7px;
-
     left: 0;
-
     width: 0;
-
     height: 1px;
-
     background: #d4af37;
-
     transition: .3s ease;
-
 }
-
 
 nav a:hover::after {
-
     width: 100%;
-
 }
-
-
 
 /* =========================================================
    INICIO
 ========================================================= */
-
 .hero {
-
     position: relative;
-
     min-height: 100vh;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     text-align: center;
-
     overflow: hidden;
-
-    background:
-
-        radial-gradient(
-            circle at 50% 50%,
-            rgba(212,175,55,.12),
-            transparent 35%
-        ),
-
-        #050505;
-
+    background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, .12), transparent 35%), #050505;
 }
-
 
 .hero::before {
-
     content: "";
-
     position: absolute;
-
     width: 650px;
-
     height: 650px;
-
     border-radius: 50%;
-
-    background:
-
-        radial-gradient(
-            circle,
-            rgba(212,175,55,.15),
-            transparent 70%
-        );
-
+    background: radial-gradient(circle, rgba(212, 175, 55, .15), transparent 70%);
     filter: blur(20px);
-
-    animation:
-        respirar 6s ease-in-out infinite;
-
+    animation: respirar 6s ease-in-out infinite;
 }
-
 
 @keyframes respirar {
-
     0%,
     100% {
-
         transform: scale(1);
-
         opacity: .5;
-
     }
-
     50% {
-
         transform: scale(1.15);
-
         opacity: .8;
-
     }
-
 }
-
 
 .contenido-inicio {
-
     position: relative;
-
     z-index: 2;
-
     max-width: 800px;
-
     padding: 20px;
-
 }
-
 
 .subtitulo {
-
     color: #c6a23a;
-
     letter-spacing: 5px;
-
     font-size: 11px;
-
     margin-bottom: 25px;
-
 }
-
 
 .contenido-inicio h1 {
     font-size: clamp(55px, 8vw, 75px);
@@ -365,1463 +176,809 @@ nav a:hover::after {
 
 .contenido-inicio h1 span {
     display: block;
-
     font-family: "Bodoni Moda", serif;
     font-style: italic;
-
     font-size: 1.15em;
-
     line-height: 1.3;
-
     padding-bottom: 10px;
-
     margin-top: 5px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #8c6415,
-            #f3d05a,
-            #fff0a6,
-            #d4af37,
-            #9d741f
-        );
-
+    background: linear-gradient(90deg, #8c6415, #f3d05a, #fff0a6, #d4af37, #9d741f);
     background-size: 200% auto;
-
     -webkit-background-clip: text;
     background-clip: text;
-
     -webkit-text-fill-color: transparent;
-
     animation: doradoBrillo 5s linear infinite;
 }
 
-
 .texto-inicio {
-
     max-width: 550px;
-
-    margin:
-        35px auto;
-
-    color: #aaa;
-
+    margin: 35px auto;
+    color: #ccc;
     line-height: 1.8;
-
     font-size: 14px;
-
 }
-
 
 .boton-dorado {
-
     display: inline-block;
-
-    padding:
-        15px 35px;
-
+    padding: 15px 35px;
     border: 1px solid #c7a13a;
-
     text-decoration: none;
-
     color: #e0c25b;
-
     font-size: 12px;
-
     letter-spacing: 2px;
-
-    transition:
-        .4s ease;
-
+    transition: .4s ease;
+    background: transparent;
+    cursor: pointer;
 }
-
 
 .boton-dorado:hover {
-
     background: #d4af37;
-
     color: #050505;
-
-    box-shadow:
-        0 0 30px
-        rgba(212,175,55,.3);
-
+    box-shadow: 0 0 30px rgba(212, 175, 55, .3);
 }
-
-
 
 /* =========================================================
    LUCES
 ========================================================= */
-
 .luces {
-
     position: absolute;
-
     border-radius: 50%;
-
     background: #d4af37;
-
     filter: blur(80px);
-
     opacity: .12;
-
 }
-
 
 .luz1 {
-
     width: 250px;
-
     height: 250px;
-
     top: 15%;
-
     left: 5%;
-
 }
-
-
 .luz2 {
-
     width: 300px;
-
     height: 300px;
-
     bottom: 10%;
-
     right: 5%;
-
 }
-
-
 .luz3 {
-
     width: 180px;
-
     height: 180px;
-
     top: 45%;
-
     right: 35%;
-
 }
-
-
 
 /* =========================================================
    SECCIONES
 ========================================================= */
-
 section {
-
-    padding:
-        120px 7%;
-
+    padding: 120px 7%;
 }
-
 
 .encabezado-seccion {
-
     text-align: center;
-
     max-width: 750px;
-
-    margin:
-        0 auto 60px;
-
+    margin: 0 auto 60px;
 }
-
 
 .mini-titulo {
-
     color: #b68b2c;
-
     letter-spacing: 4px;
-
     font-size: 10px;
-
     margin-bottom: 15px;
-
 }
-
 
 .titulo-seccion {
-
-    font-family:
-        "Bodoni Moda",
-        serif;
-
+    font-family: "Bodoni Moda", serif;
     font-style: italic;
-
     font-size: 60px;
-
     font-weight: 400;
-
     margin-bottom: 20px;
-
 }
-
 
 .titulo-seccion span {
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #a87916,
-            #f5d66a,
-            #d4af37,
-            #ffe38a,
-            #b88620
-        );
-
+    background: linear-gradient(90deg, #a87916, #f5d66a, #d4af37, #ffe38a, #b88620);
     background-size: 200% auto;
-
     -webkit-background-clip: text;
-
     background-clip: text;
-
     -webkit-text-fill-color: transparent;
-
-    animation:
-        doradoBrillo 5s linear infinite;
-
+    animation: doradoBrillo 5s linear infinite;
 }
-
 
 .encabezado-seccion > p:last-child {
-
-    color: #888;
-
+    color: #aaa;
     font-size: 13px;
-
     line-height: 1.7;
-
 }
-
-
 
 /* =========================================================
-   CATEGORÍAS
+   CATEGORÍAS (filtros principales)
 ========================================================= */
+.filtros-superiores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
 
 .categorias {
-
     display: flex;
-
     justify-content: center;
-
     gap: 15px;
-
-    margin-bottom: 50px;
-
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
-
 
 .boton-categoria {
-
-    padding:
-        14px 35px;
-
+    padding: 14px 35px;
     background: transparent;
-
     border: 1px solid #292929;
-
     color: #777;
-
     cursor: pointer;
-
-    font-family:
-        "Montserrat",
-        sans-serif;
-
+    font-family: "Montserrat", sans-serif;
     letter-spacing: 2px;
-
     font-size: 11px;
-
-    transition:
-        .4s ease;
-
+    transition: .4s ease;
 }
-
 
 .boton-categoria:hover,
 .boton-categoria.activo {
-
     border-color: #d4af37;
-
     color: #d4af37;
-
-    box-shadow:
-        0 0 20px
-        rgba(212,175,55,.08);
-
+    box-shadow: 0 0 20px rgba(212, 175, 55, .08);
 }
 
+/* ===== FILTROS ADICIONALES ===== */
+.filtros-adicionales {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
 
+.filtro-opcion {
+    padding: 8px 18px;
+    background: transparent;
+    border: 1px solid #222;
+    color: #888;
+    cursor: pointer;
+    font-size: 11px;
+    transition: .3s;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 20px;
+}
+
+.filtro-opcion:hover,
+.filtro-opcion.activo {
+    border-color: #d4af37;
+    color: #d4af37;
+}
 
 /* =========================================================
    CATÁLOGO
 ========================================================= */
-
 .catalogo {
-
     display: none;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
-
     max-width: 1400px;
-
     margin: auto;
-
 }
-
 
 .catalogo.activo {
-
     display: grid;
-
 }
-
-
 
 /* =========================================================
-   PRODUCTOS
+   PRODUCTOS (tarjetas limpias: solo imagen, nombre y botones)
 ========================================================= */
-
 .producto {
-
     padding: 15px;
-
-    background:
-        rgba(255,255,255,.015);
-
+    background: rgba(255, 255, 255, .015);
     border: 1px solid #181818;
-
-    transition:
-        .4s ease;
-
+    transition: .4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.4s, box-shadow 0.4s;
 }
 
+.producto.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .producto:hover {
-
-    transform:
-        translateY(-7px);
-
-    border-color:
-        rgba(212,175,55,.45);
-
-    box-shadow:
-
-        0 15px 40px
-        rgba(0,0,0,.4),
-
-        0 0 25px
-        rgba(212,175,55,.06);
-
+    transform: translateY(-7px);
+    border-color: rgba(212, 175, 55, .45);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .4), 0 0 25px rgba(212, 175, 55, .06);
 }
-
-
 
 /* =========================================================
    IMÁGENES
 ========================================================= */
-
 .imagen-producto {
-
     width: 100%;
-
     height: 300px;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     overflow: hidden;
-
-    background:
-        #080808;
-
+    background: #080808;
     margin-bottom: 20px;
-
 }
 
-
 .imagen-producto img {
-
     width: 100%;
-
     height: 100%;
-
     object-fit: contain;
-
-    transition:
-        transform .5s ease;
-
+    transition: transform .5s ease;
 }
 
-
-.producto:hover
-.imagen-producto img {
-
-    transform:
-        scale(1.05);
-
+.producto:hover .imagen-producto img {
+    transform: scale(1.05);
 }
-
-
 
 /* =========================================================
-   NOMBRE DE LA LOCIÓN
+   NOMBRE
 ========================================================= */
-
 .nombre-locion {
-
-    font-family:
-        "Bodoni Moda",
-        serif;
-
+    font-family: "Bodoni Moda", serif;
     font-style: italic;
-
     font-size: 26px;
-
     font-weight: 400;
-
     margin-bottom: 8px;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #a87916,
-            #f5d66a,
-            #d4af37,
-            #ffe38a,
-            #b88620
-        );
-
+    background: linear-gradient(90deg, #a87916, #f5d66a, #d4af37, #ffe38a, #b88620);
     background-size: 200% auto;
-
     -webkit-background-clip: text;
-
     background-clip: text;
-
     -webkit-text-fill-color: transparent;
-
-    animation:
-        doradoBrillo 5s linear infinite;
-
+    animation: doradoBrillo 5s linear infinite;
 }
-
-
 
 /* =========================================================
-   DESCRIPCIÓN
+   BOTONES DE TARJETA
 ========================================================= */
-
-.descripcion-locion {
-
-    color: #999;
-
-    font-size: 13px;
-
-    line-height: 1.6;
-
-    min-height: 42px;
-
-    margin-bottom: 14px;
-
-}
-
-
-
-/* =========================================================
-   PRECIOS
-========================================================= */
-
-.precios {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    flex-wrap: wrap;
-
-}
-
-
-.precio-anterior {
-
-    color: #777;
-
-    font-size: 13px;
-
-    text-decoration:
-        line-through;
-
-    text-decoration-thickness: 1px;
-
-}
-
-
-.precio-promocion {
-
-    font-size: 18px;
-
-    font-weight: 600;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #a87916,
-            #f5d66a,
-            #d4af37,
-            #ffe38a
-        );
-
-    -webkit-background-clip: text;
-
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-}
-
-
-
-/* =========================================================
-   PRECIOS POR TAMAÑO (50ml / 100ml) — ENVASES ESTANDAR
-========================================================= */
-
-.precios-tamanos {
-
-    gap: 22px;
-
-}
-
-
-#modal-precios-tamanos {
-
-    display: none;
-
-}
-
-
-.precio-tamano-item {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 2px;
-
-}
-
-
-.etiqueta-tamano {
-
-    font-size: 12px;
-
-    color: #999;
-
-    text-transform: uppercase;
-
-    letter-spacing: .5px;
-
-}
-
-
-.precio-tamano-item .precio-valor {
-
-    font-size: 18px;
-
-    font-weight: 600;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #a87916,
-            #f5d66a,
-            #d4af37,
-            #ffe38a
-        );
-
-    -webkit-background-clip: text;
-
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-}
-
-
-
-/* =========================================================
-   TARJETA DE CATÁLOGO (solo imagen + nombre + botón)
-========================================================= */
-
-.producto .descripcion-locion,
-.producto .precios {
-
-    display: none;
-
-}
-
-
 .boton-ver-detalle {
-
     width: 100%;
-
     padding: 10px 0;
-
-    margin-top: 4px;
-
+    margin-top: auto;   /* Empuja el botón hacia abajo para alinear */
     background: none;
-
-    border: 1px solid rgba(212,175,55,.45);
-
+    border: 1px solid rgba(212, 175, 55, .45);
     color: #d4af37;
-
     font-family: "Montserrat", Arial, sans-serif;
-
     font-size: 13px;
-
     letter-spacing: .5px;
-
     text-transform: uppercase;
-
     cursor: pointer;
-
     transition: .3s ease;
-
 }
-
 
 .boton-ver-detalle:hover {
-
-    background: rgba(212,175,55,.1);
-
+    background: rgba(212, 175, 55, .1);
     border-color: #d4af37;
-
 }
 
+.boton-agregar-carrito {
+    width: 100%;
+    padding: 8px 0;
+    margin-top: 6px;
+    background: none;
+    border: 1px solid #333;
+    color: #aaa;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s ease;
+}
 
+.boton-agregar-carrito:hover {
+    border-color: #d4af37;
+    color: #d4af37;
+}
 
 /* =========================================================
-   MODAL DETALLE DE PRODUCTO
+   CARRITO FLOTANTE
 ========================================================= */
-
-body.sin-scroll {
-
-    overflow: hidden;
-
+.carrito-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background: #0a0a0a;
+    border: 1px solid #d4af37;
+    border-radius: 50px;
+    padding: 12px 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .7);
+    transition: .3s;
+    cursor: pointer;
+    color: #d4af37;
+    font-weight: 500;
+    text-decoration: none;
 }
 
+.carrito-flotante:hover {
+    background: #d4af37;
+    color: #050505;
+}
+
+.carrito-contador {
+    background: #d4af37;
+    color: #050505;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* =========================================================
+   MODAL (con descripción y precios)
+========================================================= */
+body.sin-scroll {
+    overflow: hidden;
+}
 
 .modal-overlay {
-
     display: none;
-
     position: fixed;
-
     inset: 0;
-
-    background: rgba(0,0,0,.85);
-
+    background: rgba(0, 0, 0, .85);
     backdrop-filter: blur(6px);
-
     z-index: 1100;
-
     padding: 20px;
-
     align-items: center;
-
     justify-content: center;
-
 }
-
 
 .modal-overlay.activo {
-
     display: flex;
-
 }
-
 
 .modal-contenido {
-
     position: relative;
-
     background: #0a0a0a;
-
-    border: 1px solid rgba(212,175,55,.35);
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.6),
-        0 0 40px rgba(212,175,55,.08);
-
+    border: 1px solid rgba(212, 175, 55, .35);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .6), 0 0 40px rgba(212, 175, 55, .08);
     max-width: 780px;
-
     width: 100%;
-
     max-height: 90vh;
-
     overflow-y: auto;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
 }
-
 
 .modal-cerrar {
-
     position: absolute;
-
     top: 14px;
-
     right: 14px;
-
-    background: rgba(10,10,10,.55);
-
+    background: rgba(10, 10, 10, .55);
     border: none;
-
     color: #d4af37;
-
     font-size: 32px;
-
     line-height: 1;
-
     width: 40px;
-
     height: 40px;
-
     border-radius: 50%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     cursor: pointer;
-
     z-index: 1000;
-
 }
-
 
 .modal-imagen {
-
     background: #080808;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     min-height: 300px;
-
+    position: relative;
 }
-
 
 .modal-imagen img {
-
     width: 100%;
-
     height: 100%;
-
     object-fit: contain;
-
 }
 
+/* Spinner de carga */
+.spinner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(212, 175, 55, .1);
+    border-top: 3px solid #d4af37;
+    border-radius: 50%;
+    animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 .modal-info {
-
     padding: 35px 30px;
-
     display: flex;
-
     flex-direction: column;
-
     gap: 14px;
-
 }
-
 
 .modal-info .nombre-locion {
-
     font-size: 32px;
-
 }
-
 
 .modal-info .descripcion-locion {
-
     font-size: 14px;
-
     min-height: unset;
-
+    flex: 0;
+    color: #ccc;
 }
-
 
 .modal-boton-whatsapp {
-
     margin-top: 10px;
-
     text-align: center;
-
     width: fit-content;
-
 }
 
-
-@media (max-width: 700px) {
-
-    .modal-contenido {
-
-        grid-template-columns: 1fr;
-
-    }
-
-    .modal-imagen {
-
-        height: 42vh;
-
-        min-height: 240px;
-
-        max-height: 42vh;
-
-    }
-
-    .modal-imagen img {
-
-        width: 100%;
-
-        height: 100%;
-
-        object-fit: contain;
-
-    }
-
-    .modal-cerrar {
-
-        top: 12px;
-
-        right: 12px;
-
-    }
-
+/* Selector de talla en modal */
+.selector-talla {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
 }
 
+.selector-talla button {
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid #333;
+    color: #aaa;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    transition: .3s;
+    border-radius: 4px;
+}
 
+.selector-talla button.activo {
+    border-color: #d4af37;
+    color: #d4af37;
+    background: rgba(212, 175, 55, .1);
+}
+
+.selector-talla button:hover {
+    border-color: #d4af37;
+}
 
 /* =========================================================
    NOSOTROS
 ========================================================= */
-
 #nosotros {
-
-    background:
-        #080808;
-
+    background: #080808;
 }
-
 
 .texto-nosotros {
-
     max-width: 850px;
-
     margin: auto;
-
 }
-
 
 .texto-nosotros p {
-
-    color: #999;
-
+    color: #ccc;
     font-size: 15px;
-
     line-height: 2;
-
     margin-bottom: 25px;
-
 }
-
 
 .texto-nosotros strong {
-
     color: #d4af37;
-
 }
-
-
 
 /* =========================================================
    ELABORACIÓN
 ========================================================= */
-
 .proceso {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-
     max-width: 1100px;
-
     margin: auto;
-
 }
-
 
 .paso {
-
     text-align: center;
-
     padding: 35px 25px;
-
-    border:
-        1px solid #181818;
-
-    transition:
-        .4s ease;
-
+    border: 1px solid #181818;
+    transition: .4s ease;
 }
-
 
 .paso:hover {
-
-    border-color:
-        rgba(212,175,55,.4);
-
-    transform:
-        translateY(-5px);
-
+    border-color: rgba(212, 175, 55, .4);
+    transform: translateY(-5px);
 }
-
 
 .paso > span {
-
-    font-family:
-        "Bodoni Moda",
-        serif;
-
+    font-family: "Bodoni Moda", serif;
     font-style: italic;
-
     font-size: 40px;
-
     color: #d4af37;
-
 }
-
 
 .paso h3 {
-
-    margin:
-        15px 0;
-
-    font-family:
-        "Bodoni Moda",
-        serif;
-
+    margin: 15px 0;
+    font-family: "Bodoni Moda", serif;
     font-style: italic;
-
     font-size: 30px;
-
     color: #d4af37;
-
 }
-
 
 .paso p {
-
-    color: #888;
-
+    color: #aaa;
     font-size: 13px;
-
     line-height: 1.8;
-
 }
-
-
 
 /* =========================================================
    CONTACTO
 ========================================================= */
-
 #contacto {
-
-    background:
-        #080808;
-
+    background: #080808;
 }
-
 
 .contactos {
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     flex-wrap: wrap;
-
     gap: 25px;
-
     margin-top: 40px;
-
 }
-
 
 .contacto-link {
-
     min-width: 230px;
-
-    padding:
-        18px 28px;
-
+    padding: 18px 28px;
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     gap: 8px;
-
     text-decoration: none;
-
-    border:
-        1px solid #292929;
-
-    background:
-        #080808;
-
-    color: #888;
-
-    transition:
-        all .4s ease;
-
+    border: 1px solid #292929;
+    background: #080808;
+    color: #aaa;
+    transition: all .4s ease;
 }
-
 
 .contacto-link:hover {
-
-    transform:
-        translateY(-6px);
-
-    border-color:
-        #d4af37;
-
-    color:
-        #d4af37;
-
-    box-shadow:
-        0 0 25px
-        rgba(212,175,55,.15);
-
+    transform: translateY(-6px);
+    border-color: #d4af37;
+    color: #d4af37;
+    box-shadow: 0 0 25px rgba(212, 175, 55, .15);
 }
-
 
 .contacto-icono {
-
-    font-family:
-        "Bodoni Moda",
-        serif;
-
+    font-family: "Bodoni Moda", serif;
     font-style: italic;
-
     font-size: 30px;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #a87916,
-            #f5d66a,
-            #d4af37,
-            #ffe38a,
-            #b88620
-        );
-
+    background: linear-gradient(90deg, #a87916, #f5d66a, #d4af37, #ffe38a, #b88620);
     -webkit-background-clip: text;
-
     background-clip: text;
-
     -webkit-text-fill-color: transparent;
-
 }
-
-
 
 /* =========================================================
    FOOTER
 ========================================================= */
-
 footer {
-
-    padding:
-        60px 7%;
-
+    padding: 60px 7%;
     text-align: center;
-
-    border-top:
-        1px solid #171717;
-
+    border-top: 1px solid #171717;
 }
-
 
 .logo-footer {
-
-    font-family:
-        "Bodoni Moda",
-        serif;
-
+    font-family: "Bodoni Moda", serif;
     font-style: italic;
-
     font-size: 45px;
-
     color: #d4af37;
-
     margin-bottom: 15px;
-
 }
-
 
 footer p {
-
-    color: #666;
-
+    color: #777;
     font-size: 12px;
-
 }
-
 
 .copyright {
-
     margin-top: 25px;
-
     font-size: 10px;
-
 }
 
-
-
 /* =========================================================
-   RESPONSIVE - TABLET
+   RESPONSIVE
 ========================================================= */
-
 @media (max-width: 1050px) {
-
     .catalogo {
-
-        grid-template-columns:
-            repeat(3, 1fr);
-
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-
     }
-
 }
-
-
-
-/* =========================================================
-   RESPONSIVE - CELULAR
-   3 PERFUMES POR FILA
-========================================================= */
 
 @media (max-width: 800px) {
-
     header {
-
         height: auto;
-
-        padding:
-            20px 6%;
-
+        padding: 20px 6%;
         flex-direction: column;
-
         gap: 20px;
-
     }
-
-
     nav {
-
         gap: 15px;
-
         flex-wrap: wrap;
-
         justify-content: center;
-
     }
-
-
     nav a {
-
         font-size: 11px;
-
     }
-
-
     #inicio {
-
-        padding:
-            80px 8%;
-
+        padding: 80px 8%;
     }
-
-
     .contenido-inicio h1 {
-
         font-size: 50px;
-
     }
-
-
     .titulo-seccion {
-
         font-size: 45px;
-
     }
-
-
     .catalogo {
-
-        display: none;
-
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 12px;
-
-        width: 100%;
-
     }
-
-
-    .catalogo.activo {
-
-        display: grid;
-
-    }
-
-
     .producto {
-
-        width: 100%;
-
         padding: 8px;
-
     }
-
-
     .imagen-producto {
-
         height: 180px;
-
     }
-
-
     .nombre-locion {
-
         font-size: 20px;
-
     }
-
-
-    .descripcion-locion {
-
-        font-size: 10px;
-
-        min-height: 45px;
-
-    }
-
-
-    .precio-anterior {
-
-        font-size: 9px;
-
-    }
-
-
-    .precio-promocion {
-
-        font-size: 13px;
-
-    }
-
-
-    .precios {
-
-        gap: 5px;
-
-    }
-
-
     .proceso {
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns: 1fr;
     }
-
-
     #elaboracion,
     #nosotros,
     #contacto {
-
-        padding:
-            90px 7%;
-
+        padding: 90px 7%;
     }
+    .modal-contenido {
+        grid-template-columns: 1fr;
+    }
+    .modal-imagen {
+        height: 42vh;
+        min-height: 240px;
+        max-height: 42vh;
+    }
+    .modal-imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .modal-cerrar {
+        top: 12px;
+        right: 12px;
+    }
+    .carrito-flotante {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+    .carrito-contador {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+}
 
+@media (max-width: 500px) {
+    .catalogo {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+    }
+    .producto {
+        padding: 6px;
+    }
+    .imagen-producto {
+        height: 145px;
+        margin-bottom: 8px;
+    }
+    .nombre-locion {
+        font-size: 17px;
+    }
+    .categorias {
+        flex-direction: row;
+        gap: 8px;
+    }
+    .boton-categoria {
+        min-width: 120px;
+        padding: 12px 15px;
+        font-size: 10px;
+    }
+    .contenido-inicio h1 {
+        font-size: 44px;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    nav {
+        gap: 10px;
+    }
+    .filtros-adicionales .filtro-opcion {
+        font-size: 9px;
+        padding: 5px 12px;
+    }
+    .boton-ver-detalle {
+        font-size: 11px;
+    }
+    .boton-agregar-carrito {
+        font-size: 10px;
+    }
+}
+
+/* Ocultar elementos según filtros */
+.producto.oculto {
+    display: none !important;
 }
 
 
 
 /* =========================================================
-   CELULARES PEQUEÑOS
-   3 PERFUMES POR FILA
+   CORRECCIÓN DE PRECIOS EN EL MODAL
 ========================================================= */
-
-@media (max-width: 500px) {
-
-    .catalogo {
-
-        display: none;
-
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
-        gap: 7px;
-
-    }
-
-
-    .catalogo.activo {
-
-        display: grid;
-
-    }
-
-
-    .producto {
-
-        padding: 6px;
-
-    }
-
-
-    .imagen-producto {
-
-        height: 145px;
-
-        margin-bottom: 8px;
-
-    }
-
-
-    .nombre-locion {
-
-        font-size: 17px;
-
-    }
-
-
-    .descripcion-locion {
-
-        font-size: 9px;
-
-        line-height: 1.35;
-
-        min-height: 48px;
-
-    }
-
-
-    .precio-anterior {
-
-        font-size: 8px;
-
-    }
-
-
-    .precio-promocion {
-
-        font-size: 12px;
-
-    }
-
-
-    .precios {
-
-        gap: 5px;
-
-    }
-
-
-    .categorias {
-
-        flex-direction: row;
-
-        gap: 8px;
-
-    }
-
-
-    .boton-categoria {
-
-        min-width: 120px;
-
-        padding:
-            12px 15px;
-
-        font-size: 10px;
-
-    }
-
-
-    .contenido-inicio h1 {
-
-        font-size: 44px;
-
-    }
-
-
-    .logo {
-
-        font-size: 30px;
-
-    }
-
-
-    nav {
-
-        gap: 10px;
-
-    }
-
+.modal-info .precios {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+}
+
+.modal-info .precio-anterior {
+    color: #888;
+    font-size: 16px;
+    text-decoration: line-through;
+    text-decoration-color: #888;
+    text-decoration-thickness: 2px;
+}
+
+.modal-info .precio-promocion {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #d4af37, #f5d66a, #d4af37);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+
+/* También para los precios por tamaño (envases estándar) */
+.modal-info .precios-tamanos {
+    gap: 25px;
+}
+
+.modal-info .precio-tamano-item .precio-valor {
+    font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #d4af37, #f5d66a, #d4af37);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
