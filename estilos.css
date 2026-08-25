@@ -371,7 +371,7 @@ section {
 }
 
 /* =========================================================
-   PRODUCTOS (tarjetas limpias: solo imagen, nombre y botones)
+   PRODUCTOS
 ========================================================= */
 .producto {
     padding: 15px;
@@ -445,7 +445,7 @@ section {
 .boton-ver-detalle {
     width: 100%;
     padding: 10px 0;
-    margin-top: auto;   /* Empuja el botón hacia abajo para alinear */
+    margin-top: auto;
     background: none;
     border: 1px solid rgba(212, 175, 55, .45);
     color: #d4af37;
@@ -524,7 +524,7 @@ section {
 }
 
 /* =========================================================
-   MODAL (con descripción y precios)
+   MODAL DE DETALLE
 ========================================================= */
 body.sin-scroll {
     overflow: hidden;
@@ -593,7 +593,6 @@ body.sin-scroll {
     object-fit: contain;
 }
 
-/* Spinner de carga */
 .spinner {
     position: absolute;
     width: 40px;
@@ -634,7 +633,6 @@ body.sin-scroll {
     width: fit-content;
 }
 
-/* Selector de talla en modal */
 .selector-talla {
     display: flex;
     gap: 15px;
@@ -660,6 +658,173 @@ body.sin-scroll {
 
 .selector-talla button:hover {
     border-color: #d4af37;
+}
+
+/* =========================================================
+   PRECIOS EN MODAL
+========================================================= */
+.modal-info .precios {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+}
+
+.modal-info .precio-anterior {
+    color: #888;
+    font-size: 16px;
+    text-decoration: line-through;
+    text-decoration-color: #888;
+    text-decoration-thickness: 2px;
+}
+
+.modal-info .precio-promocion {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #d4af37, #f5d66a, #d4af37);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+
+.modal-info .precios-tamanos {
+    gap: 25px;
+}
+
+.modal-info .precio-tamano-item .precio-valor {
+    font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #d4af37, #f5d66a, #d4af37);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   MODAL CARRITO
+========================================================= */
+.modal-carrito-contenido {
+    position: relative;
+    background: #0a0a0a;
+    border: 1px solid rgba(212, 175, 55, .35);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .6), 0 0 40px rgba(212, 175, 55, .08);
+    max-width: 600px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 35px 30px;
+}
+
+.titulo-carrito {
+    font-family: "Bodoni Moda", serif;
+    font-style: italic;
+    font-size: 32px;
+    color: #d4af37;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.lista-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.item-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border: 1px solid #1a1a1a;
+    border-radius: 4px;
+    transition: .3s;
+    background: rgba(255,255,255,0.02);
+}
+
+.item-carrito:hover {
+    border-color: #333;
+}
+
+.item-carrito-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.item-carrito-nombre {
+    font-size: 15px;
+    color: #eee;
+    font-weight: 500;
+}
+
+.item-carrito-precio {
+    font-size: 14px;
+    background: linear-gradient(90deg, #d4af37, #f5d66a, #d4af37);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.item-carrito-talla {
+    font-size: 12px;
+    color: #888;
+}
+
+.boton-eliminar-item {
+    background: none;
+    border: 1px solid #441111;
+    color: #aa4444;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: .3s;
+    font-family: "Montserrat", sans-serif;
+}
+
+.boton-eliminar-item:hover {
+    background: #441111;
+    color: #ff6666;
+    border-color: #aa4444;
+}
+
+.carrito-total {
+    font-size: 20px;
+    color: #d4af37;
+    text-align: right;
+    padding: 15px 0;
+    border-top: 1px solid #1a1a1a;
+    margin-top: 10px;
+}
+
+.boton-vaciar-carrito {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid #441111;
+    color: #aa4444;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .3s;
+    letter-spacing: 1px;
+}
+
+.boton-vaciar-carrito:hover {
+    background: #441111;
+    color: #ff6666;
+    border-color: #aa4444;
+}
+
+.carrito-vacio {
+    text-align: center;
+    color: #888;
+    padding: 40px 0;
+    font-size: 16px;
 }
 
 /* =========================================================
@@ -886,6 +1051,24 @@ footer p {
         height: 24px;
         font-size: 12px;
     }
+    .modal-carrito-contenido {
+        padding: 25px 18px;
+    }
+    .item-carrito {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .item-carrito-info {
+        flex: 1;
+        min-width: 120px;
+    }
+    .boton-eliminar-item {
+        padding: 4px 12px;
+        font-size: 11px;
+    }
+    .titulo-carrito {
+        font-size: 26px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -933,52 +1116,6 @@ footer p {
     }
 }
 
-/* Ocultar elementos según filtros */
 .producto.oculto {
     display: none !important;
-}
-
-
-
-/* =========================================================
-   CORRECCIÓN DE PRECIOS EN EL MODAL
-========================================================= */
-.modal-info .precios {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin: 8px 0;
-}
-
-.modal-info .precio-anterior {
-    color: #888;
-    font-size: 16px;
-    text-decoration: line-through;
-    text-decoration-color: #888;
-    text-decoration-thickness: 2px;
-}
-
-.modal-info .precio-promocion {
-    font-size: 24px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #d4af37, #f5d66a, #d4af37);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 0.5px;
-}
-
-/* También para los precios por tamaño (envases estándar) */
-.modal-info .precios-tamanos {
-    gap: 25px;
-}
-
-.modal-info .precio-tamano-item .precio-valor {
-    font-size: 20px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #d4af37, #f5d66a, #d4af37);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
