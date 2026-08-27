@@ -800,6 +800,32 @@ body.sin-scroll {
     margin-top: 10px;
 }
 
+/* Botón de pago con Nequi en el carrito */
+.boton-pago-carrito {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+    border: none;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.boton-pago-carrito.nequi {
+    background: #8A2BE2;
+    color: #fff;
+}
+
+.boton-pago-carrito.nequi:hover {
+    background: #7a1fd1;
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(138, 43, 226, .4);
+}
+
 .boton-vaciar-carrito {
     width: 100%;
     padding: 12px;
@@ -1113,6 +1139,10 @@ footer p {
     }
     .boton-agregar-carrito {
         font-size: 10px;
+    }
+    .boton-pago-carrito {
+        font-size: 14px;
+        padding: 12px;
     }
 }
 

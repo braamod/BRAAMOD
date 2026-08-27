@@ -188,7 +188,7 @@
     </div>
 
     <!-- =====================================================
-    MODAL DEL CARRITO
+    MODAL DEL CARRITO CON PAGO NEQUI
     ===================================================== -->
     <div id="modal-carrito-overlay" class="modal-overlay" onclick="cerrarCarritoSiEsFondo(event)">
         <div class="modal-carrito-contenido">
@@ -200,7 +200,11 @@
             <div class="carrito-total" id="carrito-total">
                 Total: $0
             </div>
-            <button class="boton-dorado" onclick="enviarCarritoPorWhatsApp()" style="width:100%; margin-top:15px;">
+            <!-- BOTÓN DE PAGO CON NEQUI (DIRECTO) -->
+            <button class="boton-pago-carrito nequi" onclick="pagarConNequi()">
+                💳 Pagar con Nequi
+            </button>
+            <button class="boton-dorado" onclick="enviarCarritoPorWhatsApp()" style="width:100%; margin-top:10px;">
                 Enviar pedido por WhatsApp
             </button>
             <button class="boton-vaciar-carrito" onclick="vaciarCarrito()">Vaciar carrito</button>
@@ -614,6 +618,39 @@
             }, 0);
             mensaje += `\nTotal aproximado: $${total.toLocaleString()}`;
             window.open(`https://wa.me/573214978435?text=${encodeURIComponent(mensaje)}`, '_blank');
+            cerrarCarrito();
+        }
+
+        // =========================================================
+        // FUNCIÓN DE PAGO CON NEQUI (DIRECTO)
+        // =========================================================
+        function pagarConNequi() {
+            if (carrito.length === 0) {
+                alert('🛒 Tu carrito está vacío. Agrega algunos productos primero.');
+                return;
+            }
+
+            // Calcular total
+            const total = carrito.reduce((sum, item) => {
+                const num = parseInt(item.precio.replace(/[$.]/g, ''));
+                return sum + num;
+            }, 0);
+
+            // Generar lista de productos para el mensaje
+            let listaProductos = '';
+            carrito.forEach((item, i) => {
+                const tallaStr = item.talla ? ` (${item.talla})` : '';
+                listaProductos += `${i+1}. ${item.nombre}${tallaStr} — ${item.precio}\n`;
+            });
+
+            // Crear el mensaje con el total y la lista
+            const mensaje = `Hola BRAAMOD, quiero realizar el siguiente pedido:\n\n${listaProductos}\nTotal: $${total.toLocaleString()}\n\nPor favor, enviarme el link de pago por Nequi.`;
+
+            // Abrir WhatsApp con el mensaje predefinido
+            const url = `https://wa.me/573214978435?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+
+            // Cerrar el carrito
             cerrarCarrito();
         }
 
