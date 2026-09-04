@@ -328,6 +328,98 @@ section {
     box-shadow: 0 0 20px rgba(212, 175, 55, .08);
 }
 
+/* =========================================================
+   BUSCADOR DE LOCIONES
+========================================================= */
+.barra-busqueda {
+    max-width: 480px;
+    margin: 0 auto 35px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icono-lupa {
+    position: absolute;
+    left: 16px;
+    width: 16px;
+    height: 16px;
+    color: #777;
+    pointer-events: none;
+    transition: color .3s ease;
+}
+
+.barra-busqueda:focus-within .icono-lupa {
+    color: #d4af37;
+}
+
+.input-busqueda {
+    width: 100%;
+    padding: 14px 40px 14px 42px;
+    background: rgba(255, 255, 255, .02);
+    border: 1px solid #292929;
+    color: #e8e8e8;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: .5px;
+    transition: .4s ease;
+}
+
+.input-busqueda::placeholder {
+    color: #666;
+}
+
+.input-busqueda:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 20px rgba(212, 175, 55, .08);
+}
+
+.boton-limpiar-busqueda {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #777;
+    font-size: 20px;
+    line-height: 1;
+    padding: 6px 8px;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.boton-limpiar-busqueda:hover {
+    color: #d4af37;
+}
+
+/* ===== SIN RESULTADOS DE BÚSQUEDA ===== */
+.sin-resultados {
+    grid-column: 1 / -1;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.sin-resultados-texto {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.sin-resultados-texto strong {
+    color: #d4af37;
+    font-weight: 500;
+}
+
+.sin-resultados-subtexto {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
 /* ===== FILTROS ADICIONALES ===== */
 .filtros-adicionales {
     display: flex;

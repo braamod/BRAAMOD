@@ -64,6 +64,16 @@
             <p>Descubre nuestras fragancias cuidadosamente seleccionadas.</p>
         </div>
 
+        <!-- Buscador de lociones -->
+        <div class="barra-busqueda">
+            <svg class="icono-lupa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="buscador-locion" class="input-busqueda" placeholder="Busca tu loción por nombre..." oninput="buscarLocion(this.value)" aria-label="Buscar loción por nombre">
+            <button type="button" id="boton-limpiar-busqueda" class="boton-limpiar-busqueda" onclick="limpiarBusqueda()" aria-label="Limpiar búsqueda" style="display:none;">&times;</button>
+        </div>
+
         <!-- Categorías principales -->
         <div class="filtros-superiores">
             <div class="categorias" role="tablist" aria-label="Categorías de perfumes">
@@ -217,7 +227,7 @@
     <a id="carrito-flotante" class="carrito-flotante" onclick="abrirCarrito()" aria-label="Ver carrito de compras">
         🛒 <span class="carrito-contador" id="carrito-contador">0</span>
     </a>
-
+    <button id="boton-vaciar-carrito-flotante" class="boton-vaciar-carrito-flotante" onclick="vaciarCarrito()" aria-label="Vaciar carrito de compras">🗑️</button>
     <!-- =====================================================
     FOOTER
     ===================================================== -->
@@ -232,7 +242,7 @@
     ===================================================== -->
     <script>
         // =========================================================
-        // DATOS DE PRODUCTOS (20 mujer, 20 hombre, 6 económicos)
+        // DATOS DE PRODUCTOS (30 mujer, 30 hombre, 6 económicos)
         // =========================================================
         const productos = {
             mujer: [
@@ -255,7 +265,17 @@
                 { nombre: "Very Good Girl", desc: "Es una fragancia de la familia olfativa floral frutal para mujeres, lanzada en 2021. Presentada en su icónico frasco con forma de tacón de aguja en color rojo brillante, redefine la dualidad de la feminidad moderna con un aroma osado, divertido y muy seductor.", precioAnterior: "$129.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer17.jpg" },
                 { nombre: "Miss Dior", desc: "Creado originalmente en 1947 por Christian Dior. Se define como una fragancia elegante, romántica y profundamente vinculada al optimismo y al amor, combinando acordes florales, frutales y de estilo chipre.", precioAnterior: "$120.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer18.jpg" },
                 { nombre: "Botica 214", desc: "Eau de Parfum de alta sofisticación que combina contrastes naturales, notas amaderadas y frescura intensa, inspirada en viajes y descubrimientos globales.", precioAnterior: "$115.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/mujer/mujer19.jpg" },
-                { nombre: "La Vie Est Belle", desc: "Aroma dulce, elegante y muy duradero, diseñado para representar la alegría, la libertad y la elección de la propia felicidad.", precioAnterior: "$139.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer20.jpg" }
+                { nombre: "La Vie Est Belle", desc: "Aroma dulce, elegante y muy duradero, diseñado para representar la alegría, la libertad y la elección de la propia felicidad.", precioAnterior: "$139.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer20.jpg" },
+                { nombre: "Yves Saint Laurent Black Opium", desc: "Fragancia floral oriental adictiva y sensual, con notas de café, vainilla y flor de azahar. Es uno de los perfumes de mujer más vendidos del mundo, perfecto para la noche.", precioAnterior: "$139.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer21.jpg" },
+                { nombre: "Chanel Coco Mademoiselle", desc: "Un chipre floral elegante y moderno, con notas de naranja, jazmín y pachulí. Un ícono absoluto entre las fragancias femeninas más reconocidas del mundo.", precioAnterior: "$135.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer22.jpg" },
+                { nombre: "Giorgio Armani My Way", desc: "Fragancia floral blanca y cálida inspirada en la libertad y la aventura, con azahar, jazmín, tuberosa y un fondo de cedro. Tendencia fuerte en los últimos años.", precioAnterior: "$129.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer23.jpg" },
+                { nombre: "Viktor & Rolf Flowerbomb", desc: "Una explosión floral oriental intensa y llamativa, con jazmín, rosa, pachulí y orquídea. Un clásico de alta rotación entre las fragancias más vendidas.", precioAnterior: "$138.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer24.jpg" },
+                { nombre: "Narciso Rodriguez For Her", desc: "Perfume almizclado y sensual, minimalista pero muy reconocible sobre la piel, con notas de almizcle, ámbar y vainilla.", precioAnterior: "$125.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer25.jpg" },
+                { nombre: "Paco Rabanne Olympéa", desc: "Fragancia de vainilla salada con flor de azahar y sal marina, sensual y muy popular entre las mujeres jóvenes.", precioAnterior: "$128.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer26.jpg" },
+                { nombre: "Gucci Bloom", desc: "Floral blanco intenso y natural, con jazmín, tuberosa y jazmín sambac. Uno de los lanzamientos más exitosos de la marca.", precioAnterior: "$130.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer27.jpg" },
+                { nombre: "Burberry Her", desc: "Fragancia frutal londinense, juvenil y fresca, con frambuesa, moras, jazmín y vainilla. Furor en redes sociales por su icónico frasco rojo.", precioAnterior: "$120.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer28.jpg" },
+                { nombre: "Mugler Alien", desc: "Floral amaderado misterioso e intenso, con jazmín sambac y madera cashmeran. Gran fijación y muy reconocible.", precioAnterior: "$132.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/mujer/mujer29.jpg" },
+                { nombre: "Prada Paradoxe", desc: "Floral ambarino suave y adictivo, con jazmín, ámbar y algodón almizclado. Una de las fragancias en crecimiento más rápido del mercado.", precioAnterior: "$134.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer30.jpg" }
             ],
             hombre: [
                 { nombre: "Clash", desc: "Es un perfume masculino de la familia olfativa aromática acuática (Fougère acuosa), creado por el perfumista Dominique Ropion. Ofrece un frescor potente y moderno, diseñado para el uso diario, el trabajo o la actividad física.", precioAnterior: "$119.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre01.jpg" },
@@ -277,7 +297,17 @@
                 { nombre: "Versace Eros", desc: "Destaca por ser un aroma intenso, dulce y muy sensual, diseñado para hombres seguros de sí mismos que buscan acaparar miradas.", precioAnterior: "$147.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/hombre/hombre17.jpg" },
                 { nombre: "Magnate Exclusive", desc: "Perfume masculino de alta concentración y muy larga duración, perteneciente a la familia olfativa herbal aromática con dejos orientales y de cuero. Está inspirado en el hombre exitoso, moderno y seguro de sí mismo que disfruta de experiencias exclusivas.", precioAnterior: "$100.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre18.jpg" },
                 { nombre: "1 Million", desc: "Destaca por un aroma audaz, dulce y seductor, con notas de menta, mandarina, canela y cuero. Ideal para la noche y climas templados o fríos.", precioAnterior: "$148.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/hombre/hombre19.jpg" },
-                { nombre: "Sauvage", desc: "Mezcla notas cítricas chispeantes con un fondo de maderas ambarinas y especias, inspirada en los grandes espacios abiertos bajo un cielo nocturno. Su estela es intensa, seductora y de gran fijación en la piel.", precioAnterior: "$178.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre20.jpg" }
+                { nombre: "Sauvage", desc: "Mezcla notas cítricas chispeantes con un fondo de maderas ambarinas y especias, inspirada en los grandes espacios abiertos bajo un cielo nocturno. Su estela es intensa, seductora y de gran fijación en la piel.", precioAnterior: "$178.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre20.jpg" },
+                { nombre: "Giorgio Armani Acqua di Giò", desc: "Fragancia acuática y aromática, fresca desde 1996 y referencia mundial de las notas marinas, con cítricos, romero y salvia.", precioAnterior: "$125.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/hombre/hombre21.jpg" },
+                { nombre: "Maison Francis Kurkdjian Baccarat Rouge 540", desc: "Fragancia unisex cálida y adictiva, con jazmín, azafrán y madera de ámbar. Una de las fragancias de nicho más vendidas y reconocibles del mundo.", precioAnterior: "$145.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre22.jpg" },
+                { nombre: "Creed Aventus", desc: "Afrutado amaderado potente e icónico, con notas de piña, abedul y almizcle. Sinónimo de éxito y prestigio en el mundo de la perfumería.", precioAnterior: "$155.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre23.jpg" },
+                { nombre: "Hugo Boss Bottled", desc: "Amaderado especiado, versátil y de excelente calidad, con manzana, canela y sándalo. Uno de los perfumes masculinos más vendidos del mundo.", precioAnterior: "$118.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre24.jpg" },
+                { nombre: "Azzaro The Most Wanted", desc: "Vainilla especiada y cálida, con jengibre, cardamomo y vainilla bourbon. Ha arrasado en ventas durante los últimos años.", precioAnterior: "$128.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/hombre/hombre25.jpg" },
+                { nombre: "Giorgio Armani Stronger With You Intensely", desc: "Especiado y dulce, envolvente y cálido, con cardamomo, avellana y vainilla. Muy popular entre las generaciones más jóvenes.", precioAnterior: "$122.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/hombre/hombre26.jpg" },
+                { nombre: "Yves Saint Laurent Y", desc: "Aromático fougère fresco y moderno, con manzana, salvia y geranio. Pensado para el hombre ambicioso y seguro de sí mismo.", precioAnterior: "$126.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre27.jpg" },
+                { nombre: "Jean Paul Gaultier Le Beau", desc: "Amaderado floral cálido y tropical, hermano del icónico Le Male, con coco, haba tonka y madera.", precioAnterior: "$130.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre28.jpg" },
+                { nombre: "Hermès Terre d'Hermès", desc: "Amaderado mineral elegante y sofisticado, con pomelo, vetiver y pimienta. Un clásico atemporal de alta gama.", precioAnterior: "$140.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre29.jpg" },
+                { nombre: "Acqua di Parma Colonia", desc: "Cítrico clásico e italiano, con limón, bergamota y lavanda. Referencia de elegancia atemporal desde hace décadas.", precioAnterior: "$132.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/hombre/hombre30.jpg" }
             ],
             economicos: [
                 { nombre: "Envase gris", desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.", esEconomico: true, precio50: "$25.000", precio100: "$45.000", tipo: "dulce", img: "imagenes/economicos/economico01.jpg" },
@@ -297,6 +327,54 @@
         let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
         let productoModalActual = null;
         let tallaSeleccionada = '50ml';
+
+        // =========================================================
+        // UTILIDAD - ESCAPAR TEXTO (seguridad al insertar en HTML)
+        // =========================================================
+        function escaparHTML(texto) {
+            const div = document.createElement('div');
+            div.textContent = texto;
+            return div.innerHTML;
+        }
+
+        // =========================================================
+        // CREAR TARJETA DE PRODUCTO (HTML reutilizable)
+        // =========================================================
+        function crearTarjetaHTML(categoria, idxOriginal, prod) {
+            return `
+                <article class="producto" data-index="${idxOriginal}" data-categoria="${categoria}">
+                    <div class="imagen-producto">
+                        <img src="${prod.img}" alt="${prod.nombre}" loading="lazy" width="300" height="300">
+                    </div>
+                    <h3 class="nombre-locion">${prod.nombre}</h3>
+                    <button class="boton-ver-detalle" onclick="abrirDetalle('${categoria}', ${idxOriginal})" aria-label="Ver detalle de ${prod.nombre}">Click para ver</button>
+                    <button class="boton-agregar-carrito" onclick="agregarAlCarrito('${categoria}', ${idxOriginal})" aria-label="Agregar ${prod.nombre} al carrito">+ Agregar al carrito</button>
+                </article>
+            `;
+        }
+
+        // =========================================================
+        // MONTAR PRODUCTOS EN EL DOM (observer + contador carrito)
+        // =========================================================
+        function montarProductosEnDOM(html) {
+            const contenedor = document.getElementById('contenedor-catalogo');
+            contenedor.innerHTML = html;
+
+            if (window.observador) window.observador.disconnect();
+            window.observador = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.producto').forEach(el => {
+                window.observador.observe(el);
+            });
+
+            actualizarContadorCarrito();
+        }
 
         // =========================================================
         // RENDERIZAR CATÁLOGO
@@ -328,36 +406,84 @@
             }
 
             let html = '';
-            productosFiltrados.forEach((prod, index) => {
+            productosFiltrados.forEach((prod) => {
                 const idxOriginal = productosCat.indexOf(prod);
-                html += `
-                    <article class="producto" data-index="${idxOriginal}" data-categoria="${categoria}">
-                        <div class="imagen-producto">
-                            <img src="${prod.img}" alt="${prod.nombre}" loading="lazy" width="300" height="300">
-                        </div>
-                        <h3 class="nombre-locion">${prod.nombre}</h3>
-                        <button class="boton-ver-detalle" onclick="abrirDetalle('${categoria}', ${idxOriginal})" aria-label="Ver detalle de ${prod.nombre}">Click para ver</button>
-                        <button class="boton-agregar-carrito" onclick="agregarAlCarrito('${categoria}', ${idxOriginal})" aria-label="Agregar ${prod.nombre} al carrito">+ Agregar al carrito</button>
-                    </article>
-                `;
+                html += crearTarjetaHTML(categoria, idxOriginal, prod);
             });
 
-            contenedor.innerHTML = html;
+            montarProductosEnDOM(html);
+        }
 
-            if (window.observador) window.observador.disconnect();
-            window.observador = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+        // =========================================================
+        // BUSCADOR DE LOCIONES
+        // =========================================================
+        let temporizadorBusqueda = null;
+
+        function buscarLocion(textoCrudo) {
+            clearTimeout(temporizadorBusqueda);
+            temporizadorBusqueda = setTimeout(() => ejecutarBusqueda(textoCrudo), 150);
+        }
+
+        function ejecutarBusqueda(textoCrudo) {
+            const texto = textoCrudo.trim();
+            const botonLimpiar = document.getElementById('boton-limpiar-busqueda');
+            botonLimpiar.style.display = texto ? 'block' : 'none';
+
+            if (!texto) {
+                // Sin texto: volver al catálogo normal por categoría
+                document.getElementById('filtros-adicionales').style.display = 'flex';
+                renderizarCatalogo(categoriaActual, filtroActual);
+                return;
+            }
+
+            // Mientras se busca, ocultamos los filtros de precio/tipo (no aplican a una búsqueda global)
+            document.getElementById('filtros-adicionales').style.display = 'none';
+
+            const textoBusqueda = texto.toLowerCase();
+            let resultados = [];
+
+            Object.keys(productos).forEach(categoria => {
+                productos[categoria].forEach((prod, idxOriginal) => {
+                    const coincide = prod.nombre.toLowerCase().includes(textoBusqueda) ||
+                        (prod.desc && prod.desc.toLowerCase().includes(textoBusqueda));
+                    if (coincide) {
+                        resultados.push({ categoria, idxOriginal, prod });
                     }
                 });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.producto').forEach(el => {
-                window.observador.observe(el);
             });
 
-            actualizarContadorCarrito();
+            mostrarResultadosBusqueda(resultados, texto);
+        }
+
+        function mostrarResultadosBusqueda(resultados, textoBuscado) {
+            if (resultados.length === 0) {
+                const textoSeguro = escaparHTML(textoBuscado);
+                const mensajeWhatsApp = `Hola, estoy buscando la loción "${textoBuscado}". ¿La manejan?`;
+                const html = `
+                    <div class="sin-resultados">
+                        <p class="sin-resultados-texto">No encontramos "<strong>${textoSeguro}</strong>" en nuestro catálogo.</p>
+                        <p class="sin-resultados-subtexto">Puede que la tengamos disponible aunque no aparezca aquí. Pregúntanos directamente y te confirmamos.</p>
+                        <a href="https://wa.me/573214978435?text=${encodeURIComponent(mensajeWhatsApp)}" target="_blank" rel="noopener noreferrer" class="boton-dorado">Preguntar por WhatsApp</a>
+                    </div>
+                `;
+                document.getElementById('contenedor-catalogo').innerHTML = html;
+                if (window.observador) window.observador.disconnect();
+                return;
+            }
+
+            let html = '';
+            resultados.forEach(({ categoria, idxOriginal, prod }) => {
+                html += crearTarjetaHTML(categoria, idxOriginal, prod);
+            });
+
+            montarProductosEnDOM(html);
+        }
+
+        function limpiarBusqueda() {
+            const input = document.getElementById('buscador-locion');
+            input.value = '';
+            input.focus();
+            ejecutarBusqueda('');
         }
 
         // =========================================================
@@ -367,6 +493,15 @@
             categoriaActual = categoria;
             document.querySelectorAll('.boton-categoria').forEach(btn => btn.classList.remove('activo'));
             boton.classList.add('activo');
+
+            // Al cambiar de categoría, se limpia cualquier búsqueda activa
+            const buscador = document.getElementById('buscador-locion');
+            if (buscador.value) {
+                buscador.value = '';
+                document.getElementById('boton-limpiar-busqueda').style.display = 'none';
+            }
+            document.getElementById('filtros-adicionales').style.display = 'flex';
+
             renderizarCatalogo(categoria, filtroActual);
             document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
         }
