@@ -1,694 +1,1396 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ===== SEO & METAS ===== -->
     <title>BRAAMOD | Perfumería de lujo</title>
-    <meta name="description" content="BRAAMOD: fragancias exclusivas para mujer y hombre. Envases personalizados, esencias únicas. Descubre nuestra colección de perfumes de lujo.">
-    <meta property="og:title" content="BRAAMOD | Perfumería de lujo">
-    <meta property="og:description" content="Fragancias exclusivas para mujer y hombre. Envases personalizados y esencias únicas.">
-    <meta property="og:image" content="https://tudominio.com/imagenes/og-image.jpg">
-    <meta property="og:url" content="https://tudominio.com">
-    <meta name="robots" content="index, follow">
+    <meta
+      name="description"
+      content="BRAAMOD: fragancias exclusivas para mujer y hombre. Envases personalizados, esencias únicas. Descubre nuestra colección de perfumes de lujo."
+    />
+    <meta property="og:title" content="BRAAMOD | Perfumería de lujo" />
+    <meta
+      property="og:description"
+      content="Fragancias exclusivas para mujer y hombre. Envases personalizados y esencias únicas."
+    />
+    <meta
+      property="og:image"
+      content="https://tudominio.com/imagenes/og-image.jpg"
+    />
+    <meta property="og:url" content="https://tudominio.com" />
+    <meta name="robots" content="index, follow" />
 
     <!-- ===== FUENTES ===== -->
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- ===== CSS EXTERNO ===== -->
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- =====================================================
     HEADER
     ===================================================== -->
     <header>
-        <a href="#inicio" class="logo" aria-label="BRAAMOD - Inicio">BRAAMOD</a>
-        <nav>
-            <a href="#inicio" aria-label="Ir a Inicio">Inicio</a>
-            <a href="#catalogo" aria-label="Ir a Catálogo">Catálogo</a>
-            <a href="#nosotros" aria-label="Ir a Nosotros">Nosotros</a>
-            <a href="#elaboracion" aria-label="Ir a Elaboración">Elaboración</a>
-            <a href="#contacto" aria-label="Ir a Contacto">Contacto</a>
-        </nav>
+      <a href="#inicio" class="logo" aria-label="BRAAMOD - Inicio">BRAAMOD</a>
+      <button class="menu-hamburguesa" id="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-principal">
+        <a href="#inicio" aria-label="Ir a Inicio" onclick="cerrarMenu()">Inicio</a>
+        <a href="#catalogo" aria-label="Ir a Catálogo" onclick="cerrarMenu()">Catálogo</a>
+        <a href="#nosotros" aria-label="Ir a Nosotros" onclick="cerrarMenu()">Nosotros</a>
+        <a href="#elaboracion" aria-label="Ir a Elaboración" onclick="cerrarMenu()">Elaboración</a>
+        <a href="#contacto" aria-label="Ir a Contacto" onclick="cerrarMenu()">Contacto</a>
+      </nav>
     </header>
 
     <!-- =====================================================
     INICIO
     ===================================================== -->
     <section id="inicio" class="hero">
-        <div class="luces luz1"></div>
-        <div class="luces luz2"></div>
-        <div class="luces luz3"></div>
-        <div class="contenido-inicio">
-            <p class="subtitulo">ESENCIA · ELEGANCIA · DISTINCIÓN</p>
-            <h1>La esencia de <span class="destacado">BRAAMOD</span></h1>
-            <p class="texto-inicio">Fragancias creadas para personas que buscan dejar una huella inolvidable.</p>
-            <a href="#catalogo" class="boton-dorado">Descubrir colección</a>
-        </div>
+      <div class="luces luz1"></div>
+      <div class="luces luz2"></div>
+      <div class="luces luz3"></div>
+      <div class="contenido-inicio">
+        <p class="subtitulo">ESENCIA · ELEGANCIA · DISTINCIÓN</p>
+        <h1>La esencia de <span class="destacado">BRAAMOD</span></h1>
+        <p class="texto-inicio">
+          Fragancias creadas para personas que buscan dejar una huella
+          inolvidable.
+        </p>
+        <a href="#catalogo" class="boton-dorado">Descubrir colección</a>
+      </div>
     </section>
 
     <!-- =====================================================
     CATÁLOGO
     ===================================================== -->
     <section id="catalogo">
-        <div class="encabezado-seccion">
-            <p class="mini-titulo">NUESTRA COLECCIÓN</p>
-            <h2 class="titulo-seccion"><span>Catálogo</span></h2>
-            <p>Descubre nuestras fragancias cuidadosamente seleccionadas.</p>
-        </div>
+      <div class="encabezado-seccion">
+        <p class="mini-titulo">NUESTRA COLECCIÓN</p>
+        <h2 class="titulo-seccion"><span>Catálogo</span></h2>
+        <p>Descubre nuestras fragancias cuidadosamente seleccionadas.</p>
+      </div>
 
-        <!-- Buscador de lociones -->
-        <div class="barra-busqueda">
-            <svg class="icono-lupa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <circle cx="11" cy="11" r="7"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-            <input type="text" id="buscador-locion" class="input-busqueda" placeholder="Busca tu loción por nombre..." oninput="buscarLocion(this.value)" aria-label="Buscar loción por nombre">
-            <button type="button" id="boton-limpiar-busqueda" class="boton-limpiar-busqueda" onclick="limpiarBusqueda()" aria-label="Limpiar búsqueda" style="display:none;">&times;</button>
-        </div>
+      <!-- Buscador de lociones -->
+      <div class="barra-busqueda">
+        <svg
+          class="icono-lupa"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input
+          type="text"
+          id="buscador-locion"
+          class="input-busqueda"
+          placeholder="Busca tu loción por nombre..."
+          oninput="buscarLocion(this.value)"
+          aria-label="Buscar loción por nombre"
+        />
+        <button
+          type="button"
+          id="boton-limpiar-busqueda"
+          class="boton-limpiar-busqueda"
+          onclick="limpiarBusqueda()"
+          aria-label="Limpiar búsqueda"
+          style="display: none"
+        >
+          &times;
+        </button>
+      </div>
 
-        <!-- Categorías principales -->
-        <div class="filtros-superiores">
-            <div class="categorias" role="tablist" aria-label="Categorías de perfumes">
-                <button class="boton-categoria activo" onclick="mostrarCatalogo('mujer', this)" aria-label="Mostrar perfumes de mujer" role="tab">Mujer</button>
-                <button class="boton-categoria" onclick="mostrarCatalogo('hombre', this)" aria-label="Mostrar perfumes de hombre" role="tab">Hombre</button>
-                <button class="boton-categoria" onclick="mostrarCatalogo('economicos', this)" aria-label="Mostrar envases estándar" role="tab">Envases estándar</button>
-            </div>
+      <!-- Categorías principales -->
+      <div class="filtros-superiores">
+        <div
+          class="categorias"
+          role="tablist"
+          aria-label="Categorías de perfumes"
+        >
+          <button
+            class="boton-categoria activo"
+            onclick="mostrarCatalogo('mujer', this)"
+            aria-label="Mostrar perfumes de mujer"
+            role="tab"
+          >
+            Mujer
+          </button>
+          <button
+            class="boton-categoria"
+            onclick="mostrarCatalogo('hombre', this)"
+            aria-label="Mostrar perfumes de hombre"
+            role="tab"
+          >
+            Hombre
+          </button>
+          <button
+            class="boton-categoria"
+            onclick="mostrarCatalogo('economicos', this)"
+            aria-label="Mostrar envases estándar"
+            role="tab"
+          >
+            Envases estándar
+          </button>
         </div>
+      </div>
 
-        <!-- Filtros adicionales (precio y tipo) -->
-        <div class="filtros-adicionales" id="filtros-adicionales">
-            <button class="filtro-opcion activo" data-filtro="todos" onclick="aplicarFiltros('todos', this)">Todos</button>
-            <button class="filtro-opcion" data-filtro="precio-bajo" onclick="aplicarFiltros('precio-bajo', this)">Precio bajo</button>
-            <button class="filtro-opcion" data-filtro="precio-alto" onclick="aplicarFiltros('precio-alto', this)">Precio alto</button>
-            <button class="filtro-opcion" data-filtro="floral" onclick="aplicarFiltros('floral', this)">Floral</button>
-            <button class="filtro-opcion" data-filtro="amaderado" onclick="aplicarFiltros('amaderado', this)">Amaderado</button>
-            <button class="filtro-opcion" data-filtro="dulce" onclick="aplicarFiltros('dulce', this)">Dulce</button>
-        </div>
+      <!-- Filtros adicionales (precio y tipo) -->
+      <div class="filtros-adicionales" id="filtros-adicionales">
+        <button
+          class="filtro-opcion activo"
+          data-filtro="todos"
+          onclick="aplicarFiltros('todos', this)"
+        >
+          Todos
+        </button>
+        <button
+          class="filtro-opcion"
+          data-filtro="precio-bajo"
+          onclick="aplicarFiltros('precio-bajo', this)"
+        >
+          Precio bajo
+        </button>
+        <button
+          class="filtro-opcion"
+          data-filtro="precio-alto"
+          onclick="aplicarFiltros('precio-alto', this)"
+        >
+          Precio alto
+        </button>
+        <button
+          class="filtro-opcion"
+          data-filtro="floral"
+          onclick="aplicarFiltros('floral', this)"
+        >
+          Floral
+        </button>
+        <button
+          class="filtro-opcion"
+          data-filtro="amaderado"
+          onclick="aplicarFiltros('amaderado', this)"
+        >
+          Amaderado
+        </button>
+        <button
+          class="filtro-opcion"
+          data-filtro="dulce"
+          onclick="aplicarFiltros('dulce', this)"
+        >
+          Dulce
+        </button>
+      </div>
 
-        <!-- Contenedor de catálogo (se llena con JavaScript) -->
-        <div id="contenedor-catalogo" class="catalogo activo"></div>
+      <!-- Contenedor de catálogo (se llena con JavaScript) -->
+      <div id="contenedor-catalogo" class="catalogo activo"></div>
     </section>
 
     <!-- =====================================================
     NOSOTROS
     ===================================================== -->
     <section id="nosotros">
-        <div class="encabezado-seccion">
-            <p class="mini-titulo">NUESTRA ESENCIA</p>
-            <h2 class="titulo-seccion"><span>Sobre BRAAMOD</span></h2>
-        </div>
-        <div class="texto-nosotros">
-            <p>En <strong>BRAAMOD</strong> creemos que una fragancia es mucho más que un aroma. Es una forma de expresar personalidad, elegancia y estilo.</p>
-            <p>Nuestras lociones son preparadas cuidadosamente utilizando aceites y diferentes combinaciones aromáticas para crear experiencias únicas.</p>
-            <p>Cada fragancia busca representar una esencia diferente, permitiendo encontrar el aroma ideal para cada personalidad y ocasión.</p>
-        </div>
+      <div class="encabezado-seccion">
+        <p class="mini-titulo">NUESTRA ESENCIA</p>
+        <h2 class="titulo-seccion"><span>Sobre BRAAMOD</span></h2>
+      </div>
+      <div class="texto-nosotros">
+        <p>
+          En <strong>BRAAMOD</strong> creemos que una fragancia es mucho más que
+          un aroma. Es una forma de expresar personalidad, elegancia y estilo.
+        </p>
+        <p>
+          Nuestras lociones son preparadas cuidadosamente utilizando aceites y
+          diferentes combinaciones aromáticas para crear experiencias únicas.
+        </p>
+        <p>
+          Cada fragancia busca representar una esencia diferente, permitiendo
+          encontrar el aroma ideal para cada personalidad y ocasión.
+        </p>
+      </div>
     </section>
 
     <!-- =====================================================
     ELABORACIÓN
     ===================================================== -->
     <section id="elaboracion">
-        <div class="encabezado-seccion">
-            <p class="mini-titulo">EL ARTE DE CREAR</p>
-            <h2 class="titulo-seccion"><span>Nuestra elaboración</span></h2>
+      <div class="encabezado-seccion">
+        <p class="mini-titulo">EL ARTE DE CREAR</p>
+        <h2 class="titulo-seccion"><span>Nuestra elaboración</span></h2>
+      </div>
+      <div class="proceso">
+        <div class="paso">
+          <span>01</span>
+          <h3>Selección</h3>
+          <p>
+            Seleccionamos cuidadosamente los aceites y componentes utilizados en
+            nuestras fragancias.
+          </p>
         </div>
-        <div class="proceso">
-            <div class="paso">
-                <span>01</span>
-                <h3>Selección</h3>
-                <p>Seleccionamos cuidadosamente los aceites y componentes utilizados en nuestras fragancias.</p>
-            </div>
-            <div class="paso">
-                <span>02</span>
-                <h3>Preparación</h3>
-                <p>Combinamos los diferentes componentes buscando conseguir un aroma equilibrado y agradable.</p>
-            </div>
-            <div class="paso">
-                <span>03</span>
-                <h3>Creación</h3>
-                <p>Cada fragancia es preparada pensando en ofrecer una experiencia especial.</p>
-            </div>
+        <div class="paso">
+          <span>02</span>
+          <h3>Preparación</h3>
+          <p>
+            Combinamos los diferentes componentes buscando conseguir un aroma
+            equilibrado y agradable.
+          </p>
         </div>
+        <div class="paso">
+          <span>03</span>
+          <h3>Creación</h3>
+          <p>
+            Cada fragancia es preparada pensando en ofrecer una experiencia
+            especial.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- =====================================================
     CONTACTO
     ===================================================== -->
     <section id="contacto">
-        <div class="encabezado-seccion">
-            <p class="mini-titulo">CONECTA CON NOSOTROS</p>
-            <h2 class="titulo-seccion"><span>Contacto</span></h2>
-        </div>
-        <div class="contactos">
-            <a href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias." target="_blank" rel="noopener noreferrer" class="contacto-link" aria-label="Contactar por WhatsApp">
-                <span class="contacto-icono">WhatsApp</span>
-                <span>Escríbenos por WhatsApp</span>
-            </a>
-            <a href="https://www.instagram.com/braa_mod/" target="_blank" rel="noopener noreferrer" class="contacto-link" aria-label="Seguir en Instagram">
-                <span class="contacto-icono">Instagram</span>
-                <span>Síguenos en Instagram</span>
-            </a>
-        </div>
+      <div class="encabezado-seccion">
+        <p class="mini-titulo">CONECTA CON NOSOTROS</p>
+        <h2 class="titulo-seccion"><span>Contacto</span></h2>
+      </div>
+      <div class="contactos">
+        <a
+          href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contacto-link"
+          aria-label="Contactar por WhatsApp"
+        >
+          <span class="contacto-icono">WhatsApp</span>
+          <span>Escríbenos por WhatsApp</span>
+        </a>
+        <a
+          href="https://www.instagram.com/braa_mod/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contacto-link"
+          aria-label="Seguir en Instagram"
+        >
+          <span class="contacto-icono">Instagram</span>
+          <span>Síguenos en Instagram</span>
+        </a>
+      </div>
     </section>
 
     <!-- =====================================================
     MODAL DE DETALLE
     ===================================================== -->
-    <div id="modal-overlay" class="modal-overlay" onclick="cerrarDetalleSiEsFondo(event)">
-        <div class="modal-contenido">
-            <button class="modal-cerrar" onclick="cerrarDetalle()" aria-label="Cerrar modal">&times;</button>
-            <div class="modal-imagen">
-                <div class="spinner" id="modal-spinner"></div>
-                <img id="modal-imagen" src="" alt="">
-            </div>
-            <div class="modal-info">
-                <h3 id="modal-nombre" class="nombre-locion"></h3>
-                <p id="modal-descripcion" class="descripcion-locion"></p>
-                <div id="modal-precios" class="precios">
-                    <span id="modal-precio-anterior" class="precio-anterior"></span>
-                    <span id="modal-precio-promocion" class="precio-promocion"></span>
-                </div>
-                <div id="modal-precios-tamanos" class="precios precios-tamanos">
-                    <div class="precio-tamano-item">
-                        <span class="etiqueta-tamano">50 ml</span>
-                        <span id="modal-precio-50" class="precio-valor"></span>
-                    </div>
-                    <div class="precio-tamano-item">
-                        <span class="etiqueta-tamano">100 ml</span>
-                        <span id="modal-precio-100" class="precio-valor"></span>
-                    </div>
-                </div>
-                <!-- Selector de talla para envases estándar -->
-                <div id="modal-selector-talla" class="selector-talla" style="display:none;">
-                    <button data-talla="50ml" class="activo" onclick="seleccionarTalla('50ml', this)">50 ml</button>
-                    <button data-talla="100ml" onclick="seleccionarTalla('100ml', this)">100 ml</button>
-                </div>
-                <a id="modal-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="boton-dorado modal-boton-whatsapp">Pedir por WhatsApp</a>
-                <button class="boton-agregar-carrito" onclick="agregarAlCarritoDesdeModal()">Agregar al carrito</button>
-            </div>
+    <div
+      id="modal-overlay"
+      class="modal-overlay"
+      onclick="cerrarDetalleSiEsFondo(event)"
+    >
+      <div class="modal-contenido">
+        <button
+          class="modal-cerrar"
+          onclick="cerrarDetalle()"
+          aria-label="Cerrar modal"
+        >
+          &times;
+        </button>
+        <div class="modal-imagen">
+          <div class="spinner" id="modal-spinner"></div>
+          <img id="modal-imagen" src="" alt="" />
         </div>
+        <div class="modal-info">
+          <h3 id="modal-nombre" class="nombre-locion"></h3>
+          <p id="modal-descripcion" class="descripcion-locion"></p>
+          <div id="modal-precios" class="precios">
+            <span id="modal-precio-anterior" class="precio-anterior"></span>
+            <span id="modal-precio-promocion" class="precio-promocion"></span>
+          </div>
+          <div id="modal-precios-tamanos" class="precios precios-tamanos">
+            <div class="precio-tamano-item">
+              <span class="etiqueta-tamano">50 ml</span>
+              <span id="modal-precio-50" class="precio-valor"></span>
+            </div>
+            <div class="precio-tamano-item">
+              <span class="etiqueta-tamano">100 ml</span>
+              <span id="modal-precio-100" class="precio-valor"></span>
+            </div>
+          </div>
+          <!-- Selector de talla para envases estándar -->
+          <div
+            id="modal-selector-talla"
+            class="selector-talla"
+            style="display: none"
+          >
+            <button
+              data-talla="50ml"
+              class="activo"
+              onclick="seleccionarTalla('50ml', this)"
+            >
+              50 ml
+            </button>
+            <button
+              data-talla="100ml"
+              onclick="seleccionarTalla('100ml', this)"
+            >
+              100 ml
+            </button>
+          </div>
+          <a
+            id="modal-whatsapp"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="boton-dorado modal-boton-whatsapp"
+            >Pedir por WhatsApp</a
+          >
+          <button
+            class="boton-agregar-carrito"
+            onclick="agregarAlCarritoDesdeModal()"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- =====================================================
     MODAL DEL CARRITO CON PAGO NEQUI
     ===================================================== -->
-    <div id="modal-carrito-overlay" class="modal-overlay" onclick="cerrarCarritoSiEsFondo(event)">
-        <div class="modal-carrito-contenido">
-            <button class="modal-cerrar" onclick="cerrarCarrito()" aria-label="Cerrar carrito">&times;</button>
-            <h2 class="titulo-carrito">🛒 Tu Carrito</h2>
-            <div id="lista-carrito" class="lista-carrito">
-                <!-- Los productos se renderizan aquí con JavaScript -->
-            </div>
-            <div class="carrito-total" id="carrito-total">
-                Total: $0
-            </div>
-            <!-- BOTÓN DE PAGO CON NEQUI (DIRECTO) -->
-            <button class="boton-pago-carrito nequi" onclick="pagarConNequi()">
-                💳 Pagar con Nequi
-            </button>
-            <button class="boton-dorado" onclick="enviarCarritoPorWhatsApp()" style="width:100%; margin-top:10px;">
-                Enviar pedido por WhatsApp
-            </button>
-            <button class="boton-vaciar-carrito" onclick="vaciarCarrito()">Vaciar carrito</button>
+    <div
+      id="modal-carrito-overlay"
+      class="modal-overlay"
+      onclick="cerrarCarritoSiEsFondo(event)"
+    >
+      <div class="modal-carrito-contenido">
+        <button
+          class="modal-cerrar"
+          onclick="cerrarCarrito()"
+          aria-label="Cerrar carrito"
+        >
+          &times;
+        </button>
+        <h2 class="titulo-carrito">🛒 Tu Carrito</h2>
+        <div id="lista-carrito" class="lista-carrito">
+          <!-- Los productos se renderizan aquí con JavaScript -->
         </div>
+        <div class="carrito-total" id="carrito-total">Total: $0</div>
+        <!-- BOTÓN DE PAGO CON NEQUI (DIRECTO) -->
+        <button class="boton-pago-carrito nequi" onclick="pagarConNequi()">
+          💳 Pagar con Nequi
+        </button>
+        <button
+          class="boton-dorado"
+          onclick="enviarCarritoPorWhatsApp()"
+          style="width: 100%; margin-top: 10px"
+        >
+          Enviar pedido por WhatsApp
+        </button>
+        <button class="boton-vaciar-carrito" onclick="vaciarCarrito()">
+          Vaciar carrito
+        </button>
+      </div>
     </div>
 
     <!-- =====================================================
     CARRITO FLOTANTE
     ===================================================== -->
-    <a id="carrito-flotante" class="carrito-flotante" onclick="abrirCarrito()" aria-label="Ver carrito de compras">
-        🛒 <span class="carrito-contador" id="carrito-contador">0</span>
+    <a
+      id="carrito-flotante"
+      class="carrito-flotante"
+      onclick="abrirCarrito()"
+      aria-label="Ver carrito de compras"
+    >
+      🛒 <span class="carrito-contador" id="carrito-contador">0</span>
     </a>
-    <button id="boton-vaciar-carrito-flotante" class="boton-vaciar-carrito-flotante" onclick="vaciarCarrito()" aria-label="Vaciar carrito de compras">🗑️</button>
+
     <!-- =====================================================
     FOOTER
     ===================================================== -->
     <footer>
-        <div class="logo-footer">BRAAMOD</div>
-        <p>La esencia que deja una huella.</p>
-        <p class="copyright">© 2026 BRAAMOD. Todos los derechos reservados.</p>
+      <div class="logo-footer">BRAAMOD</div>
+      <p>La esencia que deja una huella.</p>
+      <p class="copyright">© 2026 BRAAMOD. Todos los derechos reservados.</p>
     </footer>
 
     <!-- =====================================================
     JAVASCRIPT (TODO EL CÓDIGO)
     ===================================================== -->
     <script>
-        // =========================================================
-        // DATOS DE PRODUCTOS (30 mujer, 30 hombre, 6 económicos)
-        // =========================================================
-        const productos = {
-            mujer: [
-                { nombre: "Lucky 7 Passion", desc: "Perfume para mujer de la familia dulce, frutal y floral. Ejemplo: floral, dulce y elegante.", precioAnterior: "$119.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer01.jpg" },
-                { nombre: "Victoria's Secret Bombshell", desc: "Fragancia de la familia olfativa floral frutal, con notas de salida de maracuyá, lichi y piña; notas de corazón de orquídea, fresia y rosa; y notas de fondo de almizcle, ámbar y madera.", precioAnterior: "$129.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer02.jpg" },
-                { nombre: "Feeling Chic", desc: "Fragancia femenina fresca y vibrante, con notas de manzana verde, pepino y limón.", precioAnterior: "$129.900", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer03.jpg" },
-                { nombre: "Scandal", desc: "Es una fragancia de la familia olfativa chipre floral, destacada por un aroma audaz, sensual y dulce, donde predomina la nota de miel combinada con naranja sanguina, gardenia y pachulí.", precioAnterior: "$135.900", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer04.jpg" },
-                { nombre: "Dolce & Gabbana The Only One", desc: "Perfume femenino de la familia olfativa ámbar vainilla. Destaca por su mezcla única y sofisticada de violeta y café, creando un aroma dulce, atalcado y muy envolvente.", precioAnterior: "$156.900", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer05.jpg" },
-                { nombre: "Hawas", desc: "Un perfume árabe de mujer que mezcla notas dulces, frutales y florales con un toque elegante. Tiene una gran fijación en la piel y una estela muy potente que deja huella.", precioAnterior: "$119.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer06.jpg" },
-                { nombre: "Ariana Grande Thank U, Next", desc: "Es un perfume de la familia olfativa floral frutal gourmand. Salida: frambuesa jugosa y pera fresca.", precioAnterior: "$125.900", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer07.jpg" },
-                { nombre: "Dolce & Gabbana Light Blue", desc: "Es una fragancia icónica, conocida por su carácter chispeante, limpio y veraniego. Notas de salida (frescas y frutales): limón siciliano, manzana Granny Smith, cedro y campanilla.", precioAnterior: "$115.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer08.jpg" },
-                { nombre: "Shalimar", desc: "Es el primer perfume ambarino y oriental de la historia. Creado en 1925 e inspirado en la legendaria historia de amor del Taj Mahal, combina notas de bergamota, iris, rosa y una sobredosis de vainilla para ofrecer una estela profunda, sensual y eterna.", precioAnterior: "$118.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer09.jpg" },
-                { nombre: "Coco Chanel Girl", desc: "Es un perfume de mujer ámbar floral, fresco y sensual. Combina notas de salida de naranja y mandarina con un corazón de jazmín y rosa, sobre un fondo cálido de pachulí y vainilla. Representa a una mujer libre, audaz, elegante y moderna.", precioAnterior: "$128.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer10.jpg" },
-                { nombre: "Aqua Allegoria", desc: "Es una colección de perfumes femeninos frescos y alegres que rinde homenaje a la naturaleza. Estas fragancias combinan notas cítricas, florales y frutales con materias primas de alta calidad, ofreciendo aromas luminosos, elegantes y perfectos para el uso diario.", precioAnterior: "$115.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer11.jpg" },
-                { nombre: "Chanel N°5", desc: "Es el perfume más famoso del mundo. Creado en 1921 por Ernest Beaux para Coco Chanel, revolucionó la perfumería al ser el primer bouquet floral con un uso intenso de aldehídos, que dan un toque jabonoso y limpio.", precioAnterior: "$127.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer12.jpg" },
-                { nombre: "Black XS", desc: "Se define como un aroma audaz, intenso, rebelde y profundamente sensual, pensado para la noche y los climas cálidos.", precioAnterior: "$115.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer13.jpg" },
-                { nombre: "Good Girl", desc: "Representa la dualidad de la mujer moderna: audaz y sexy, elegante y misteriosa, combinando notas luminosas de jazmín y nardos con otras oscuras e intensas de haba tonka y cacao, dentro de su característico frasco en forma de tacón de aguja.", precioAnterior: "$135.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer14.jpg" },
-                { nombre: "Rome Melancholia", desc: "Combina una salida fresca de cítricos y especias con un corazón cremoso de coco y lavanda, cerrando con un fondo cálido de maderas y ámbar.", precioAnterior: "$118.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/mujer/mujer15.jpg" },
-                { nombre: "Flower by Kenzo", desc: "Floral atalcado para mujer. Creado en el año 2000, mezcla notas de rosa de Bulgaria, violeta, mandarina, vainilla y almizcles blancos, creando un aroma limpio, cálido y suave que evoca la sensación de talco de bebé.", precioAnterior: "$122.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer16.jpg" },
-                { nombre: "Very Good Girl", desc: "Es una fragancia de la familia olfativa floral frutal para mujeres, lanzada en 2021. Presentada en su icónico frasco con forma de tacón de aguja en color rojo brillante, redefine la dualidad de la feminidad moderna con un aroma osado, divertido y muy seductor.", precioAnterior: "$129.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer17.jpg" },
-                { nombre: "Miss Dior", desc: "Creado originalmente en 1947 por Christian Dior. Se define como una fragancia elegante, romántica y profundamente vinculada al optimismo y al amor, combinando acordes florales, frutales y de estilo chipre.", precioAnterior: "$120.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer18.jpg" },
-                { nombre: "Botica 214", desc: "Eau de Parfum de alta sofisticación que combina contrastes naturales, notas amaderadas y frescura intensa, inspirada en viajes y descubrimientos globales.", precioAnterior: "$115.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/mujer/mujer19.jpg" },
-                { nombre: "La Vie Est Belle", desc: "Aroma dulce, elegante y muy duradero, diseñado para representar la alegría, la libertad y la elección de la propia felicidad.", precioAnterior: "$139.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer20.jpg" },
-                { nombre: "Yves Saint Laurent Black Opium", desc: "Fragancia floral oriental adictiva y sensual, con notas de café, vainilla y flor de azahar. Es uno de los perfumes de mujer más vendidos del mundo, perfecto para la noche.", precioAnterior: "$139.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer21.jpg" },
-                { nombre: "Chanel Coco Mademoiselle", desc: "Un chipre floral elegante y moderno, con notas de naranja, jazmín y pachulí. Un ícono absoluto entre las fragancias femeninas más reconocidas del mundo.", precioAnterior: "$135.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer22.jpg" },
-                { nombre: "Giorgio Armani My Way", desc: "Fragancia floral blanca y cálida inspirada en la libertad y la aventura, con azahar, jazmín, tuberosa y un fondo de cedro. Tendencia fuerte en los últimos años.", precioAnterior: "$129.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer23.jpg" },
-                { nombre: "Viktor & Rolf Flowerbomb", desc: "Una explosión floral oriental intensa y llamativa, con jazmín, rosa, pachulí y orquídea. Un clásico de alta rotación entre las fragancias más vendidas.", precioAnterior: "$138.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer24.jpg" },
-                { nombre: "Narciso Rodriguez For Her", desc: "Perfume almizclado y sensual, minimalista pero muy reconocible sobre la piel, con notas de almizcle, ámbar y vainilla.", precioAnterior: "$125.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer25.jpg" },
-                { nombre: "Paco Rabanne Olympéa", desc: "Fragancia de vainilla salada con flor de azahar y sal marina, sensual y muy popular entre las mujeres jóvenes.", precioAnterior: "$128.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer26.jpg" },
-                { nombre: "Gucci Bloom", desc: "Floral blanco intenso y natural, con jazmín, tuberosa y jazmín sambac. Uno de los lanzamientos más exitosos de la marca.", precioAnterior: "$130.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer27.jpg" },
-                { nombre: "Burberry Her", desc: "Fragancia frutal londinense, juvenil y fresca, con frambuesa, moras, jazmín y vainilla. Furor en redes sociales por su icónico frasco rojo.", precioAnterior: "$120.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/mujer/mujer28.jpg" },
-                { nombre: "Mugler Alien", desc: "Floral amaderado misterioso e intenso, con jazmín sambac y madera cashmeran. Gran fijación y muy reconocible.", precioAnterior: "$132.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/mujer/mujer29.jpg" },
-                { nombre: "Prada Paradoxe", desc: "Floral ambarino suave y adictivo, con jazmín, ámbar y algodón almizclado. Una de las fragancias en crecimiento más rápido del mercado.", precioAnterior: "$134.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/mujer/mujer30.jpg" }
-            ],
-            hombre: [
-                { nombre: "Clash", desc: "Es un perfume masculino de la familia olfativa aromática acuática (Fougère acuosa), creado por el perfumista Dominique Ropion. Ofrece un frescor potente y moderno, diseñado para el uso diario, el trabajo o la actividad física.", precioAnterior: "$119.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre01.jpg" },
-                { nombre: "Asad", desc: "Destaca por un aroma intenso, cálido y especiado.", precioAnterior: "$135.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre02.jpg" },
-                { nombre: "Eternity", desc: "Destaca por su frescura limpia, un estilo varonil y una sensación reconfortante que evoca un baño matutino. Es una fragancia versátil, elegante y segura que nunca pasa de moda.", precioAnterior: "$118.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/hombre/hombre03.jpg" },
-                { nombre: "Valentino Uomo", desc: "Es un perfume para hombre de estilo clásico y elegante. Tiene un aroma dulce y amaderado, con notas de chocolate, café y avellana. Es ideal para usar en días fríos.", precioAnterior: "$129.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/hombre/hombre04.jpg" },
-                { nombre: "212 Men NYC", desc: "Huele a césped recién cortado, hojas de cítricos, jengibre y especias verdes, con un fondo cálido de sándalo e incienso.", precioAnterior: "$139.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre05.jpg" },
-                { nombre: "Khamrah", desc: "Es un perfume unisex de la familia oriental especiada, lanzado en 2022. Destaca por su aroma dulce, cálido y avainillado con un toque de licor y especias, ideal para hombres que buscan una estela intensa, elegante y nocturna.", precioAnterior: "$125.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/hombre/hombre06.jpg" },
-                { nombre: "Invictus", desc: "Encarna la victoria, la energía y el dinamismo mediante un choque entre la frescura marina y una sensualidad amaderada y cálida.", precioAnterior: "$138.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre07.jpg" },
-                { nombre: "Nautica Voyage", desc: "Destaca por su aroma limpio, fresco y frutal que evoca la sensación de salir de la ducha.", precioAnterior: "$115.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/hombre/hombre08.jpg" },
-                { nombre: "Creed", desc: "Perfume de la familia olfativa chipre frutal, famoso por evocar fuerza, éxito, elegancia y liderazgo.", precioAnterior: "$149.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre09.jpg" },
-                { nombre: "Versace Pour Homme", desc: "Este aroma de la familia aromática Fougère evoca la brisa del mar Mediterráneo con un estilo limpio, elegante y muy versátil.", precioAnterior: "$125.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/hombre/hombre10.jpg" },
-                { nombre: "Valentino Intense", desc: "Destaca por su aroma profundo, cómodo y ligeramente atalcado, ideal para climas frescos y ocasiones nocturnas.", precioAnterior: "$125.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre11.jpg" },
-                { nombre: "Dolce & Gabbana Light Blue Forever", desc: "Destaca por una explosión ultra realista, jugosa y amarga de toronja (pomelo) y bergamota en la salida; matices ozónicos en el corazón y una base seca de vetiver de Java y almizcle blanco.", precioAnterior: "$136.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/hombre/hombre12.jpg" },
-                { nombre: "Fahrenheit", desc: "Mezcla notas de mandarina de Sicilia, violeta, cuero y maderas cálidas, creando un aroma inconfundible, maduro y con un toque sutilmente amaderado y petroleado muy característico.", precioAnterior: "$119.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre13.jpg" },
-                { nombre: "Solo Elixir", desc: "Combina notas balsámicas cremosas, el olíbano provocativo y la elegancia de la madera de Oud.", precioAnterior: "$129.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre14.jpg" },
-                { nombre: "Jean Paul Gaultier Le Male", desc: "Mezcla notas frescas de menta y lavanda con un fondo cálido y dulce de vainilla.", precioAnterior: "$129.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/hombre/hombre15.jpg" },
-                { nombre: "Bleu de Chanel", desc: "Fragancia amaderada y aromática para hombre que representa la libertad y la elegancia moderna.", precioAnterior: "$117.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre16.jpg" },
-                { nombre: "Versace Eros", desc: "Destaca por ser un aroma intenso, dulce y muy sensual, diseñado para hombres seguros de sí mismos que buscan acaparar miradas.", precioAnterior: "$147.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/hombre/hombre17.jpg" },
-                { nombre: "Magnate Exclusive", desc: "Perfume masculino de alta concentración y muy larga duración, perteneciente a la familia olfativa herbal aromática con dejos orientales y de cuero. Está inspirado en el hombre exitoso, moderno y seguro de sí mismo que disfruta de experiencias exclusivas.", precioAnterior: "$100.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre18.jpg" },
-                { nombre: "1 Million", desc: "Destaca por un aroma audaz, dulce y seductor, con notas de menta, mandarina, canela y cuero. Ideal para la noche y climas templados o fríos.", precioAnterior: "$148.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/hombre/hombre19.jpg" },
-                { nombre: "Sauvage", desc: "Mezcla notas cítricas chispeantes con un fondo de maderas ambarinas y especias, inspirada en los grandes espacios abiertos bajo un cielo nocturno. Su estela es intensa, seductora y de gran fijación en la piel.", precioAnterior: "$178.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre20.jpg" },
-                { nombre: "Giorgio Armani Acqua di Giò", desc: "Fragancia acuática y aromática, fresca desde 1996 y referencia mundial de las notas marinas, con cítricos, romero y salvia.", precioAnterior: "$125.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/hombre/hombre21.jpg" },
-                { nombre: "Maison Francis Kurkdjian Baccarat Rouge 540", desc: "Fragancia unisex cálida y adictiva, con jazmín, azafrán y madera de ámbar. Una de las fragancias de nicho más vendidas y reconocibles del mundo.", precioAnterior: "$145.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre22.jpg" },
-                { nombre: "Creed Aventus", desc: "Afrutado amaderado potente e icónico, con notas de piña, abedul y almizcle. Sinónimo de éxito y prestigio en el mundo de la perfumería.", precioAnterior: "$155.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre23.jpg" },
-                { nombre: "Hugo Boss Bottled", desc: "Amaderado especiado, versátil y de excelente calidad, con manzana, canela y sándalo. Uno de los perfumes masculinos más vendidos del mundo.", precioAnterior: "$118.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre24.jpg" },
-                { nombre: "Azzaro The Most Wanted", desc: "Vainilla especiada y cálida, con jengibre, cardamomo y vainilla bourbon. Ha arrasado en ventas durante los últimos años.", precioAnterior: "$128.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/hombre/hombre25.jpg" },
-                { nombre: "Giorgio Armani Stronger With You Intensely", desc: "Especiado y dulce, envolvente y cálido, con cardamomo, avellana y vainilla. Muy popular entre las generaciones más jóvenes.", precioAnterior: "$122.000", precioPromocion: "$90.000", tipo: "dulce", img: "imagenes/hombre/hombre26.jpg" },
-                { nombre: "Yves Saint Laurent Y", desc: "Aromático fougère fresco y moderno, con manzana, salvia y geranio. Pensado para el hombre ambicioso y seguro de sí mismo.", precioAnterior: "$126.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre27.jpg" },
-                { nombre: "Jean Paul Gaultier Le Beau", desc: "Amaderado floral cálido y tropical, hermano del icónico Le Male, con coco, haba tonka y madera.", precioAnterior: "$130.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre28.jpg" },
-                { nombre: "Hermès Terre d'Hermès", desc: "Amaderado mineral elegante y sofisticado, con pomelo, vetiver y pimienta. Un clásico atemporal de alta gama.", precioAnterior: "$140.000", precioPromocion: "$90.000", tipo: "amaderado", img: "imagenes/hombre/hombre29.jpg" },
-                { nombre: "Acqua di Parma Colonia", desc: "Cítrico clásico e italiano, con limón, bergamota y lavanda. Referencia de elegancia atemporal desde hace décadas.", precioAnterior: "$132.000", precioPromocion: "$90.000", tipo: "floral", img: "imagenes/hombre/hombre30.jpg" }
-            ],
-            economicos: [
-                { nombre: "Envase gris", desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.", esEconomico: true, precio50: "$25.000", precio100: "$45.000", tipo: "dulce", img: "imagenes/economicos/economico01.jpg" },
-                { nombre: "Envase verde", desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.", esEconomico: true, precio50: "$25.000", precio100: "$45.000", tipo: "floral", img: "imagenes/economicos/economico02.jpg" },
-                { nombre: "Envase azul", desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.", esEconomico: true, precio50: "$25.000", precio100: "$45.000", tipo: "amaderado", img: "imagenes/economicos/economico03.jpg" },
-                { nombre: "Envase negro", desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.", esEconomico: true, precio50: "$25.000", precio100: "$45.000", tipo: "amaderado", img: "imagenes/economicos/economico04.jpg" },
-                { nombre: "Envase rojo", desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.", esEconomico: true, precio50: "$25.000", precio100: "$45.000", tipo: "dulce", img: "imagenes/economicos/economico05.jpg" },
-                { nombre: "Envase dorado", desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.", esEconomico: true, precio50: "$25.000", precio100: "$45.000", tipo: "dulce", img: "imagenes/economicos/economico06.jpg" }
-            ]
-        };
+      // =========================================================
+      // DATOS DE PRODUCTOS (30 mujer, 30 hombre, 6 económicos)
+      // =========================================================
+      const productos = {
+        mujer: [
+          {
+            nombre: "Lucky 7 Passion",
+            desc: "Perfume para mujer de la familia dulce, frutal y floral. Ejemplo: floral, dulce y elegante.",
+            precioAnterior: "$119.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer01.jpg",
+          },
+          {
+            nombre: "Victoria's Secret Bombshell",
+            desc: "Fragancia de la familia olfativa floral frutal, con notas de salida de maracuyá, lichi y piña; notas de corazón de orquídea, fresia y rosa; y notas de fondo de almizcle, ámbar y madera.",
+            precioAnterior: "$129.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer02.jpg",
+          },
+          {
+            nombre: "Feeling Chic",
+            desc: "Fragancia femenina fresca y vibrante, con notas de manzana verde, pepino y limón.",
+            precioAnterior: "$129.900",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer03.jpg",
+          },
+          {
+            nombre: "Scandal",
+            desc: "Es una fragancia de la familia olfativa chipre floral, destacada por un aroma audaz, sensual y dulce, donde predomina la nota de miel combinada con naranja sanguina, gardenia y pachulí.",
+            precioAnterior: "$135.900",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer04.jpg",
+          },
+          {
+            nombre: "Dolce & Gabbana The Only One",
+            desc: "Perfume femenino de la familia olfativa ámbar vainilla. Destaca por su mezcla única y sofisticada de violeta y café, creando un aroma dulce, atalcado y muy envolvente.",
+            precioAnterior: "$156.900",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer05.jpg",
+          },
+          {
+            nombre: "Hawas",
+            desc: "Un perfume árabe de mujer que mezcla notas dulces, frutales y florales con un toque elegante. Tiene una gran fijación en la piel y una estela muy potente que deja huella.",
+            precioAnterior: "$119.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer06.jpg",
+          },
+          {
+            nombre: "Ariana Grande Thank U, Next",
+            desc: "Es un perfume de la familia olfativa floral frutal gourmand. Salida: frambuesa jugosa y pera fresca.",
+            precioAnterior: "$125.900",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer07.jpg",
+          },
+          {
+            nombre: "Dolce & Gabbana Light Blue",
+            desc: "Es una fragancia icónica, conocida por su carácter chispeante, limpio y veraniego. Notas de salida (frescas y frutales): limón siciliano, manzana Granny Smith, cedro y campanilla.",
+            precioAnterior: "$115.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer08.jpg",
+          },
+          {
+            nombre: "Shalimar",
+            desc: "Es el primer perfume ambarino y oriental de la historia. Creado en 1925 e inspirado en la legendaria historia de amor del Taj Mahal, combina notas de bergamota, iris, rosa y una sobredosis de vainilla para ofrecer una estela profunda, sensual y eterna.",
+            precioAnterior: "$118.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer09.jpg",
+          },
+          {
+            nombre: "Coco Chanel Girl",
+            desc: "Es un perfume de mujer ámbar floral, fresco y sensual. Combina notas de salida de naranja y mandarina con un corazón de jazmín y rosa, sobre un fondo cálido de pachulí y vainilla. Representa a una mujer libre, audaz, elegante y moderna.",
+            precioAnterior: "$128.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer10.jpg",
+          },
+          {
+            nombre: "Aqua Allegoria",
+            desc: "Es una colección de perfumes femeninos frescos y alegres que rinde homenaje a la naturaleza. Estas fragancias combinan notas cítricas, florales y frutales con materias primas de alta calidad, ofreciendo aromas luminosos, elegantes y perfectos para el uso diario.",
+            precioAnterior: "$115.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer11.jpg",
+          },
+          {
+            nombre: "Chanel N°5",
+            desc: "Es el perfume más famoso del mundo. Creado en 1921 por Ernest Beaux para Coco Chanel, revolucionó la perfumería al ser el primer bouquet floral con un uso intenso de aldehídos, que dan un toque jabonoso y limpio.",
+            precioAnterior: "$127.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer12.jpg",
+          },
+          {
+            nombre: "Black XS",
+            desc: "Se define como un aroma audaz, intenso, rebelde y profundamente sensual, pensado para la noche y los climas cálidos.",
+            precioAnterior: "$115.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer13.jpg",
+          },
+          {
+            nombre: "Good Girl",
+            desc: "Representa la dualidad de la mujer moderna: audaz y sexy, elegante y misteriosa, combinando notas luminosas de jazmín y nardos con otras oscuras e intensas de haba tonka y cacao, dentro de su característico frasco en forma de tacón de aguja.",
+            precioAnterior: "$135.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer14.jpg",
+          },
+          {
+            nombre: "Rome Melancholia",
+            desc: "Combina una salida fresca de cítricos y especias con un corazón cremoso de coco y lavanda, cerrando con un fondo cálido de maderas y ámbar.",
+            precioAnterior: "$118.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/mujer/mujer15.jpg",
+          },
+          {
+            nombre: "Flower by Kenzo",
+            desc: "Floral atalcado para mujer. Creado en el año 2000, mezcla notas de rosa de Bulgaria, violeta, mandarina, vainilla y almizcles blancos, creando un aroma limpio, cálido y suave que evoca la sensación de talco de bebé.",
+            precioAnterior: "$122.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer16.jpg",
+          },
+          {
+            nombre: "Very Good Girl",
+            desc: "Es una fragancia de la familia olfativa floral frutal para mujeres, lanzada en 2021. Presentada en su icónico frasco con forma de tacón de aguja en color rojo brillante, redefine la dualidad de la feminidad moderna con un aroma osado, divertido y muy seductor.",
+            precioAnterior: "$129.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer17.jpg",
+          },
+          {
+            nombre: "Miss Dior",
+            desc: "Creado originalmente en 1947 por Christian Dior. Se define como una fragancia elegante, romántica y profundamente vinculada al optimismo y al amor, combinando acordes florales, frutales y de estilo chipre.",
+            precioAnterior: "$120.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer18.jpg",
+          },
+          {
+            nombre: "Botica 214",
+            desc: "Eau de Parfum de alta sofisticación que combina contrastes naturales, notas amaderadas y frescura intensa, inspirada en viajes y descubrimientos globales.",
+            precioAnterior: "$115.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/mujer/mujer19.jpg",
+          },
+          {
+            nombre: "La Vie Est Belle",
+            desc: "Aroma dulce, elegante y muy duradero, diseñado para representar la alegría, la libertad y la elección de la propia felicidad.",
+            precioAnterior: "$139.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer20.jpg",
+          },
+          {
+            nombre: "Yves Saint Laurent Black Opium",
+            desc: "Fragancia floral oriental adictiva y sensual, con notas de café, vainilla y flor de azahar. Es uno de los perfumes de mujer más vendidos del mundo, perfecto para la noche.",
+            precioAnterior: "$139.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer21.jpg",
+          },
+          {
+            nombre: "Chanel Coco Mademoiselle",
+            desc: "Un chipre floral elegante y moderno, con notas de naranja, jazmín y pachulí. Un ícono absoluto entre las fragancias femeninas más reconocidas del mundo.",
+            precioAnterior: "$135.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer22.jpg",
+          },
+          {
+            nombre: "Giorgio Armani My Way",
+            desc: "Fragancia floral blanca y cálida inspirada en la libertad y la aventura, con azahar, jazmín, tuberosa y un fondo de cedro. Tendencia fuerte en los últimos años.",
+            precioAnterior: "$129.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer23.jpg",
+          },
+          {
+            nombre: "Viktor & Rolf Flowerbomb",
+            desc: "Una explosión floral oriental intensa y llamativa, con jazmín, rosa, pachulí y orquídea. Un clásico de alta rotación entre las fragancias más vendidas.",
+            precioAnterior: "$138.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer24.jpg",
+          },
+          {
+            nombre: "Narciso Rodriguez For Her",
+            desc: "Perfume almizclado y sensual, minimalista pero muy reconocible sobre la piel, con notas de almizcle, ámbar y vainilla.",
+            precioAnterior: "$125.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer25.jpg",
+          },
+          {
+            nombre: "Paco Rabanne Olympéa",
+            desc: "Fragancia de vainilla salada con flor de azahar y sal marina, sensual y muy popular entre las mujeres jóvenes.",
+            precioAnterior: "$128.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer26.jpg",
+          },
+          {
+            nombre: "Gucci Bloom",
+            desc: "Floral blanco intenso y natural, con jazmín, tuberosa y jazmín sambac. Uno de los lanzamientos más exitosos de la marca.",
+            precioAnterior: "$130.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer27.jpg",
+          },
+          {
+            nombre: "Burberry Her",
+            desc: "Fragancia frutal londinense, juvenil y fresca, con frambuesa, moras, jazmín y vainilla. Furor en redes sociales por su icónico frasco rojo.",
+            precioAnterior: "$120.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/mujer/mujer28.jpg",
+          },
+          {
+            nombre: "Mugler Alien",
+            desc: "Floral amaderado misterioso e intenso, con jazmín sambac y madera cashmeran. Gran fijación y muy reconocible.",
+            precioAnterior: "$132.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/mujer/mujer29.jpg",
+          },
+          {
+            nombre: "Prada Paradoxe",
+            desc: "Floral ambarino suave y adictivo, con jazmín, ámbar y algodón almizclado. Una de las fragancias en crecimiento más rápido del mercado.",
+            precioAnterior: "$134.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/mujer/mujer30.jpg",
+          },
+        ],
+        hombre: [
+          {
+            nombre: "Clash",
+            desc: "Es un perfume masculino de la familia olfativa aromática acuática (Fougère acuosa), creado por el perfumista Dominique Ropion. Ofrece un frescor potente y moderno, diseñado para el uso diario, el trabajo o la actividad física.",
+            precioAnterior: "$119.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre01.jpg",
+          },
+          {
+            nombre: "Asad",
+            desc: "Destaca por un aroma intenso, cálido y especiado.",
+            precioAnterior: "$135.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre02.jpg",
+          },
+          {
+            nombre: "Eternity",
+            desc: "Destaca por su frescura limpia, un estilo varonil y una sensación reconfortante que evoca un baño matutino. Es una fragancia versátil, elegante y segura que nunca pasa de moda.",
+            precioAnterior: "$118.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/hombre/hombre03.jpg",
+          },
+          {
+            nombre: "Valentino Uomo",
+            desc: "Es un perfume para hombre de estilo clásico y elegante. Tiene un aroma dulce y amaderado, con notas de chocolate, café y avellana. Es ideal para usar en días fríos.",
+            precioAnterior: "$129.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/hombre/hombre04.jpg",
+          },
+          {
+            nombre: "212 Men NYC",
+            desc: "Huele a césped recién cortado, hojas de cítricos, jengibre y especias verdes, con un fondo cálido de sándalo e incienso.",
+            precioAnterior: "$139.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre05.jpg",
+          },
+          {
+            nombre: "Khamrah",
+            desc: "Es un perfume unisex de la familia oriental especiada, lanzado en 2022. Destaca por su aroma dulce, cálido y avainillado con un toque de licor y especias, ideal para hombres que buscan una estela intensa, elegante y nocturna.",
+            precioAnterior: "$125.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/hombre/hombre06.jpg",
+          },
+          {
+            nombre: "Invictus",
+            desc: "Encarna la victoria, la energía y el dinamismo mediante un choque entre la frescura marina y una sensualidad amaderada y cálida.",
+            precioAnterior: "$138.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre07.jpg",
+          },
+          {
+            nombre: "Nautica Voyage",
+            desc: "Destaca por su aroma limpio, fresco y frutal que evoca la sensación de salir de la ducha.",
+            precioAnterior: "$115.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/hombre/hombre08.jpg",
+          },
+          {
+            nombre: "Creed",
+            desc: "Perfume de la familia olfativa chipre frutal, famoso por evocar fuerza, éxito, elegancia y liderazgo.",
+            precioAnterior: "$149.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre09.jpg",
+          },
+          {
+            nombre: "Versace Pour Homme",
+            desc: "Este aroma de la familia aromática Fougère evoca la brisa del mar Mediterráneo con un estilo limpio, elegante y muy versátil.",
+            precioAnterior: "$125.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/hombre/hombre10.jpg",
+          },
+          {
+            nombre: "Valentino Intense",
+            desc: "Destaca por su aroma profundo, cómodo y ligeramente atalcado, ideal para climas frescos y ocasiones nocturnas.",
+            precioAnterior: "$125.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre11.jpg",
+          },
+          {
+            nombre: "Dolce & Gabbana Light Blue Forever",
+            desc: "Destaca por una explosión ultra realista, jugosa y amarga de toronja (pomelo) y bergamota en la salida; matices ozónicos en el corazón y una base seca de vetiver de Java y almizcle blanco.",
+            precioAnterior: "$136.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/hombre/hombre12.jpg",
+          },
+          {
+            nombre: "Fahrenheit",
+            desc: "Mezcla notas de mandarina de Sicilia, violeta, cuero y maderas cálidas, creando un aroma inconfundible, maduro y con un toque sutilmente amaderado y petroleado muy característico.",
+            precioAnterior: "$119.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre13.jpg",
+          },
+          {
+            nombre: "Solo Elixir",
+            desc: "Combina notas balsámicas cremosas, el olíbano provocativo y la elegancia de la madera de Oud.",
+            precioAnterior: "$129.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre14.jpg",
+          },
+          {
+            nombre: "Jean Paul Gaultier Le Male",
+            desc: "Mezcla notas frescas de menta y lavanda con un fondo cálido y dulce de vainilla.",
+            precioAnterior: "$129.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/hombre/hombre15.jpg",
+          },
+          {
+            nombre: "Bleu de Chanel",
+            desc: "Fragancia amaderada y aromática para hombre que representa la libertad y la elegancia moderna.",
+            precioAnterior: "$117.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre16.jpg",
+          },
+          {
+            nombre: "Versace Eros",
+            desc: "Destaca por ser un aroma intenso, dulce y muy sensual, diseñado para hombres seguros de sí mismos que buscan acaparar miradas.",
+            precioAnterior: "$147.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/hombre/hombre17.jpg",
+          },
+          {
+            nombre: "Magnate Exclusive",
+            desc: "Perfume masculino de alta concentración y muy larga duración, perteneciente a la familia olfativa herbal aromática con dejos orientales y de cuero. Está inspirado en el hombre exitoso, moderno y seguro de sí mismo que disfruta de experiencias exclusivas.",
+            precioAnterior: "$100.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre18.jpg",
+          },
+          {
+            nombre: "1 Million",
+            desc: "Destaca por un aroma audaz, dulce y seductor, con notas de menta, mandarina, canela y cuero. Ideal para la noche y climas templados o fríos.",
+            precioAnterior: "$148.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/hombre/hombre19.jpg",
+          },
+          {
+            nombre: "Sauvage",
+            desc: "Mezcla notas cítricas chispeantes con un fondo de maderas ambarinas y especias, inspirada en los grandes espacios abiertos bajo un cielo nocturno. Su estela es intensa, seductora y de gran fijación en la piel.",
+            precioAnterior: "$178.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre20.jpg",
+          },
+          {
+            nombre: "Giorgio Armani Acqua di Giò",
+            desc: "Fragancia acuática y aromática, fresca desde 1996 y referencia mundial de las notas marinas, con cítricos, romero y salvia.",
+            precioAnterior: "$125.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/hombre/hombre21.jpg",
+          },
+          {
+            nombre: "Maison Francis Kurkdjian Baccarat Rouge 540",
+            desc: "Fragancia unisex cálida y adictiva, con jazmín, azafrán y madera de ámbar. Una de las fragancias de nicho más vendidas y reconocibles del mundo.",
+            precioAnterior: "$145.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre22.jpg",
+          },
+          {
+            nombre: "Creed Aventus",
+            desc: "Afrutado amaderado potente e icónico, con notas de piña, abedul y almizcle. Sinónimo de éxito y prestigio en el mundo de la perfumería.",
+            precioAnterior: "$155.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre23.jpg",
+          },
+          {
+            nombre: "Hugo Boss Bottled",
+            desc: "Amaderado especiado, versátil y de excelente calidad, con manzana, canela y sándalo. Uno de los perfumes masculinos más vendidos del mundo.",
+            precioAnterior: "$118.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre24.jpg",
+          },
+          {
+            nombre: "Azzaro The Most Wanted",
+            desc: "Vainilla especiada y cálida, con jengibre, cardamomo y vainilla bourbon. Ha arrasado en ventas durante los últimos años.",
+            precioAnterior: "$128.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/hombre/hombre25.jpg",
+          },
+          {
+            nombre: "Giorgio Armani Stronger With You Intensely",
+            desc: "Especiado y dulce, envolvente y cálido, con cardamomo, avellana y vainilla. Muy popular entre las generaciones más jóvenes.",
+            precioAnterior: "$122.000",
+            precioPromocion: "$90.000",
+            tipo: "dulce",
+            img: "imagenes/hombre/hombre26.jpg",
+          },
+          {
+            nombre: "Yves Saint Laurent Y",
+            desc: "Aromático fougère fresco y moderno, con manzana, salvia y geranio. Pensado para el hombre ambicioso y seguro de sí mismo.",
+            precioAnterior: "$126.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre27.jpg",
+          },
+          {
+            nombre: "Jean Paul Gaultier Le Beau",
+            desc: "Amaderado floral cálido y tropical, hermano del icónico Le Male, con coco, haba tonka y madera.",
+            precioAnterior: "$130.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre28.jpg",
+          },
+          {
+            nombre: "Hermès Terre d'Hermès",
+            desc: "Amaderado mineral elegante y sofisticado, con pomelo, vetiver y pimienta. Un clásico atemporal de alta gama.",
+            precioAnterior: "$140.000",
+            precioPromocion: "$90.000",
+            tipo: "amaderado",
+            img: "imagenes/hombre/hombre29.jpg",
+          },
+          {
+            nombre: "Acqua di Parma Colonia",
+            desc: "Cítrico clásico e italiano, con limón, bergamota y lavanda. Referencia de elegancia atemporal desde hace décadas.",
+            precioAnterior: "$132.000",
+            precioPromocion: "$90.000",
+            tipo: "floral",
+            img: "imagenes/hombre/hombre30.jpg",
+          },
+        ],
+        economicos: [
+          {
+            nombre: "Envase gris",
+            desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.",
+            esEconomico: true,
+            precio50: "$25.000",
+            precio100: "$45.000",
+            tipo: "dulce",
+            img: "imagenes/economicos/economico01.jpg",
+          },
+          {
+            nombre: "Envase verde",
+            desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.",
+            esEconomico: true,
+            precio50: "$25.000",
+            precio100: "$45.000",
+            tipo: "floral",
+            img: "imagenes/economicos/economico02.jpg",
+          },
+          {
+            nombre: "Envase azul",
+            desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.",
+            esEconomico: true,
+            precio50: "$25.000",
+            precio100: "$45.000",
+            tipo: "amaderado",
+            img: "imagenes/economicos/economico03.jpg",
+          },
+          {
+            nombre: "Envase negro",
+            desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.",
+            esEconomico: true,
+            precio50: "$25.000",
+            precio100: "$45.000",
+            tipo: "amaderado",
+            img: "imagenes/economicos/economico04.jpg",
+          },
+          {
+            nombre: "Envase rojo",
+            desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.",
+            esEconomico: true,
+            precio50: "$25.000",
+            precio100: "$45.000",
+            tipo: "dulce",
+            img: "imagenes/economicos/economico05.jpg",
+          },
+          {
+            nombre: "Envase dorado",
+            desc: "Elige tu tamaño, elige tu esencia. Cada fragancia de BRAAMOD está disponible en presentación de 50 ml y 100 ml, en el mismo envase facetado que ves en nuestras fotos. La diferencia está en la duración que quieres llevar contigo. El frasco es solo el punto de partida: dentro va la fragancia que tú elijas de nuestro catálogo. Selecciona el aroma que más se ajuste a tu personalidad y nosotros lo preparamos en el tamaño que prefieras.",
+            esEconomico: true,
+            precio50: "$25.000",
+            precio100: "$45.000",
+            tipo: "dulce",
+            img: "imagenes/economicos/economico06.jpg",
+          },
+        ],
+      };
 
-        // =========================================================
-        // ESTADO GLOBAL
-        // =========================================================
-        let categoriaActual = 'mujer';
-        let filtroActual = 'todos';
-        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-        let productoModalActual = null;
-        let tallaSeleccionada = '50ml';
+      // =========================================================
+      // ESTADO GLOBAL
+      // =========================================================
+      let categoriaActual = "mujer";
+      let filtroActual = "todos";
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      let productoModalActual = null;
+      let tallaSeleccionada = "50ml";
 
-        // =========================================================
-        // UTILIDAD - ESCAPAR TEXTO (seguridad al insertar en HTML)
-        // =========================================================
-        function escaparHTML(texto) {
-            const div = document.createElement('div');
-            div.textContent = texto;
-            return div.innerHTML;
-        }
+      // =========================================================
+      // UTILIDAD - ESCAPAR TEXTO (seguridad al insertar en HTML)
+      // =========================================================
+      function escaparHTML(texto) {
+        const div = document.createElement("div");
+        div.textContent = texto;
+        return div.innerHTML;
+      }
 
-        // =========================================================
-        // CREAR TARJETA DE PRODUCTO (HTML reutilizable)
-        // =========================================================
-        function crearTarjetaHTML(categoria, idxOriginal, prod) {
-            return `
+      // =========================================================
+      // CREAR TARJETA DE PRODUCTO (HTML reutilizable)
+      // =========================================================
+      function crearTarjetaHTML(categoria, idxOriginal, prod) {
+        return `
                 <article class="producto" data-index="${idxOriginal}" data-categoria="${categoria}">
                     <div class="imagen-producto">
                         <img src="${prod.img}" alt="${prod.nombre}" loading="lazy" width="300" height="300">
                     </div>
                     <h3 class="nombre-locion">${prod.nombre}</h3>
-                    <button class="boton-ver-detalle" onclick="abrirDetalle('${categoria}', ${idxOriginal})" aria-label="Ver detalle de ${prod.nombre}">Click para ver</button>
+                    <button class="boton-ver-detalle" onclick="abrirDetalle('${categoria}', ${idxOriginal})" aria-label="Ver detalle de ${prod.nombre}">Ver fragancia</button>
                     <button class="boton-agregar-carrito" onclick="agregarAlCarrito('${categoria}', ${idxOriginal})" aria-label="Agregar ${prod.nombre} al carrito">+ Agregar al carrito</button>
                 </article>
             `;
-        }
+      }
 
-        // =========================================================
-        // MONTAR PRODUCTOS EN EL DOM (observer + contador carrito)
-        // =========================================================
-        function montarProductosEnDOM(html) {
-            const contenedor = document.getElementById('contenedor-catalogo');
-            contenedor.innerHTML = html;
+      // =========================================================
+      // MONTAR PRODUCTOS EN EL DOM (observer + contador carrito)
+      // =========================================================
+      function montarProductosEnDOM(html) {
+        const contenedor = document.getElementById("contenedor-catalogo");
+        contenedor.innerHTML = html;
 
-            if (window.observador) window.observador.disconnect();
-            window.observador = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.producto').forEach(el => {
-                window.observador.observe(el);
+        if (window.observador) window.observador.disconnect();
+        window.observador = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
             });
+          },
+          { threshold: 0.1 },
+        );
 
-            actualizarContadorCarrito();
-        }
+        document.querySelectorAll(".producto").forEach((el) => {
+          window.observador.observe(el);
+        });
 
-        // =========================================================
-        // RENDERIZAR CATÁLOGO
-        // =========================================================
-        function renderizarCatalogo(categoria, filtro) {
-            const contenedor = document.getElementById('contenedor-catalogo');
-            const productosCat = productos[categoria] || [];
-            let productosFiltrados = productosCat;
+        actualizarContadorCarrito();
+      }
 
-            if (filtro !== 'todos') {
-                if (filtro === 'precio-bajo') {
-                    productosFiltrados = productosFiltrados.filter(p => {
-                        const precio = parseInt(p.precioPromocion ? p.precioPromocion.replace(/[$.]/g, '') : '0');
-                        return precio < 100000;
-                    });
-                } else if (filtro === 'precio-alto') {
-                    productosFiltrados = productosFiltrados.filter(p => {
-                        const precio = parseInt(p.precioPromocion ? p.precioPromocion.replace(/[$.]/g, '') : '0');
-                        return precio >= 100000;
-                    });
-                } else {
-                    productosFiltrados = productosFiltrados.filter(p => p.tipo === filtro);
-                }
-            }
+      // =========================================================
+      // RENDERIZAR CATÁLOGO
+      // =========================================================
+      function renderizarCatalogo(categoria, filtro) {
+        const contenedor = document.getElementById("contenedor-catalogo");
+        const productosCat = productos[categoria] || [];
+        let productosFiltrados = productosCat;
 
-            if (productosFiltrados.length === 0) {
-                contenedor.innerHTML = `<p style="text-align:center; color:#888; grid-column:1/-1;">No hay productos que coincidan con este filtro.</p>`;
-                return;
-            }
-
-            let html = '';
-            productosFiltrados.forEach((prod) => {
-                const idxOriginal = productosCat.indexOf(prod);
-                html += crearTarjetaHTML(categoria, idxOriginal, prod);
+        if (filtro !== "todos") {
+          if (filtro === "precio-bajo") {
+            productosFiltrados = productosFiltrados.filter((p) => {
+              const precio = parseInt(
+                p.precioPromocion
+                  ? p.precioPromocion.replace(/[$.]/g, "")
+                  : "0",
+              );
+              return precio < 100000;
             });
-
-            montarProductosEnDOM(html);
-        }
-
-        // =========================================================
-        // BUSCADOR DE LOCIONES
-        // =========================================================
-        let temporizadorBusqueda = null;
-
-        function buscarLocion(textoCrudo) {
-            clearTimeout(temporizadorBusqueda);
-            temporizadorBusqueda = setTimeout(() => ejecutarBusqueda(textoCrudo), 150);
-        }
-
-        function ejecutarBusqueda(textoCrudo) {
-            const texto = textoCrudo.trim();
-            const botonLimpiar = document.getElementById('boton-limpiar-busqueda');
-            botonLimpiar.style.display = texto ? 'block' : 'none';
-
-            if (!texto) {
-                // Sin texto: volver al catálogo normal por categoría
-                document.getElementById('filtros-adicionales').style.display = 'flex';
-                renderizarCatalogo(categoriaActual, filtroActual);
-                return;
-            }
-
-            // Mientras se busca, ocultamos los filtros de precio/tipo (no aplican a una búsqueda global)
-            document.getElementById('filtros-adicionales').style.display = 'none';
-
-            const textoBusqueda = texto.toLowerCase();
-            let resultados = [];
-
-            Object.keys(productos).forEach(categoria => {
-                productos[categoria].forEach((prod, idxOriginal) => {
-                    const coincide = prod.nombre.toLowerCase().includes(textoBusqueda) ||
-                        (prod.desc && prod.desc.toLowerCase().includes(textoBusqueda));
-                    if (coincide) {
-                        resultados.push({ categoria, idxOriginal, prod });
-                    }
-                });
+          } else if (filtro === "precio-alto") {
+            productosFiltrados = productosFiltrados.filter((p) => {
+              const precio = parseInt(
+                p.precioPromocion
+                  ? p.precioPromocion.replace(/[$.]/g, "")
+                  : "0",
+              );
+              return precio >= 100000;
             });
-
-            mostrarResultadosBusqueda(resultados, texto);
+          } else {
+            productosFiltrados = productosFiltrados.filter(
+              (p) => p.tipo === filtro,
+            );
+          }
         }
 
-        function mostrarResultadosBusqueda(resultados, textoBuscado) {
-            if (resultados.length === 0) {
-                const textoSeguro = escaparHTML(textoBuscado);
-                const mensajeWhatsApp = `Hola, estoy buscando la loción "${textoBuscado}". ¿La manejan?`;
-                const html = `
+        if (productosFiltrados.length === 0) {
+          contenedor.innerHTML = `<p style="text-align:center; color:#888; grid-column:1/-1;">No hay productos que coincidan con este filtro.</p>`;
+          return;
+        }
+
+        let html = "";
+        productosFiltrados.forEach((prod) => {
+          const idxOriginal = productosCat.indexOf(prod);
+          html += crearTarjetaHTML(categoria, idxOriginal, prod);
+        });
+
+        montarProductosEnDOM(html);
+      }
+
+      // =========================================================
+      // BUSCADOR DE LOCIONES
+      // =========================================================
+      let temporizadorBusqueda = null;
+
+      function buscarLocion(textoCrudo) {
+        clearTimeout(temporizadorBusqueda);
+        temporizadorBusqueda = setTimeout(
+          () => ejecutarBusqueda(textoCrudo),
+          150,
+        );
+      }
+
+      function ejecutarBusqueda(textoCrudo) {
+        const texto = textoCrudo.trim();
+        const botonLimpiar = document.getElementById("boton-limpiar-busqueda");
+        botonLimpiar.style.display = texto ? "block" : "none";
+
+        if (!texto) {
+          // Sin texto: volver al catálogo normal por categoría
+          document.getElementById("filtros-adicionales").style.display = "flex";
+          renderizarCatalogo(categoriaActual, filtroActual);
+          return;
+        }
+
+        // Mientras se busca, ocultamos los filtros de precio/tipo (no aplican a una búsqueda global)
+        document.getElementById("filtros-adicionales").style.display = "none";
+
+        const textoBusqueda = texto.toLowerCase();
+        let resultados = [];
+
+        Object.keys(productos).forEach((categoria) => {
+          productos[categoria].forEach((prod, idxOriginal) => {
+            const coincide =
+              prod.nombre.toLowerCase().includes(textoBusqueda) ||
+              (prod.desc && prod.desc.toLowerCase().includes(textoBusqueda));
+            if (coincide) {
+              resultados.push({ categoria, idxOriginal, prod });
+            }
+          });
+        });
+
+        mostrarResultadosBusqueda(resultados, texto);
+      }
+
+      function mostrarResultadosBusqueda(resultados, textoBuscado) {
+        if (resultados.length === 0) {
+          const textoSeguro = escaparHTML(textoBuscado);
+          const mensajeWhatsApp = `Hola, estoy buscando la loción "${textoBuscado}". ¿La manejan?`;
+          const html = `
                     <div class="sin-resultados">
                         <p class="sin-resultados-texto">No encontramos "<strong>${textoSeguro}</strong>" en nuestro catálogo.</p>
                         <p class="sin-resultados-subtexto">Puede que la tengamos disponible aunque no aparezca aquí. Pregúntanos directamente y te confirmamos.</p>
                         <a href="https://wa.me/573214978435?text=${encodeURIComponent(mensajeWhatsApp)}" target="_blank" rel="noopener noreferrer" class="boton-dorado">Preguntar por WhatsApp</a>
                     </div>
                 `;
-                document.getElementById('contenedor-catalogo').innerHTML = html;
-                if (window.observador) window.observador.disconnect();
-                return;
-            }
-
-            let html = '';
-            resultados.forEach(({ categoria, idxOriginal, prod }) => {
-                html += crearTarjetaHTML(categoria, idxOriginal, prod);
-            });
-
-            montarProductosEnDOM(html);
+          document.getElementById("contenedor-catalogo").innerHTML = html;
+          if (window.observador) window.observador.disconnect();
+          return;
         }
 
-        function limpiarBusqueda() {
-            const input = document.getElementById('buscador-locion');
-            input.value = '';
-            input.focus();
-            ejecutarBusqueda('');
-        }
-
-        // =========================================================
-        // CAMBIAR CATEGORÍA
-        // =========================================================
-        function mostrarCatalogo(categoria, boton) {
-            categoriaActual = categoria;
-            document.querySelectorAll('.boton-categoria').forEach(btn => btn.classList.remove('activo'));
-            boton.classList.add('activo');
-
-            // Al cambiar de categoría, se limpia cualquier búsqueda activa
-            const buscador = document.getElementById('buscador-locion');
-            if (buscador.value) {
-                buscador.value = '';
-                document.getElementById('boton-limpiar-busqueda').style.display = 'none';
-            }
-            document.getElementById('filtros-adicionales').style.display = 'flex';
-
-            renderizarCatalogo(categoria, filtroActual);
-            document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // =========================================================
-        // APLICAR FILTROS ADICIONALES
-        // =========================================================
-        function aplicarFiltros(filtro, boton) {
-            filtroActual = filtro;
-            document.querySelectorAll('.filtro-opcion').forEach(btn => btn.classList.remove('activo'));
-            boton.classList.add('activo');
-            renderizarCatalogo(categoriaActual, filtro);
-        }
-
-        // =========================================================
-        // MODAL - ABRIR
-        // =========================================================
-        function abrirDetalle(categoria, index) {
-            const prod = productos[categoria][index];
-            productoModalActual = { categoria, index };
-
-            document.getElementById('modal-spinner').style.display = 'block';
-            document.getElementById('modal-imagen').style.display = 'none';
-
-            document.getElementById('modal-nombre').textContent = prod.nombre;
-            document.getElementById('modal-descripcion').textContent = prod.desc;
-
-            const esEconomico = prod.esEconomico || false;
-            if (esEconomico) {
-                document.getElementById('modal-precios').style.display = 'none';
-                document.getElementById('modal-precios-tamanos').style.display = 'flex';
-                document.getElementById('modal-precio-50').textContent = prod.precio50;
-                document.getElementById('modal-precio-100').textContent = prod.precio100;
-                document.getElementById('modal-selector-talla').style.display = 'flex';
-                tallaSeleccionada = '50ml';
-                document.querySelectorAll('#modal-selector-talla button').forEach(btn => {
-                    btn.classList.toggle('activo', btn.dataset.talla === '50ml');
-                });
-            } else {
-                document.getElementById('modal-precios').style.display = 'flex';
-                document.getElementById('modal-precios-tamanos').style.display = 'none';
-                document.getElementById('modal-precio-anterior').textContent = prod.precioAnterior;
-                document.getElementById('modal-precio-promocion').textContent = prod.precioPromocion;
-                document.getElementById('modal-selector-talla').style.display = 'none';
-            }
-
-            const img = document.getElementById('modal-imagen');
-            img.onload = function() {
-                document.getElementById('modal-spinner').style.display = 'none';
-                img.style.display = 'block';
-            };
-            img.onerror = function() {
-                document.getElementById('modal-spinner').style.display = 'none';
-                img.style.display = 'block';
-                img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="%23666" stroke-width="2"%3E%3Crect x="3" y="3" width="18" height="18" rx="2"/%3E%3Ccircle cx="8.5" cy="8.5" r="1.5"/%3E%3Cpath d="M21 15l-5-5-5 5-4-4-3 3"/%3E%3C/svg%3E';
-            };
-            img.src = prod.img;
-
-            actualizarBotonWhatsApp(prod);
-
-            document.getElementById('modal-overlay').classList.add('activo');
-            document.body.classList.add('sin-scroll');
-        }
-
-        function actualizarBotonWhatsApp(prod) {
-            const esEconomico = prod.esEconomico || false;
-            let mensaje = `Hola, estoy interesado en ${prod.nombre}`;
-            if (esEconomico) {
-                mensaje += ` (talla ${tallaSeleccionada}: ${tallaSeleccionada === '50ml' ? prod.precio50 : prod.precio100})`;
-            } else {
-                mensaje += ` (${prod.precioPromocion})`;
-            }
-            document.getElementById('modal-whatsapp').href =
-                `https://wa.me/573214978435?text=${encodeURIComponent(mensaje)}`;
-        }
-
-        function seleccionarTalla(talla, boton) {
-            tallaSeleccionada = talla;
-            document.querySelectorAll('#modal-selector-talla button').forEach(btn => btn.classList.remove('activo'));
-            boton.classList.add('activo');
-            if (productoModalActual) {
-                const prod = productos[productoModalActual.categoria][productoModalActual.index];
-                actualizarBotonWhatsApp(prod);
-            }
-        }
-
-        function cerrarDetalle() {
-            document.getElementById('modal-overlay').classList.remove('activo');
-            document.body.classList.remove('sin-scroll');
-            productoModalActual = null;
-        }
-
-        function cerrarDetalleSiEsFondo(event) {
-            if (event.target.id === 'modal-overlay') cerrarDetalle();
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                cerrarDetalle();
-                cerrarCarrito();
-            }
+        let html = "";
+        resultados.forEach(({ categoria, idxOriginal, prod }) => {
+          html += crearTarjetaHTML(categoria, idxOriginal, prod);
         });
 
-        // =========================================================
-        // CARRITO - AGREGAR
-        // =========================================================
-        function agregarAlCarrito(categoria, index) {
-            const prod = productos[categoria][index];
-            const esEconomico = prod.esEconomico || false;
-            const item = {
-                nombre: prod.nombre,
-                categoria: categoria,
-                index: index,
-                talla: esEconomico ? '50ml' : null,
-                precio: esEconomico ? prod.precio50 : prod.precioPromocion
-            };
-            carrito.push(item);
-            localStorage.setItem('carrito', JSON.stringify(carrito));
-            actualizarContadorCarrito();
-            alert(`✅ "${prod.nombre}" agregado al carrito.`);
+        montarProductosEnDOM(html);
+      }
+
+      function limpiarBusqueda() {
+        const input = document.getElementById("buscador-locion");
+        input.value = "";
+        input.focus();
+        ejecutarBusqueda("");
+      }
+
+      // =========================================================
+      // CAMBIAR CATEGORÍA
+      // =========================================================
+      function mostrarCatalogo(categoria, boton) {
+        categoriaActual = categoria;
+        document
+          .querySelectorAll(".boton-categoria")
+          .forEach((btn) => btn.classList.remove("activo"));
+        boton.classList.add("activo");
+
+        // Al cambiar de categoría, se limpia cualquier búsqueda activa
+        const buscador = document.getElementById("buscador-locion");
+        if (buscador.value) {
+          buscador.value = "";
+          document.getElementById("boton-limpiar-busqueda").style.display =
+            "none";
+        }
+        document.getElementById("filtros-adicionales").style.display = "flex";
+
+        renderizarCatalogo(categoria, filtroActual);
+        document
+          .getElementById("catalogo")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+      // =========================================================
+      // APLICAR FILTROS ADICIONALES
+      // =========================================================
+      function aplicarFiltros(filtro, boton) {
+        filtroActual = filtro;
+        document
+          .querySelectorAll(".filtro-opcion")
+          .forEach((btn) => btn.classList.remove("activo"));
+        boton.classList.add("activo");
+        renderizarCatalogo(categoriaActual, filtro);
+      }
+
+      // =========================================================
+      // MODAL - ABRIR
+      // =========================================================
+      function abrirDetalle(categoria, index) {
+        const prod = productos[categoria][index];
+        productoModalActual = { categoria, index };
+
+        document.getElementById("modal-spinner").style.display = "block";
+        document.getElementById("modal-imagen").style.display = "none";
+
+        document.getElementById("modal-nombre").textContent = prod.nombre;
+        document.getElementById("modal-descripcion").textContent = prod.desc;
+
+        const esEconomico = prod.esEconomico || false;
+        if (esEconomico) {
+          document.getElementById("modal-precios").style.display = "none";
+          document.getElementById("modal-precios-tamanos").style.display =
+            "flex";
+          document.getElementById("modal-precio-50").textContent =
+            prod.precio50;
+          document.getElementById("modal-precio-100").textContent =
+            prod.precio100;
+          document.getElementById("modal-selector-talla").style.display =
+            "flex";
+          tallaSeleccionada = "50ml";
+          document
+            .querySelectorAll("#modal-selector-talla button")
+            .forEach((btn) => {
+              btn.classList.toggle("activo", btn.dataset.talla === "50ml");
+            });
+        } else {
+          document.getElementById("modal-precios").style.display = "flex";
+          document.getElementById("modal-precios-tamanos").style.display =
+            "none";
+          document.getElementById("modal-precio-anterior").textContent =
+            prod.precioAnterior;
+          document.getElementById("modal-precio-promocion").textContent =
+            prod.precioPromocion;
+          document.getElementById("modal-selector-talla").style.display =
+            "none";
         }
 
-        function agregarAlCarritoDesdeModal() {
-            if (!productoModalActual) return;
-            const { categoria, index } = productoModalActual;
-            const prod = productos[categoria][index];
-            const esEconomico = prod.esEconomico || false;
-            const item = {
-                nombre: prod.nombre,
-                categoria: categoria,
-                index: index,
-                talla: esEconomico ? tallaSeleccionada : null,
-                precio: esEconomico ? (tallaSeleccionada === '50ml' ? prod.precio50 : prod.precio100) : prod.precioPromocion
-            };
-            carrito.push(item);
-            localStorage.setItem('carrito', JSON.stringify(carrito));
-            actualizarContadorCarrito();
-            alert(`✅ "${prod.nombre}" agregado al carrito.`);
+        const img = document.getElementById("modal-imagen");
+        img.onload = function () {
+          document.getElementById("modal-spinner").style.display = "none";
+          img.style.display = "block";
+        };
+        img.onerror = function () {
+          document.getElementById("modal-spinner").style.display = "none";
+          img.style.display = "block";
+          img.src =
+            'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="%23666" stroke-width="2"%3E%3Crect x="3" y="3" width="18" height="18" rx="2"/%3E%3Ccircle cx="8.5" cy="8.5" r="1.5"/%3E%3Cpath d="M21 15l-5-5-5 5-4-4-3 3"/%3E%3C/svg%3E';
+        };
+        img.src = prod.img;
+
+        actualizarBotonWhatsApp(prod);
+
+        document.getElementById("modal-overlay").classList.add("activo");
+        document.body.classList.add("sin-scroll");
+      }
+
+      function actualizarBotonWhatsApp(prod) {
+        const esEconomico = prod.esEconomico || false;
+        let mensaje = `Hola, estoy interesado en ${prod.nombre}`;
+        if (esEconomico) {
+          mensaje += ` (talla ${tallaSeleccionada}: ${tallaSeleccionada === "50ml" ? prod.precio50 : prod.precio100})`;
+        } else {
+          mensaje += ` (${prod.precioPromocion})`;
+        }
+        document.getElementById("modal-whatsapp").href =
+          `https://wa.me/573214978435?text=${encodeURIComponent(mensaje)}`;
+      }
+
+      function seleccionarTalla(talla, boton) {
+        tallaSeleccionada = talla;
+        document
+          .querySelectorAll("#modal-selector-talla button")
+          .forEach((btn) => btn.classList.remove("activo"));
+        boton.classList.add("activo");
+        if (productoModalActual) {
+          const prod =
+            productos[productoModalActual.categoria][productoModalActual.index];
+          actualizarBotonWhatsApp(prod);
+        }
+      }
+
+      function cerrarDetalle() {
+        document.getElementById("modal-overlay").classList.remove("activo");
+        document.body.classList.remove("sin-scroll");
+        productoModalActual = null;
+      }
+
+      function cerrarDetalleSiEsFondo(event) {
+        if (event.target.id === "modal-overlay") cerrarDetalle();
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          cerrarDetalle();
+          cerrarCarrito();
+        }
+      });
+
+      // =========================================================
+      // CARRITO - AGREGAR
+      // =========================================================
+      function agregarAlCarrito(categoria, index) {
+        const prod = productos[categoria][index];
+        const esEconomico = prod.esEconomico || false;
+        const item = {
+          nombre: prod.nombre,
+          categoria: categoria,
+          index: index,
+          talla: esEconomico ? "50ml" : null,
+          precio: esEconomico ? prod.precio50 : prod.precioPromocion,
+        };
+        carrito.push(item);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        actualizarContadorCarrito();
+        mostrarToast(`✅ "${prod.nombre}" agregado al carrito.`);
+      }
+
+      function agregarAlCarritoDesdeModal() {
+        if (!productoModalActual) return;
+        const { categoria, index } = productoModalActual;
+        const prod = productos[categoria][index];
+        const esEconomico = prod.esEconomico || false;
+        const item = {
+          nombre: prod.nombre,
+          categoria: categoria,
+          index: index,
+          talla: esEconomico ? tallaSeleccionada : null,
+          precio: esEconomico
+            ? tallaSeleccionada === "50ml"
+              ? prod.precio50
+              : prod.precio100
+            : prod.precioPromocion,
+        };
+        carrito.push(item);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        actualizarContadorCarrito();
+        mostrarToast(`✅ "${prod.nombre}" agregado al carrito.`);
+      }
+
+      // =========================================================
+      // CARRITO - CONTADOR
+      // =========================================================
+      function actualizarContadorCarrito() {
+        const contador = document.getElementById("carrito-contador");
+        contador.textContent = carrito.length;
+        contador.style.display = carrito.length === 0 ? "none" : "flex";
+      }
+
+      // =========================================================
+      // CARRITO - ABRIR / CERRAR MODAL
+      // =========================================================
+      function abrirCarrito() {
+        document
+          .getElementById("modal-carrito-overlay")
+          .classList.add("activo");
+        document.body.classList.add("sin-scroll");
+        renderizarCarrito();
+      }
+
+      function cerrarCarrito() {
+        document
+          .getElementById("modal-carrito-overlay")
+          .classList.remove("activo");
+        document.body.classList.remove("sin-scroll");
+      }
+
+      function cerrarCarritoSiEsFondo(event) {
+        if (event.target.id === "modal-carrito-overlay") cerrarCarrito();
+      }
+
+      // =========================================================
+      // CARRITO - RENDERIZAR LISTA
+      // =========================================================
+      function renderizarCarrito() {
+        const lista = document.getElementById("lista-carrito");
+        const totalDiv = document.getElementById("carrito-total");
+
+        if (carrito.length === 0) {
+          lista.innerHTML = `<div class="carrito-vacio">🛒 Tu carrito está vacío</div>`;
+          totalDiv.textContent = "Total: $0";
+          return;
         }
 
-        // =========================================================
-        // CARRITO - CONTADOR
-        // =========================================================
-        function actualizarContadorCarrito() {
-            document.getElementById('carrito-contador').textContent = carrito.length;
-        }
+        let html = "";
+        let total = 0;
 
-        // =========================================================
-        // CARRITO - ABRIR / CERRAR MODAL
-        // =========================================================
-        function abrirCarrito() {
-            document.getElementById('modal-carrito-overlay').classList.add('activo');
-            document.body.classList.add('sin-scroll');
-            renderizarCarrito();
-        }
+        carrito.forEach((item, index) => {
+          const precioNum = parseInt(item.precio.replace(/[$.]/g, ""));
+          total += precioNum;
 
-        function cerrarCarrito() {
-            document.getElementById('modal-carrito-overlay').classList.remove('activo');
-            document.body.classList.remove('sin-scroll');
-        }
-
-        function cerrarCarritoSiEsFondo(event) {
-            if (event.target.id === 'modal-carrito-overlay') cerrarCarrito();
-        }
-
-        // =========================================================
-        // CARRITO - RENDERIZAR LISTA
-        // =========================================================
-        function renderizarCarrito() {
-            const lista = document.getElementById('lista-carrito');
-            const totalDiv = document.getElementById('carrito-total');
-
-            if (carrito.length === 0) {
-                lista.innerHTML = `<div class="carrito-vacio">🛒 Tu carrito está vacío</div>`;
-                totalDiv.textContent = 'Total: $0';
-                return;
-            }
-
-            let html = '';
-            let total = 0;
-
-            carrito.forEach((item, index) => {
-                const precioNum = parseInt(item.precio.replace(/[$.]/g, ''));
-                total += precioNum;
-
-                const tallaStr = item.talla ? `<span class="item-carrito-talla">${item.talla}</span>` : '';
-                html += `
+          const tallaStr = item.talla
+            ? `<span class="item-carrito-talla">${item.talla}</span>`
+            : "";
+          html += `
                     <div class="item-carrito">
                         <div class="item-carrito-info">
                             <span class="item-carrito-nombre">${item.nombre}</span>
@@ -700,104 +1402,140 @@
                         </button>
                     </div>
                 `;
-            });
-
-            lista.innerHTML = html;
-            totalDiv.textContent = `Total: $${total.toLocaleString()}`;
-        }
-
-        // =========================================================
-        // CARRITO - ELIMINAR PRODUCTO
-        // =========================================================
-        function eliminarDelCarrito(index) {
-            const eliminado = carrito[index];
-            carrito.splice(index, 1);
-            localStorage.setItem('carrito', JSON.stringify(carrito));
-            actualizarContadorCarrito();
-            renderizarCarrito();
-            if (carrito.length === 0) {
-                document.getElementById('carrito-total').textContent = 'Total: $0';
-            }
-        }
-
-        // =========================================================
-        // CARRITO - VACIAR COMPLETO
-        // =========================================================
-        function vaciarCarrito() {
-            if (carrito.length === 0) return;
-            if (confirm('¿Estás seguro de que quieres vaciar todo el carrito?')) {
-                carrito = [];
-                localStorage.setItem('carrito', JSON.stringify(carrito));
-                actualizarContadorCarrito();
-                renderizarCarrito();
-                document.getElementById('carrito-total').textContent = 'Total: $0';
-            }
-        }
-
-        // =========================================================
-        // CARRITO - ENVIAR POR WHATSAPP
-        // =========================================================
-        function enviarCarritoPorWhatsApp() {
-            if (carrito.length === 0) {
-                alert('🛒 Tu carrito está vacío. Agrega algunos productos primero.');
-                return;
-            }
-            let mensaje = 'Hola, me gustaría pedir los siguientes productos:\n\n';
-            carrito.forEach((item, i) => {
-                const tallaStr = item.talla ? ` (${item.talla})` : '';
-                mensaje += `${i+1}. ${item.nombre}${tallaStr} — ${item.precio}\n`;
-            });
-            const total = carrito.reduce((sum, item) => {
-                const num = parseInt(item.precio.replace(/[$.]/g, ''));
-                return sum + num;
-            }, 0);
-            mensaje += `\nTotal aproximado: $${total.toLocaleString()}`;
-            window.open(`https://wa.me/573214978435?text=${encodeURIComponent(mensaje)}`, '_blank');
-            cerrarCarrito();
-        }
-
-        // =========================================================
-        // FUNCIÓN DE PAGO CON NEQUI (DIRECTO)
-        // =========================================================
-        function pagarConNequi() {
-            if (carrito.length === 0) {
-                alert('🛒 Tu carrito está vacío. Agrega algunos productos primero.');
-                return;
-            }
-
-            // Calcular total
-            const total = carrito.reduce((sum, item) => {
-                const num = parseInt(item.precio.replace(/[$.]/g, ''));
-                return sum + num;
-            }, 0);
-
-            // Generar lista de productos para el mensaje
-            let listaProductos = '';
-            carrito.forEach((item, i) => {
-                const tallaStr = item.talla ? ` (${item.talla})` : '';
-                listaProductos += `${i+1}. ${item.nombre}${tallaStr} — ${item.precio}\n`;
-            });
-
-            // Crear el mensaje con el total y la lista
-            const mensaje = `Hola BRAAMOD, quiero realizar el siguiente pedido:\n\n${listaProductos}\nTotal: $${total.toLocaleString()}\n\nPor favor, enviarme el link de pago por Nequi.`;
-
-            // Abrir WhatsApp con el mensaje predefinido
-            const url = `https://wa.me/573214978435?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
-
-            // Cerrar el carrito
-            cerrarCarrito();
-        }
-
-        // =========================================================
-        // INICIALIZAR
-        // =========================================================
-        document.addEventListener('DOMContentLoaded', () => {
-            renderizarCatalogo('mujer', 'todos');
-            actualizarContadorCarrito();
         });
+
+        lista.innerHTML = html;
+        totalDiv.textContent = `Total: $${total.toLocaleString()}`;
+      }
+
+      // =========================================================
+      // CARRITO - ELIMINAR PRODUCTO
+      // =========================================================
+      function eliminarDelCarrito(index) {
+        const eliminado = carrito[index];
+        carrito.splice(index, 1);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        actualizarContadorCarrito();
+        renderizarCarrito();
+        if (carrito.length === 0) {
+          document.getElementById("carrito-total").textContent = "Total: $0";
+        }
+      }
+
+      // =========================================================
+      // CARRITO - VACIAR COMPLETO
+      // =========================================================
+      function vaciarCarrito() {
+        if (carrito.length === 0) return;
+        if (confirm("¿Estás seguro de que quieres vaciar todo el carrito?")) {
+          carrito = [];
+          localStorage.setItem("carrito", JSON.stringify(carrito));
+          actualizarContadorCarrito();
+          renderizarCarrito();
+          document.getElementById("carrito-total").textContent = "Total: $0";
+        }
+      }
+
+      // =========================================================
+      // CARRITO - ENVIAR POR WHATSAPP
+      // =========================================================
+      function enviarCarritoPorWhatsApp() {
+        if (carrito.length === 0) {
+          mostrarToast("🛒 Tu carrito está vacío. Agrega productos primero.");
+          return;
+        }
+        let mensaje = "Hola, me gustaría pedir los siguientes productos:\n\n";
+        carrito.forEach((item, i) => {
+          const tallaStr = item.talla ? ` (${item.talla})` : "";
+          mensaje += `${i + 1}. ${item.nombre}${tallaStr} — ${item.precio}\n`;
+        });
+        const total = carrito.reduce((sum, item) => {
+          const num = parseInt(item.precio.replace(/[$.]/g, ""));
+          return sum + num;
+        }, 0);
+        mensaje += `\nTotal aproximado: $${total.toLocaleString()}`;
+        window.open(
+          `https://wa.me/573214978435?text=${encodeURIComponent(mensaje)}`,
+          "_blank",
+        );
+        cerrarCarrito();
+      }
+
+      // =========================================================
+      // FUNCIÓN DE PAGO CON NEQUI (DIRECTO)
+      // =========================================================
+      function pagarConNequi() {
+        if (carrito.length === 0) {
+          mostrarToast("🛒 Tu carrito está vacío. Agrega productos primero.");
+          return;
+        }
+
+        // Calcular total
+        const total = carrito.reduce((sum, item) => {
+          const num = parseInt(item.precio.replace(/[$.]/g, ""));
+          return sum + num;
+        }, 0);
+
+        // Generar lista de productos para el mensaje
+        let listaProductos = "";
+        carrito.forEach((item, i) => {
+          const tallaStr = item.talla ? ` (${item.talla})` : "";
+          listaProductos += `${i + 1}. ${item.nombre}${tallaStr} — ${item.precio}\n`;
+        });
+
+        // Crear el mensaje con el total y la lista
+        const mensaje = `Hola BRAAMOD, quiero realizar el siguiente pedido:\n\n${listaProductos}\nTotal: $${total.toLocaleString()}\n\nPor favor, enviarme el link de pago por Nequi.`;
+
+        // Abrir WhatsApp con el mensaje predefinido
+        const url = `https://wa.me/573214978435?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, "_blank");
+
+        // Cerrar el carrito
+        cerrarCarrito();
+      }
+
+      // =========================================================
+      // MENÚ HAMBURGUESA
+      // =========================================================
+      function toggleMenu() {
+        const nav = document.getElementById("nav-principal");
+        const btn = document.getElementById("menu-hamburguesa");
+        const abierto = nav.classList.toggle("abierto");
+        btn.classList.toggle("activo", abierto);
+        btn.setAttribute("aria-expanded", abierto);
+      }
+
+      function cerrarMenu() {
+        const nav = document.getElementById("nav-principal");
+        const btn = document.getElementById("menu-hamburguesa");
+        nav.classList.remove("abierto");
+        btn.classList.remove("activo");
+        btn.setAttribute("aria-expanded", "false");
+      }
+
+      // =========================================================
+      // TOAST (reemplaza alert nativo)
+      // =========================================================
+      function mostrarToast(mensaje) {
+        let toast = document.getElementById("toast-braamod");
+        if (!toast) {
+          toast = document.createElement("div");
+          toast.id = "toast-braamod";
+          document.body.appendChild(toast);
+        }
+        toast.textContent = mensaje;
+        toast.classList.add("visible");
+        clearTimeout(toast._timer);
+        toast._timer = setTimeout(() => toast.classList.remove("visible"), 2800);
+      }
+
+      // =========================================================
+      // INICIALIZAR
+      // =========================================================
+      document.addEventListener("DOMContentLoaded", () => {
+        renderizarCatalogo("mujer", "todos");
+        actualizarContadorCarrito();
+      });
     </script>
-
-</body>
-
+  </body>
 </html>

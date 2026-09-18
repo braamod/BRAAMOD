@@ -47,6 +47,7 @@ a {
     0% {
         background-position: 0% center;
     }
+
     100% {
         background-position: 200% center;
     }
@@ -91,7 +92,7 @@ nav {
 nav a {
     position: relative;
     text-decoration: none;
-    color: #d0d0d0;
+    color: #d8d8d8;
     font-size: 13px;
     letter-spacing: 1px;
     transition: .3s ease;
@@ -142,11 +143,13 @@ nav a:hover::after {
 }
 
 @keyframes respirar {
+
     0%,
     100% {
         transform: scale(1);
         opacity: .5;
     }
+
     50% {
         transform: scale(1.15);
         opacity: .8;
@@ -193,7 +196,7 @@ nav a:hover::after {
 .texto-inicio {
     max-width: 550px;
     margin: 35px auto;
-    color: #ccc;
+    color: #d5d5d5;
     line-height: 1.8;
     font-size: 14px;
 }
@@ -234,12 +237,14 @@ nav a:hover::after {
     top: 15%;
     left: 5%;
 }
+
 .luz2 {
     width: 300px;
     height: 300px;
     bottom: 10%;
     right: 5%;
 }
+
 .luz3 {
     width: 180px;
     height: 180px;
@@ -284,8 +289,8 @@ section {
     animation: doradoBrillo 5s linear infinite;
 }
 
-.encabezado-seccion > p:last-child {
-    color: #aaa;
+.encabezado-seccion>p:last-child {
+    color: #bbb;
     font-size: 13px;
     line-height: 1.7;
 }
@@ -506,7 +511,8 @@ section {
 .imagen-producto img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center top;
     transition: transform .5s ease;
 }
 
@@ -833,7 +839,7 @@ body.sin-scroll {
     border: 1px solid #1a1a1a;
     border-radius: 4px;
     transition: .3s;
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .item-carrito:hover {
@@ -958,7 +964,7 @@ body.sin-scroll {
 }
 
 .texto-nosotros p {
-    color: #ccc;
+    color: #d5d5d5;
     font-size: 15px;
     line-height: 2;
     margin-bottom: 25px;
@@ -991,7 +997,7 @@ body.sin-scroll {
     transform: translateY(-5px);
 }
 
-.paso > span {
+.paso>span {
     font-family: "Bodoni Moda", serif;
     font-style: italic;
     font-size: 40px;
@@ -1007,7 +1013,7 @@ body.sin-scroll {
 }
 
 .paso p {
-    color: #aaa;
+    color: #bbb;
     font-size: 13px;
     line-height: 1.8;
 }
@@ -1038,7 +1044,7 @@ body.sin-scroll {
     text-decoration: none;
     border: 1px solid #292929;
     background: #080808;
-    color: #aaa;
+    color: #bbb;
     transition: all .4s ease;
 }
 
@@ -1103,87 +1109,109 @@ footer p {
         flex-direction: column;
         gap: 20px;
     }
+
     nav {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     nav a {
         font-size: 11px;
     }
+
     #inicio {
         padding: 80px 8%;
     }
+
     .contenido-inicio h1 {
         font-size: 50px;
     }
+
     .titulo-seccion {
         font-size: 45px;
     }
+
     .catalogo {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 12px;
     }
+
     .producto {
         padding: 8px;
     }
+
     .imagen-producto {
         height: 180px;
     }
+
     .nombre-locion {
         font-size: 20px;
     }
+
     .proceso {
         grid-template-columns: 1fr;
     }
+
     #elaboracion,
     #nosotros,
     #contacto {
         padding: 90px 7%;
     }
+
     .modal-contenido {
         grid-template-columns: 1fr;
     }
+
     .modal-imagen {
         height: 42vh;
         min-height: 240px;
         max-height: 42vh;
     }
+
     .modal-imagen img {
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
+
     .modal-cerrar {
         top: 12px;
         right: 12px;
     }
+
     .carrito-flotante {
         bottom: 20px;
         right: 20px;
         padding: 10px 16px;
         font-size: 13px;
     }
+
     .carrito-contador {
         width: 24px;
         height: 24px;
         font-size: 12px;
     }
+
     .modal-carrito-contenido {
         padding: 25px 18px;
     }
+
     .item-carrito {
         flex-wrap: wrap;
         gap: 10px;
     }
+
     .item-carrito-info {
         flex: 1;
         min-width: 120px;
     }
+
     .boton-eliminar-item {
         padding: 4px 12px;
         font-size: 11px;
     }
+
     .titulo-carrito {
         font-size: 26px;
     }
@@ -1194,44 +1222,56 @@ footer p {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 7px;
     }
+
     .producto {
         padding: 6px;
     }
+
     .imagen-producto {
         height: 145px;
         margin-bottom: 8px;
     }
+
     .nombre-locion {
         font-size: 17px;
     }
+
     .categorias {
         flex-direction: row;
         gap: 8px;
     }
+
     .boton-categoria {
         min-width: 120px;
         padding: 12px 15px;
         font-size: 10px;
     }
+
     .contenido-inicio h1 {
         font-size: 44px;
     }
+
     .logo {
         font-size: 30px;
     }
+
     nav {
         gap: 10px;
     }
+
     .filtros-adicionales .filtro-opcion {
         font-size: 9px;
         padding: 5px 12px;
     }
+
     .boton-ver-detalle {
         font-size: 11px;
     }
+
     .boton-agregar-carrito {
         font-size: 10px;
     }
+
     .boton-pago-carrito {
         font-size: 14px;
         padding: 12px;
@@ -1239,5 +1279,162 @@ footer p {
 }
 
 .producto.oculto {
+    display: none !important;
+}
+/* =========================================================
+   HAMBURGER MENU
+========================================================= */
+.menu-hamburguesa {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1100;
+}
+
+.menu-hamburguesa span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #d4af37;
+    transition: transform .3s ease, opacity .3s ease;
+    transform-origin: center;
+}
+
+.menu-hamburguesa.activo span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-hamburguesa.activo span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.menu-hamburguesa.activo span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   TOAST NOTIFICACIÓN
+========================================================= */
+#toast-braamod {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #111;
+    border: 1px solid rgba(212, 175, 55, .5);
+    color: #e8e8e8;
+    padding: 13px 22px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: .3px;
+    border-radius: 4px;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease, transform .3s ease;
+    white-space: nowrap;
+    max-width: 90vw;
+    text-align: center;
+}
+
+#toast-braamod.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET: 2 columnas (500px–800px)
+========================================================= */
+@media (min-width: 500px) and (max-width: 800px) {
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px;
+    }
+
+    .imagen-producto {
+        height: 220px;
+    }
+
+    .nombre-locion {
+        font-size: 22px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE: 2 columnas (≤499px)
+========================================================= */
+@media (max-width: 499px) {
+    .menu-hamburguesa {
+        display: flex;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        padding: 18px 6%;
+        gap: 0;
+    }
+
+    #nav-principal {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(5, 5, 5, .97);
+        backdrop-filter: blur(10px);
+        z-index: 1050;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
+
+    #nav-principal.abierto {
+        display: flex;
+    }
+
+    #nav-principal a {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+    }
+
+    .imagen-producto {
+        height: 160px;
+        margin-bottom: 10px;
+    }
+
+    .nombre-locion {
+        font-size: 18px;
+    }
+
+    .boton-ver-detalle {
+        font-size: 11px;
+        padding: 9px 0;
+    }
+
+    .boton-agregar-carrito {
+        font-size: 10px;
+    }
+}
+
+/* =========================================================
+   HIDE: botón flotante papelera (eliminado del HTML)
+========================================================= */
+.boton-vaciar-carrito-flotante {
     display: none !important;
 }
