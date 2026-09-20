@@ -110,7 +110,7 @@ nav a::after {
     width: 0;
     height: 1px;
     background: #d4af37;
-    transition: .3s ease;
+    transition: .90s ease;
 }
 
 nav a:hover::after {
@@ -139,7 +139,7 @@ nav a:hover::after {
     border-radius: 50%;
     background: radial-gradient(circle, rgba(212, 175, 55, .15), transparent 70%);
     filter: blur(20px);
-    animation: respirar 6s ease-in-out infinite;
+    animation: respirar 30s ease-in-out infinite;
 }
 
 @keyframes respirar {
@@ -190,7 +190,7 @@ nav a:hover::after {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: doradoBrillo 5s linear infinite;
+    animation: doradoBrillo 40s linear infinite;
 }
 
 .texto-inicio {
@@ -286,7 +286,7 @@ section {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: doradoBrillo 5s linear infinite;
+    animation: doradoBrillo 20s linear infinite;
 }
 
 .encabezado-seccion>p:last-child {
@@ -513,11 +513,11 @@ section {
     height: 100%;
     object-fit: cover;
     object-position: center top;
-    transition: transform .5s ease;
+    transition: transform 2.5s ease;
 }
 
 .producto:hover .imagen-producto img {
-    transform: scale(1.05);
+    transform: scale(1.20);
 }
 
 /* =========================================================
@@ -1281,6 +1281,7 @@ footer p {
 .producto.oculto {
     display: none !important;
 }
+
 /* =========================================================
    HAMBURGER MENU
 ========================================================= */
