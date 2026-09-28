@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
     <!-- ===== SEO & METAS ===== -->
     <title>BRAAMOD | Perfumería de lujo</title>
@@ -17,11 +17,18 @@
     />
     <meta
       property="og:image"
-      content="https://tudominio.com/imagenes/og-image.jpg"
+      content="imagenes/marca/logo-600.jpg"
     />
-    <meta property="og:url" content="https://tudominio.com" />
+    <meta property="og:url" content="https://braamod.com" />
     <meta name="robots" content="index, follow" />
 
+    <meta name="theme-color" content="#070706" />
+    <link rel="icon" type="image/jpeg" href="imagenes/marca/logo-192.jpg" />
+    <link rel="apple-touch-icon" href="imagenes/marca/logo-192.jpg" />
+    <link rel="preload" as="image" href="imagenes/marca/logo-600.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <noscript><style>#cargador{display:none}body.cargando{overflow:auto}.contenido-inicio>*{opacity:1!important;transform:none!important}</style></noscript>
     <!-- ===== FUENTES ===== -->
     <link
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600&display=swap"
@@ -32,21 +39,25 @@
     <link rel="stylesheet" href="estilos.css" />
   </head>
 
-  <body>
+  <body class="cargando">
+    <div id="cargador" role="status" aria-label="Cargando BRAAMOD">
+      <div class="cargador-marca">
+        <img src="imagenes/marca/logo-600.jpg" width="600" height="600" alt="BRAAMOD — Tu presencia, nuestra esencia." />
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49.5" pathLength="1"></circle></svg>
+      </div>
+    </div>
     <!-- =====================================================
     HEADER
     ===================================================== -->
     <header>
-      <a href="#inicio" class="logo" aria-label="BRAAMOD - Inicio">BRAAMOD</a>
-      <button class="menu-hamburguesa" id="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#inicio" class="logo" aria-label="BRAAMOD - Inicio" onclick="cerrarMenu()"><img src="imagenes/marca/logo-192.jpg" width="40" height="40" alt="" /><span>BRAAMOD</span></a>
+      <button class="menu-hamburguesa" id="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span><span></span></button>
       <nav id="nav-principal">
-        <a href="#inicio" aria-label="Ir a Inicio" onclick="cerrarMenu()">Inicio</a>
-        <a href="#catalogo" aria-label="Ir a Catálogo" onclick="cerrarMenu()">Catálogo</a>
-        <a href="#nosotros" aria-label="Ir a Nosotros" onclick="cerrarMenu()">Nosotros</a>
-        <a href="#elaboracion" aria-label="Ir a Elaboración" onclick="cerrarMenu()">Elaboración</a>
-        <a href="#contacto" aria-label="Ir a Contacto" onclick="cerrarMenu()">Contacto</a>
+        <a href="#inicio" onclick="cerrarMenu()">Inicio</a>
+        <a href="#catalogo" onclick="cerrarMenu()">Catálogo</a>
+        <a href="#nosotros" onclick="cerrarMenu()">Nosotros</a>
+        <a href="#elaboracion" onclick="cerrarMenu()">Elaboración</a>
+        <a href="#contacto" onclick="cerrarMenu()">Contacto</a>
       </nav>
     </header>
 
@@ -54,17 +65,14 @@
     INICIO
     ===================================================== -->
     <section id="inicio" class="hero">
-      <div class="luces luz1"></div>
-      <div class="luces luz2"></div>
-      <div class="luces luz3"></div>
+      <svg class="anillo" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49.5" pathLength="1"></circle></svg>
       <div class="contenido-inicio">
-        <p class="subtitulo">ESENCIA · ELEGANCIA · DISTINCIÓN</p>
-        <h1>La esencia de <span class="destacado">BRAAMOD</span></h1>
-        <p class="texto-inicio">
-          Fragancias creadas para personas que buscan dejar una huella
-          inolvidable.
-        </p>
-        <a href="#catalogo" class="boton-dorado">Descubrir colección</a>
+        <h1>Tu presencia, nuestra esencia.</h1>
+        <p class="texto-inicio">Fragancias creadas para personas que buscan dejar una huella inolvidable.</p>
+        <div class="hero-acciones">
+          <a href="#catalogo" class="boton-dorado">Ver la colección</a>
+          <a href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias." target="_blank" rel="noopener noreferrer" class="boton-linea">Pedir por WhatsApp</a>
+        </div>
       </div>
     </section>
 
@@ -73,7 +81,6 @@
     ===================================================== -->
     <section id="catalogo">
       <div class="encabezado-seccion">
-        <p class="mini-titulo">NUESTRA COLECCIÓN</p>
         <h2 class="titulo-seccion"><span>Catálogo</span></h2>
         <p>Descubre nuestras fragancias cuidadosamente seleccionadas.</p>
       </div>
@@ -223,23 +230,14 @@
     NOSOTROS
     ===================================================== -->
     <section id="nosotros">
-      <div class="encabezado-seccion">
-        <p class="mini-titulo">NUESTRA ESENCIA</p>
-        <h2 class="titulo-seccion"><span>Sobre BRAAMOD</span></h2>
-      </div>
-      <div class="texto-nosotros">
-        <p>
-          En <strong>BRAAMOD</strong> creemos que una fragancia es mucho más que
-          un aroma. Es una forma de expresar personalidad, elegancia y estilo.
-        </p>
-        <p>
-          Nuestras lociones son preparadas cuidadosamente utilizando aceites y
-          diferentes combinaciones aromáticas para crear experiencias únicas.
-        </p>
-        <p>
-          Cada fragancia busca representar una esencia diferente, permitiendo
-          encontrar el aroma ideal para cada personalidad y ocasión.
-        </p>
+      <div class="encabezado-seccion"><h2 class="titulo-seccion"><span>Sobre BRAAMOD</span></h2></div>
+      <div class="nosotros-grid">
+        <p class="nosotros-frase">Una forma de expresar personalidad, elegancia y estilo.</p>
+        <div class="texto-nosotros">
+          <p>En <strong>BRAAMOD</strong> creemos que una fragancia es mucho más que un aroma. Es una forma de expresar personalidad, elegancia y estilo.</p>
+          <p>Nuestras lociones son preparadas cuidadosamente utilizando aceites y diferentes combinaciones aromáticas para crear experiencias únicas.</p>
+          <p>Cada fragancia busca representar una esencia diferente, permitiendo encontrar el aroma ideal para cada personalidad y ocasión.</p>
+        </div>
       </div>
     </section>
 
@@ -247,35 +245,11 @@
     ELABORACIÓN
     ===================================================== -->
     <section id="elaboracion">
-      <div class="encabezado-seccion">
-        <p class="mini-titulo">EL ARTE DE CREAR</p>
-        <h2 class="titulo-seccion"><span>Nuestra elaboración</span></h2>
-      </div>
+      <div class="encabezado-seccion"><h2 class="titulo-seccion"><span>Nuestra elaboración</span></h2></div>
       <div class="proceso">
-        <div class="paso">
-          <span>01</span>
-          <h3>Selección</h3>
-          <p>
-            Seleccionamos cuidadosamente los aceites y componentes utilizados en
-            nuestras fragancias.
-          </p>
-        </div>
-        <div class="paso">
-          <span>02</span>
-          <h3>Preparación</h3>
-          <p>
-            Combinamos los diferentes componentes buscando conseguir un aroma
-            equilibrado y agradable.
-          </p>
-        </div>
-        <div class="paso">
-          <span>03</span>
-          <h3>Creación</h3>
-          <p>
-            Cada fragancia es preparada pensando en ofrecer una experiencia
-            especial.
-          </p>
-        </div>
+        <div class="paso"><span>01</span><h3>Selección</h3><p>Seleccionamos cuidadosamente los aceites y componentes utilizados en nuestras fragancias.</p></div>
+        <div class="paso"><span>02</span><h3>Preparación</h3><p>Combinamos los diferentes componentes buscando conseguir un aroma equilibrado y agradable.</p></div>
+        <div class="paso"><span>03</span><h3>Creación</h3><p>Cada fragancia es preparada pensando en ofrecer una experiencia especial.</p></div>
       </div>
     </section>
 
@@ -283,31 +257,10 @@
     CONTACTO
     ===================================================== -->
     <section id="contacto">
-      <div class="encabezado-seccion">
-        <p class="mini-titulo">CONECTA CON NOSOTROS</p>
-        <h2 class="titulo-seccion"><span>Contacto</span></h2>
-      </div>
+      <div class="encabezado-seccion"><h2 class="titulo-seccion"><span>Contacto</span></h2><p>Cuéntanos qué fragancia buscas y te ayudamos a elegirla.</p></div>
       <div class="contactos">
-        <a
-          href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contacto-link"
-          aria-label="Contactar por WhatsApp"
-        >
-          <span class="contacto-icono">WhatsApp</span>
-          <span>Escríbenos por WhatsApp</span>
-        </a>
-        <a
-          href="https://www.instagram.com/braa_mod/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contacto-link"
-          aria-label="Seguir en Instagram"
-        >
-          <span class="contacto-icono">Instagram</span>
-          <span>Síguenos en Instagram</span>
-        </a>
+        <a href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias." target="_blank" rel="noopener noreferrer" class="contacto-link" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg><span><b>WhatsApp</b><small>Escríbenos por WhatsApp</small></span></a>
+        <a href="https://www.instagram.com/braa_mod/" target="_blank" rel="noopener noreferrer" class="contacto-link" aria-label="Seguir en Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></svg><span><b>Instagram</b><small>Síguenos en Instagram</small></span></a>
       </div>
     </section>
 
@@ -402,17 +355,17 @@
         >
           &times;
         </button>
-        <h2 class="titulo-carrito">🛒 Tu Carrito</h2>
+        <h2 class="titulo-carrito">Tu carrito</h2>
         <div id="lista-carrito" class="lista-carrito">
           <!-- Los productos se renderizan aquí con JavaScript -->
         </div>
         <div class="carrito-total" id="carrito-total">Total: $0</div>
         <!-- BOTÓN DE PAGO CON NEQUI (DIRECTO) -->
         <button class="boton-pago-carrito nequi" onclick="pagarConNequi()">
-          💳 Pagar con Nequi
+          Pagar con Nequi
         </button>
         <button
-          class="boton-dorado"
+          class="boton-linea"
           onclick="enviarCarritoPorWhatsApp()"
           style="width: 100%; margin-top: 10px"
         >
@@ -427,21 +380,15 @@
     <!-- =====================================================
     CARRITO FLOTANTE
     ===================================================== -->
-    <a
-      id="carrito-flotante"
-      class="carrito-flotante"
-      onclick="abrirCarrito()"
-      aria-label="Ver carrito de compras"
-    >
-      🛒 <span class="carrito-contador" id="carrito-contador">0</span>
-    </a>
+    <button type="button" id="carrito-flotante" class="carrito-flotante" onclick="abrirCarrito()" aria-label="Ver carrito de compras"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="carrito-contador" id="carrito-contador">0</span></button>
 
     <!-- =====================================================
     FOOTER
     ===================================================== -->
     <footer>
-      <div class="logo-footer">BRAAMOD</div>
-      <p>La esencia que deja una huella.</p>
+      <img class="logo-footer" src="imagenes/marca/logo-192.jpg" width="88" height="88" alt="BRAAMOD" loading="lazy" />
+      <p class="lema">Tu presencia, nuestra esencia.</p>
+      <div class="enlaces-footer"><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a><a href="https://www.instagram.com/braa_mod/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
       <p class="copyright">© 2026 BRAAMOD. Todos los derechos reservados.</p>
     </footer>
 
@@ -1464,16 +1411,23 @@
       // CREAR TARJETA DE PRODUCTO (HTML reutilizable)
       // =========================================================
       function crearTarjetaHTML(categoria, idxOriginal, prod) {
+        const precio = prod.esEconomico
+          ? `<span class="precio-actual">Desde ${prod.precio50}</span>`
+          : `${prod.precioAnterior ? `<s class="precio-tachado">${prod.precioAnterior}</s>` : ""}<span class="precio-actual">${prod.precioPromocion}</span>`;
         return `
-                <article class="producto" data-index="${idxOriginal}" data-categoria="${categoria}">
-                    <div class="imagen-producto">
-                        <img src="${prod.img}" alt="${prod.nombre}" loading="lazy" width="300" height="300">
-                    </div>
-                    <h3 class="nombre-locion">${prod.nombre}</h3>
-                    <button class="boton-ver-detalle" onclick="abrirDetalle('${categoria}', ${idxOriginal})" aria-label="Ver detalle de ${prod.nombre}">Ver fragancia</button>
-                    <button class="boton-agregar-carrito" onclick="agregarAlCarrito('${categoria}', ${idxOriginal})" aria-label="Agregar ${prod.nombre} al carrito">+ Agregar al carrito</button>
-                </article>
-            `;
+          <article class="producto" data-index="${idxOriginal}" data-categoria="${categoria}">
+            <button type="button" class="imagen-producto" onclick="abrirDetalle('${categoria}', ${idxOriginal})" aria-label="Ver detalle de ${prod.nombre}">
+              <img src="${prod.img}" alt="${prod.nombre}" loading="lazy" width="400" height="400">
+            </button>
+            <div class="info-producto">
+              <h3 class="nombre-locion">${prod.nombre}</h3>
+              <p class="precio-tarjeta">${precio}</p>
+            </div>
+            <div class="acciones">
+              <button class="boton-ver-detalle" onclick="abrirDetalle('${categoria}', ${idxOriginal})" aria-label="Ver detalle de ${prod.nombre}">Detalle</button>
+              <button class="boton-agregar-carrito" onclick="agregarAlCarrito('${categoria}', ${idxOriginal})" aria-label="Agregar ${prod.nombre} al carrito">Agregar</button>
+            </div>
+          </article>`;
       }
 
       // =========================================================
@@ -1782,7 +1736,7 @@
         carrito.push(item);
         localStorage.setItem("carrito", JSON.stringify(carrito));
         actualizarContadorCarrito();
-        mostrarToast(`✅ "${prod.nombre}" agregado al carrito.`);
+        mostrarToast(`"${prod.nombre}" agregado al carrito.`);
       }
 
       function agregarAlCarritoDesdeModal() {
@@ -1804,7 +1758,7 @@
         carrito.push(item);
         localStorage.setItem("carrito", JSON.stringify(carrito));
         actualizarContadorCarrito();
-        mostrarToast(`✅ "${prod.nombre}" agregado al carrito.`);
+        mostrarToast(`"${prod.nombre}" agregado al carrito.`);
       }
 
       // =========================================================
@@ -1846,7 +1800,7 @@
         const totalDiv = document.getElementById("carrito-total");
 
         if (carrito.length === 0) {
-          lista.innerHTML = `<div class="carrito-vacio">🛒 Tu carrito está vacío</div>`;
+          lista.innerHTML = `<div class="carrito-vacio">Tu carrito está vacío</div>`;
           totalDiv.textContent = "Total: $0";
           return;
         }
@@ -1869,7 +1823,7 @@
                             ${tallaStr}
                         </div>
                         <button class="boton-eliminar-item" onclick="eliminarDelCarrito(${index})" aria-label="Eliminar ${item.nombre}">
-                            ✕ Eliminar
+                            Eliminar
                         </button>
                     </div>
                 `;
@@ -1912,7 +1866,7 @@
       // =========================================================
       function enviarCarritoPorWhatsApp() {
         if (carrito.length === 0) {
-          mostrarToast("🛒 Tu carrito está vacío. Agrega productos primero.");
+          mostrarToast("Tu carrito está vacío. Agrega productos primero.");
           return;
         }
         let mensaje = "Hola, me gustaría pedir los siguientes productos:\n\n";
@@ -1937,7 +1891,7 @@
       // =========================================================
       function pagarConNequi() {
         if (carrito.length === 0) {
-          mostrarToast("🛒 Tu carrito está vacío. Agrega productos primero.");
+          mostrarToast("Tu carrito está vacío. Agrega productos primero.");
           return;
         }
 
@@ -1974,6 +1928,7 @@
         const abierto = nav.classList.toggle("abierto");
         btn.classList.toggle("activo", abierto);
         btn.setAttribute("aria-expanded", abierto);
+        document.body.classList.toggle("sin-scroll", abierto);
       }
 
       function cerrarMenu() {
@@ -1982,6 +1937,7 @@
         nav.classList.remove("abierto");
         btn.classList.remove("activo");
         btn.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("sin-scroll");
       }
 
       // =========================================================
@@ -2007,6 +1963,27 @@
         renderizarCatalogo("mujer", "todos");
         actualizarContadorCarrito();
       });
+    </script>
+  <script>
+      (function () {
+        const b = document.body, c = document.getElementById("cargador"), h = document.querySelector("header");
+        let listo = false;
+        function abrir() {
+          if (listo) return;
+          listo = true;
+          c.classList.add("listo");
+          b.classList.remove("cargando");
+          b.classList.add("entrada");
+          setTimeout(() => c.remove(), 1200);
+        }
+        const minimo = new Promise((r) => setTimeout(r, matchMedia("(prefers-reduced-motion: reduce)").matches ? 600 : 2400));
+        const cargada = new Promise((r) => (document.readyState === "complete" ? r() : addEventListener("load", r)));
+        Promise.all([minimo, cargada]).then(abrir);
+        setTimeout(abrir, 6500);
+        const f = () => h.classList.toggle("solido", scrollY > 40);
+        f();
+        addEventListener("scroll", f, { passive: true });
+      })();
     </script>
   </body>
 </html>
