@@ -9,14 +9,14 @@ img{display:block;max-width:100%}a{color:inherit}button{font-family:inherit}
 :focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
 
 /* ---------- Pantalla de carga ---------- */
-#cargador{position:fixed;inset:0;z-index:5000;background:#000;display:grid;place-items:center;transition:opacity .9s ease,visibility .9s;animation:forzar .6s ease 7s forwards}
+#cargador{position:fixed;inset:0;z-index:5000;background:#000;display:grid;place-items:center;transition:opacity .9s ease,visibility .9s;animation:forzar .6s ease 3.8s forwards}
 #cargador.listo{opacity:0;visibility:hidden}
 @keyframes forzar{to{opacity:0;visibility:hidden}}
 .cargador-marca{position:relative;width:min(58vw,290px);aspect-ratio:1}
 .cargador-marca img{width:100%;height:100%;border-radius:50%;animation:aparece 1.3s ease both}
 .cargador-marca svg{position:absolute;inset:-14px;width:calc(100% + 28px);height:calc(100% + 28px);transform:rotate(-90deg)}
 .cargador-marca circle,.anillo circle{fill:none;stroke:var(--gold);stroke-width:.6;stroke-dasharray:1;stroke-dashoffset:1;stroke-linecap:round}
-.cargador-marca circle{animation:trazo 2.1s cubic-bezier(.6,0,.2,1) .2s forwards}
+.cargador-marca circle{animation:trazo 1s cubic-bezier(.6,0,.2,1) .1s forwards}
 @keyframes trazo{to{stroke-dashoffset:0}}
 @keyframes aparece{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
 
@@ -85,7 +85,8 @@ section{padding:clamp(80px,12vw,130px) 6%}
 /* ---------- Catálogo ---------- */
 .catalogo{display:none;grid-template-columns:repeat(4,1fr);gap:34px 22px;max-width:1360px;margin:36px auto 0}
 .catalogo.activo{display:grid}
-.producto{display:flex;flex-direction:column;opacity:0;transition:opacity .7s ease}
+.producto{display:flex;flex-direction:column;transition:opacity .7s ease}
+.js .producto:not(.visible){opacity:0}
 .producto.visible{opacity:1}
 .imagen-producto{display:block;width:100%;aspect-ratio:1;padding:0;overflow:hidden;background:#0a0908;border:1px solid var(--line);cursor:pointer;transition:border-color .4s}
 .imagen-producto img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 1.2s ease}
@@ -204,3 +205,11 @@ nav a{font:400 26px var(--serif);letter-spacing:.12em;text-transform:none}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}}
 .producto.oculto{display:none!important}
+
+.item-carrito{flex-wrap:wrap}
+.cantidad{display:flex;align-items:center;gap:10px}
+.cantidad button{width:36px;height:36px;background:none;border:1px solid var(--line);color:var(--gold2);font-size:18px;cursor:pointer}
+.cantidad button:hover{border-color:var(--gold)}
+.wa-flotante{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));z-index:999;display:grid;place-items:center;width:54px;height:54px;background:var(--ink);border:1px solid var(--gold);border-radius:50%;color:var(--gold2);box-shadow:0 8px 30px rgba(0,0,0,.6);transition:.3s}
+.wa-flotante svg{width:24px;height:24px}
+.wa-flotante:hover{background:var(--gold);color:var(--ink)}
