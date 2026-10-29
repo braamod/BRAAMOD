@@ -2,7 +2,10 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
 
     <!-- ===== SEO & METAS ===== -->
     <title>BRAAMOD | Perfumería de lujo</title>
@@ -25,8 +28,19 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_CO" />
     <meta name="twitter:card" content="summary_large_image" />
-    <script>document.documentElement.classList.add("js")</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BRAAMOD","url":"https://braamod.com/","logo":"https://braamod.com/imagenes/marca/logo-600.jpg","sameAs":["https://www.instagram.com/braa_mod/"]}</script>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "BRAAMOD",
+        "url": "https://braamod.com/",
+        "logo": "https://braamod.com/imagenes/marca/logo-600.jpg",
+        "sameAs": ["https://www.instagram.com/braa_mod/"]
+      }
+    </script>
 
     <meta name="theme-color" content="#070706" />
     <link rel="icon" type="image/jpeg" href="imagenes/marca/logo-192.jpg" />
@@ -34,7 +48,20 @@
     <link rel="preload" as="image" href="imagenes/marca/logo-600.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <noscript><style>#cargador{display:none}body.cargando{overflow:auto}.contenido-inicio>*{opacity:1!important;transform:none!important}</style></noscript>
+    <noscript
+      ><style>
+        #cargador {
+          display: none;
+        }
+        body.cargando {
+          overflow: auto;
+        }
+        .contenido-inicio > * {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style></noscript
+    >
     <!-- ===== FUENTES ===== -->
     <link
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600&display=swap"
@@ -48,16 +75,42 @@
   <body class="cargando">
     <div id="cargador" role="status" aria-label="Cargando BRAAMOD">
       <div class="cargador-marca">
-        <img src="imagenes/marca/logo-600.jpg" width="600" height="600" alt="BRAAMOD — Tu presencia, nuestra esencia." />
-        <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49.5" pathLength="1"></circle></svg>
+        <img
+          src="imagenes/marca/logo-600.jpg"
+          width="600"
+          height="600"
+          alt="BRAAMOD — Tu presencia, nuestra esencia."
+        />
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="49.5" pathLength="1"></circle>
+        </svg>
       </div>
     </div>
     <!-- =====================================================
     HEADER
     ===================================================== -->
     <header>
-      <a href="#inicio" class="logo" aria-label="BRAAMOD - Inicio" onclick="cerrarMenu()"><img src="imagenes/marca/logo-192.jpg" width="40" height="40" alt="" /><span>BRAAMOD</span></a>
-      <button class="menu-hamburguesa" id="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+      <a
+        href="#inicio"
+        class="logo"
+        aria-label="BRAAMOD - Inicio"
+        onclick="cerrarMenu()"
+        ><img
+          src="imagenes/marca/logo-192.jpg"
+          width="40"
+          height="40"
+          alt=""
+        /><span>BRAAMOD</span></a
+      >
+      <button
+        class="menu-hamburguesa"
+        id="menu-hamburguesa"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+      >
+        <span></span><span></span><span></span>
+      </button>
       <nav id="nav-principal">
         <a href="#inicio" onclick="cerrarMenu()">Inicio</a>
         <a href="#catalogo" onclick="cerrarMenu()">Catálogo</a>
@@ -71,13 +124,199 @@
     INICIO
     ===================================================== -->
     <section id="inicio" class="hero">
-      <svg class="anillo" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49.5" pathLength="1"></circle></svg>
+      <svg class="anillo" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="49.5" pathLength="1"></circle>
+      </svg>
       <div class="contenido-inicio">
         <h1>Tu presencia, nuestra esencia.</h1>
-        <p class="texto-inicio">Fragancias creadas para personas que buscan dejar una huella inolvidable.</p>
+        <p class="texto-inicio">
+          Fragancias creadas para personas que buscan dejar una huella
+          inolvidable.
+        </p>
         <div class="hero-acciones">
           <a href="#catalogo" class="boton-dorado">Ver la colección</a>
-          <a href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias." target="_blank" rel="noopener noreferrer" class="boton-linea">Pedir por WhatsApp</a>
+          <a
+            href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="boton-linea"
+            >Pedir por WhatsApp</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+    EXPERIENCIA 360° — el perfume gira mientras haces scroll
+    Los fotogramas están en imagenes/experiencia/asad360/ (72 cuadros,
+    uno cada 5°). Edita los textos de las 4 etapas (<li>).
+    ===================================================== -->
+    <section
+      id="experiencia"
+      class="exp"
+      aria-labelledby="exp-titulo"
+      data-frames="imagenes/experiencia/asad360/f"
+      data-n="72"
+      data-digitos="2"
+      data-modo="vuelta"
+      data-aspecto="0.446"
+    >
+      <h2 id="exp-titulo" class="exp-lectura">
+        Asad, de Lattafa: perfume árabe de hombre, de aroma intenso, cálido y
+        especiado, con gran proyección y fijación. $90.000.
+      </h2>
+      <div class="exp-pista">
+        <div class="exp-escena">
+          <svg class="exp-aro" viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="exp-aro-base" cx="50" cy="50" r="49.5"></circle>
+            <circle
+              class="exp-aro-giro"
+              cx="50"
+              cy="50"
+              r="49.5"
+              pathLength="1"
+            ></circle>
+          </svg>
+
+          <div class="exp-3d">
+            <canvas
+              class="exp-lienzo"
+              width="232"
+              height="520"
+              aria-hidden="true"
+            ></canvas>
+            <img
+              class="exp-estatica"
+              src="imagenes/experiencia/asad360/f00.webp"
+              width="232"
+              height="520"
+              alt="Frasco negro y dorado del perfume Asad de Lattafa"
+            />
+            <span class="exp-suelo" aria-hidden="true"></span>
+          </div>
+
+          <ol class="exp-datos">
+            <li class="exp-dato exp-dato--1 activa">
+              <p class="exp-et">Lattafa</p>
+              <h3 class="exp-nombre">Asad</h3>
+              <p>Perfume árabe de hombre.</p>
+              <p class="exp-guia">Sigue bajando y míralo girar.</p>
+            </li>
+            <li class="exp-dato exp-dato--2">
+              <p class="exp-et">Aroma</p>
+              <h3>Intenso, cálido y especiado</h3>
+            </li>
+            <li class="exp-dato exp-dato--3">
+              <p class="exp-et">Presencia</p>
+              <h3>Gran proyección y fijación</h3>
+              <p>Familia olfativa amaderada.</p>
+              <!-- Cuando tengas las notas olfativas, agrégalas aquí. -->
+            </li>
+            <li class="exp-dato exp-dato--4">
+              <p class="exp-et">Precio</p>
+              <p class="exp-precio"><s>$135.000</s>$90.000</p>
+              <div class="exp-acciones">
+                <a
+                  class="boton-dorado"
+                  href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20quiero%20el%20perfume%20Asad%20de%20Lattafa."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Pedir por WhatsApp</a
+                >
+                <a class="boton-linea exp-ver" href="#catalogo" data-cat="arabes-hombre"
+                  >Ver en el catálogo</a
+                >
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+    EXPERIENCIA 360° MUJER — Ariana Grande Cloud
+    Fotogramas en imagenes/experiencia/cloud360/ (7 vistas reales:
+    frente, tres cuartos, lado y espalda). Gira de ida y vuelta.
+    ===================================================== -->
+    <section
+      id="experiencia-mujer"
+      class="exp exp--mujer"
+      aria-labelledby="expm-titulo"
+      data-frames="imagenes/experiencia/cloud360/f"
+      data-n="7"
+      data-digitos="0"
+      data-modo="vaiven"
+      data-aspecto="0.837"
+    >
+      <h2 id="expm-titulo" class="exp-lectura">
+        Ariana Grande Cloud: perfume de mujer dulce y aireado, con notas de
+        lavanda, coco cremoso y praliné, en un frasco con forma de nube.
+        $90.000.
+      </h2>
+      <div class="exp-pista">
+        <div class="exp-escena">
+          <svg class="exp-aro" viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="exp-aro-base" cx="50" cy="50" r="49.5"></circle>
+            <circle
+              class="exp-aro-giro"
+              cx="50"
+              cy="50"
+              r="49.5"
+              pathLength="1"
+            ></circle>
+          </svg>
+
+          <div class="exp-3d">
+            <canvas
+              class="exp-lienzo"
+              width="309"
+              height="369"
+              aria-hidden="true"
+            ></canvas>
+            <img
+              class="exp-estatica"
+              src="imagenes/experiencia/cloud360/f0.webp"
+              width="309"
+              height="369"
+              alt="Frasco en forma de nube del perfume Ariana Grande Cloud"
+            />
+            <span class="exp-suelo" aria-hidden="true"></span>
+          </div>
+
+          <ol class="exp-datos">
+            <li class="exp-dato exp-dato--1 activa">
+              <p class="exp-et">Ariana Grande</p>
+              <h3 class="exp-nombre">Cloud</h3>
+              <p>Perfume de mujer.</p>
+              <p class="exp-guia">Sigue bajando y míralo girar.</p>
+            </li>
+            <li class="exp-dato exp-dato--2">
+              <p class="exp-et">Aroma</p>
+              <h3>Dulce, suave y aireado</h3>
+              <p>Gourmand con lavanda, coco cremoso y praliné.</p>
+            </li>
+            <li class="exp-dato exp-dato--3">
+              <p class="exp-et">Diseño</p>
+              <h3>Un frasco hecho nube</h3>
+              <p>Cristal azul cielo sobre una base blanca, vista desde todos sus ángulos.</p>
+            </li>
+            <li class="exp-dato exp-dato--4">
+              <p class="exp-et">Precio</p>
+              <p class="exp-precio"><s>$126.000</s>$90.000</p>
+              <div class="exp-acciones">
+                <a
+                  class="boton-dorado"
+                  href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20quiero%20el%20perfume%20Ariana%20Grande%20Cloud."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Pedir por WhatsApp</a
+                >
+                <a class="boton-linea exp-ver" href="#catalogo" data-cat="mujer"
+                  >Ver en el catálogo</a
+                >
+              </div>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
@@ -126,16 +365,11 @@
 
       <!-- Categorías principales -->
       <div class="filtros-superiores">
-        <div
-          class="categorias"
-         
-          aria-label="Categorías de perfumes"
-        >
+        <div class="categorias" aria-label="Categorías de perfumes">
           <button
             class="boton-categoria activo"
             onclick="mostrarCatalogo('mujer', this)"
             aria-label="Mostrar perfumes de mujer"
-           
           >
             Mujer
           </button>
@@ -143,7 +377,6 @@
             class="boton-categoria"
             onclick="mostrarCatalogo('hombre', this)"
             aria-label="Mostrar perfumes de hombre"
-           
           >
             Hombre
           </button>
@@ -151,7 +384,6 @@
             class="boton-categoria"
             onclick="mostrarCatalogo('arabes-mujer', this)"
             aria-label="Mostrar perfumes árabes de mujer"
-           
           >
             Árabes Mujer
           </button>
@@ -159,7 +391,6 @@
             class="boton-categoria"
             onclick="mostrarCatalogo('arabes-hombre', this)"
             aria-label="Mostrar perfumes árabes de hombre"
-           
           >
             Árabes Hombre
           </button>
@@ -167,7 +398,6 @@
             class="boton-categoria"
             onclick="mostrarCatalogo('unisex', this)"
             aria-label="Mostrar perfumes unisex"
-           
           >
             Unisex
           </button>
@@ -175,7 +405,6 @@
             class="boton-categoria"
             onclick="mostrarCatalogo('economicos', this)"
             aria-label="Mostrar envases estándar"
-           
           >
             Envases estándar
           </button>
@@ -216,20 +445,159 @@
 
       <!-- Contenedor de catálogo (se llena con JavaScript) -->
       <div id="contenedor-catalogo" class="catalogo activo"></div>
-      <noscript><p>Catálogo (pídelo por WhatsApp):</p><ul><li>Chanel N°5</li><li>Chanel Coco Mademoiselle</li><li>Dior J'Adore</li><li>Miss Dior</li><li>Yves Saint Laurent Black Opium</li><li>La Vie Est Belle</li><li>Good Girl</li><li>Viktor & Rolf Flowerbomb</li><li>Paco Rabanne Olympéa</li><li>Lady Million</li><li>Giorgio Armani Sí</li><li>Scandal</li><li>Versace Bright Crystal</li><li>Dior Joy</li><li>Gucci Bloom</li><li>Chanel Chance</li><li>Carolina Herrera CH</li><li>Burberry Her</li><li>Ariana Grande Cloud</li><li>Ariana Grande Thank U, Next</li><li>Victoria's Secret Bombshell</li><li>Moschino Toy 2</li><li>Juicy Couture Viva La Juicy</li><li>Good Girl Supreme</li><li>Giorgio Armani My Way</li><li>Shalimar</li><li>Dolce & Gabbana Light Blue</li><li>Flower by Kenzo</li><li>Dolce & Gabbana The Only One</li><li>Narciso Rodriguez For Her</li><li>Prada Paradoxe</li><li>Mugler Angel</li><li>Very Good Girl</li><li>Black XS</li><li>My Burberry Blush</li><li>Bvlgari Omnia Crystalline</li><li>Paco Rabanne Olympéa Aqua</li><li>Aqua Allegoria</li><li>Coco Chanel Girl</li><li>Botica 214</li><li>Rome Melancholia</li><li>Feeling Chic</li><li>Lucky 7 Passion</li><li>Sauvage</li><li>Bleu de Chanel</li><li>1 Million</li><li>Giorgio Armani Acqua di Giò</li><li>Creed Aventus</li><li>Jean Paul Gaultier Le Male</li><li>Invictus</li><li>Versace Eros</li><li>Hermès Terre d'Hermès</li><li>Fahrenheit</li><li>Hugo Boss Bottled</li><li>Maison Francis Kurkdjian Baccarat Rouge 540</li><li>Azzaro The Most Wanted</li><li>Giorgio Armani Stronger With You Intensely</li><li>Yves Saint Laurent Y</li><li>Jean Paul Gaultier Le Beau</li><li>Parfums de Marly Layton</li><li>Acqua di Parma Colonia</li><li>Calvin Klein CK One</li><li>212 Men NYC</li><li>Invictus Legend</li><li>One Million Lucky</li><li>Paco Rabanne Phantom</li><li>Hugo Boss Bottled Night</li><li>Hugo Boss Bottled Tonic</li><li>Hugo Boss The Scent</li><li>Bvlgari Man In Black</li><li>Bvlgari Aqva</li><li>Dior Homme Intense</li><li>Creed Silver Mountain Water</li><li>Dolce & Gabbana The One</li><li>Dolce & Gabbana Light Blue Forever</li><li>Antonio Banderas Icon</li><li>Antonio Banderas Blue Seduction</li><li>Valentino Uomo</li><li>Valentino Intense</li><li>Versace Pour Homme</li><li>Nautica Voyage</li><li>Eternity</li><li>Solo Elixir</li><li>Magnate Exclusive</li><li>Clash</li><li>Envase gris</li><li>Envase verde</li><li>Envase azul</li><li>Envase negro</li><li>Envase rojo</li><li>Envase dorado</li><li>Yara</li><li>Club De Nuit Woman</li><li>Hawas For Her</li><li>Yara Candy</li><li>Yara Moi</li><li>Yara Tous</li><li>9 AM Pour Femme</li><li>Fakhar Rose</li><li>Haya</li><li>Ajwad Pink</li><li>Asad</li><li>9 PM Men</li><li>Hawas For Him</li><li>Maahir</li><li>Asad Zanzibar</li><li>Qahwa</li><li>Shaheen</li><li>Maahir (versión oscura)</li><li>Fakhar Black</li><li>Ajwad</li><li>Khamrah</li><li>Club De Nuit Intense</li><li>Amber Rouge</li><li>Orientica (ámbar dorado)</li><li>Club De Nuit Untold</li><li>Oud Saffron</li><li>Bade'e Al Oud For Glory</li><li>Amber Noir</li><li>Odyssey Mandarin Sky</li><li>Nusuk Blanc</li></ul></noscript>
+      <noscript
+        ><p>Catálogo (pídelo por WhatsApp):</p>
+        <ul>
+          <li>Chanel N°5</li>
+          <li>Chanel Coco Mademoiselle</li>
+          <li>Dior J'Adore</li>
+          <li>Miss Dior</li>
+          <li>Yves Saint Laurent Black Opium</li>
+          <li>La Vie Est Belle</li>
+          <li>Good Girl</li>
+          <li>Viktor & Rolf Flowerbomb</li>
+          <li>Paco Rabanne Olympéa</li>
+          <li>Lady Million</li>
+          <li>Giorgio Armani Sí</li>
+          <li>Scandal</li>
+          <li>Versace Bright Crystal</li>
+          <li>Dior Joy</li>
+          <li>Gucci Bloom</li>
+          <li>Chanel Chance</li>
+          <li>Carolina Herrera CH</li>
+          <li>Burberry Her</li>
+          <li>Ariana Grande Cloud</li>
+          <li>Ariana Grande Thank U, Next</li>
+          <li>Victoria's Secret Bombshell</li>
+          <li>Moschino Toy 2</li>
+          <li>Juicy Couture Viva La Juicy</li>
+          <li>Good Girl Supreme</li>
+          <li>Giorgio Armani My Way</li>
+          <li>Shalimar</li>
+          <li>Dolce & Gabbana Light Blue</li>
+          <li>Flower by Kenzo</li>
+          <li>Dolce & Gabbana The Only One</li>
+          <li>Narciso Rodriguez For Her</li>
+          <li>Prada Paradoxe</li>
+          <li>Mugler Angel</li>
+          <li>Very Good Girl</li>
+          <li>Black XS</li>
+          <li>My Burberry Blush</li>
+          <li>Bvlgari Omnia Crystalline</li>
+          <li>Paco Rabanne Olympéa Aqua</li>
+          <li>Aqua Allegoria</li>
+          <li>Coco Chanel Girl</li>
+          <li>Botica 214</li>
+          <li>Rome Melancholia</li>
+          <li>Feeling Chic</li>
+          <li>Lucky 7 Passion</li>
+          <li>Sauvage</li>
+          <li>Bleu de Chanel</li>
+          <li>1 Million</li>
+          <li>Giorgio Armani Acqua di Giò</li>
+          <li>Creed Aventus</li>
+          <li>Jean Paul Gaultier Le Male</li>
+          <li>Invictus</li>
+          <li>Versace Eros</li>
+          <li>Hermès Terre d'Hermès</li>
+          <li>Fahrenheit</li>
+          <li>Hugo Boss Bottled</li>
+          <li>Maison Francis Kurkdjian Baccarat Rouge 540</li>
+          <li>Azzaro The Most Wanted</li>
+          <li>Giorgio Armani Stronger With You Intensely</li>
+          <li>Yves Saint Laurent Y</li>
+          <li>Jean Paul Gaultier Le Beau</li>
+          <li>Parfums de Marly Layton</li>
+          <li>Acqua di Parma Colonia</li>
+          <li>Calvin Klein CK One</li>
+          <li>212 Men NYC</li>
+          <li>Invictus Legend</li>
+          <li>One Million Lucky</li>
+          <li>Paco Rabanne Phantom</li>
+          <li>Hugo Boss Bottled Night</li>
+          <li>Hugo Boss Bottled Tonic</li>
+          <li>Hugo Boss The Scent</li>
+          <li>Bvlgari Man In Black</li>
+          <li>Bvlgari Aqva</li>
+          <li>Dior Homme Intense</li>
+          <li>Creed Silver Mountain Water</li>
+          <li>Dolce & Gabbana The One</li>
+          <li>Dolce & Gabbana Light Blue Forever</li>
+          <li>Antonio Banderas Icon</li>
+          <li>Antonio Banderas Blue Seduction</li>
+          <li>Valentino Uomo</li>
+          <li>Valentino Intense</li>
+          <li>Versace Pour Homme</li>
+          <li>Nautica Voyage</li>
+          <li>Eternity</li>
+          <li>Solo Elixir</li>
+          <li>Magnate Exclusive</li>
+          <li>Clash</li>
+          <li>Envase gris</li>
+          <li>Envase verde</li>
+          <li>Envase azul</li>
+          <li>Envase negro</li>
+          <li>Envase rojo</li>
+          <li>Envase dorado</li>
+          <li>Yara</li>
+          <li>Club De Nuit Woman</li>
+          <li>Hawas For Her</li>
+          <li>Yara Candy</li>
+          <li>Yara Moi</li>
+          <li>Yara Tous</li>
+          <li>9 AM Pour Femme</li>
+          <li>Fakhar Rose</li>
+          <li>Haya</li>
+          <li>Ajwad Pink</li>
+          <li>Asad</li>
+          <li>9 PM Men</li>
+          <li>Hawas For Him</li>
+          <li>Maahir</li>
+          <li>Asad Zanzibar</li>
+          <li>Qahwa</li>
+          <li>Shaheen</li>
+          <li>Maahir (versión oscura)</li>
+          <li>Fakhar Black</li>
+          <li>Ajwad</li>
+          <li>Khamrah</li>
+          <li>Club De Nuit Intense</li>
+          <li>Amber Rouge</li>
+          <li>Orientica (ámbar dorado)</li>
+          <li>Club De Nuit Untold</li>
+          <li>Oud Saffron</li>
+          <li>Bade'e Al Oud For Glory</li>
+          <li>Amber Noir</li>
+          <li>Odyssey Mandarin Sky</li>
+          <li>Nusuk Blanc</li>
+        </ul></noscript
+      >
     </section>
 
     <!-- =====================================================
     NOSOTROS
     ===================================================== -->
     <section id="nosotros">
-      <div class="encabezado-seccion"><h2 class="titulo-seccion"><span>Sobre BRAAMOD</span></h2></div>
+      <div class="encabezado-seccion">
+        <h2 class="titulo-seccion"><span>Sobre BRAAMOD</span></h2>
+      </div>
       <div class="nosotros-grid">
-        <p class="nosotros-frase">Una forma de expresar personalidad, elegancia y estilo.</p>
+        <p class="nosotros-frase">
+          Una forma de expresar personalidad, elegancia y estilo.
+        </p>
         <div class="texto-nosotros">
-          <p>En <strong>BRAAMOD</strong> creemos que una fragancia es mucho más que un aroma. Es una forma de expresar personalidad, elegancia y estilo.</p>
-          <p>Nuestras lociones son preparadas cuidadosamente utilizando aceites y diferentes combinaciones aromáticas para crear experiencias únicas.</p>
-          <p>Cada fragancia busca representar una esencia diferente, permitiendo encontrar el aroma ideal para cada personalidad y ocasión.</p>
+          <p>
+            En <strong>BRAAMOD</strong> creemos que una fragancia es mucho más
+            que un aroma. Es una forma de expresar personalidad, elegancia y
+            estilo.
+          </p>
+          <p>
+            Nuestras lociones son preparadas cuidadosamente utilizando aceites y
+            diferentes combinaciones aromáticas para crear experiencias únicas.
+          </p>
+          <p>
+            Cada fragancia busca representar una esencia diferente, permitiendo
+            encontrar el aroma ideal para cada personalidad y ocasión.
+          </p>
         </div>
       </div>
     </section>
@@ -238,11 +606,34 @@
     ELABORACIÓN
     ===================================================== -->
     <section id="elaboracion">
-      <div class="encabezado-seccion"><h2 class="titulo-seccion"><span>Nuestra elaboración</span></h2></div>
+      <div class="encabezado-seccion">
+        <h2 class="titulo-seccion"><span>Nuestra elaboración</span></h2>
+      </div>
       <div class="proceso">
-        <div class="paso"><span>01</span><h3>Selección</h3><p>Seleccionamos cuidadosamente los aceites y componentes utilizados en nuestras fragancias.</p></div>
-        <div class="paso"><span>02</span><h3>Preparación</h3><p>Combinamos los diferentes componentes buscando conseguir un aroma equilibrado y agradable.</p></div>
-        <div class="paso"><span>03</span><h3>Creación</h3><p>Cada fragancia es preparada pensando en ofrecer una experiencia especial.</p></div>
+        <div class="paso">
+          <span>01</span>
+          <h3>Selección</h3>
+          <p>
+            Seleccionamos cuidadosamente los aceites y componentes utilizados en
+            nuestras fragancias.
+          </p>
+        </div>
+        <div class="paso">
+          <span>02</span>
+          <h3>Preparación</h3>
+          <p>
+            Combinamos los diferentes componentes buscando conseguir un aroma
+            equilibrado y agradable.
+          </p>
+        </div>
+        <div class="paso">
+          <span>03</span>
+          <h3>Creación</h3>
+          <p>
+            Cada fragancia es preparada pensando en ofrecer una experiencia
+            especial.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -250,10 +641,47 @@
     CONTACTO
     ===================================================== -->
     <section id="contacto">
-      <div class="encabezado-seccion"><h2 class="titulo-seccion"><span>Contacto</span></h2><p>Cuéntanos qué fragancia buscas y te ayudamos a elegirla.</p></div>
+      <div class="encabezado-seccion">
+        <h2 class="titulo-seccion"><span>Contacto</span></h2>
+        <p>Cuéntanos qué fragancia buscas y te ayudamos a elegirla.</p>
+      </div>
       <div class="contactos">
-        <a href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias." target="_blank" rel="noopener noreferrer" class="contacto-link" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg><span><b>WhatsApp</b><small>Escríbenos por WhatsApp</small></span></a>
-        <a href="https://www.instagram.com/braa_mod/" target="_blank" rel="noopener noreferrer" class="contacto-link" aria-label="Seguir en Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></svg><span><b>Instagram</b><small>Síguenos en Instagram</small></span></a>
+        <a
+          href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contacto-link"
+          aria-label="Contactar por WhatsApp"
+          ><svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            aria-hidden="true"
+          >
+            <path
+              d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"
+            /></svg
+          ><span><b>WhatsApp</b><small>Escríbenos por WhatsApp</small></span></a
+        >
+        <a
+          href="https://www.instagram.com/braa_mod/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contacto-link"
+          aria-label="Seguir en Instagram"
+          ><svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            aria-hidden="true"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.3" cy="6.7" r=".6" fill="currentColor" /></svg
+          ><span><b>Instagram</b><small>Síguenos en Instagram</small></span></a
+        >
       </div>
     </section>
 
@@ -265,7 +693,12 @@
       class="modal-overlay"
       onclick="cerrarDetalleSiEsFondo(event)"
     >
-      <div class="modal-contenido" role="dialog" aria-modal="true" aria-labelledby="modal-nombre">
+      <div
+        class="modal-contenido"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-nombre"
+      >
         <button
           class="modal-cerrar"
           onclick="cerrarDetalle()"
@@ -340,7 +773,12 @@
       class="modal-overlay"
       onclick="cerrarCarritoSiEsFondo(event)"
     >
-      <div class="modal-carrito-contenido" role="dialog" aria-modal="true" aria-labelledby="titulo-carrito">
+      <div
+        class="modal-carrito-contenido"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="titulo-carrito"
+      >
         <button
           class="modal-cerrar"
           onclick="cerrarCarrito()"
@@ -373,17 +811,66 @@
     <!-- =====================================================
     CARRITO FLOTANTE
     ===================================================== -->
-    <button type="button" id="carrito-flotante" class="carrito-flotante" onclick="abrirCarrito()" aria-label="Ver carrito de compras"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="carrito-contador" id="carrito-contador">0</span></button>
+    <button
+      type="button"
+      id="carrito-flotante"
+      class="carrito-flotante"
+      onclick="abrirCarrito()"
+      aria-label="Ver carrito de compras"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        aria-hidden="true"
+      >
+        <path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z" />
+        <path d="M9 8V6.5a3 3 0 0 1 6 0V8" /></svg
+      ><span class="carrito-contador" id="carrito-contador">0</span>
+    </button>
 
     <!-- =====================================================
     FOOTER
     ===================================================== -->
-    <a class="wa-flotante" href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias." target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></a>
+    <a
+      class="wa-flotante"
+      href="https://wa.me/573214978435?text=Hola%20BRAAMOD,%20estoy%20interesado%20en%20sus%20fragancias."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Escribir por WhatsApp"
+      ><svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        aria-hidden="true"
+      >
+        <path
+          d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"
+        /></svg
+    ></a>
 
     <footer>
-      <img class="logo-footer" src="imagenes/marca/logo-192.jpg" width="88" height="88" alt="BRAAMOD" loading="lazy" />
+      <img
+        class="logo-footer"
+        src="imagenes/marca/logo-192.jpg"
+        width="88"
+        height="88"
+        alt="BRAAMOD"
+        loading="lazy"
+      />
       <p class="lema">Tu presencia, nuestra esencia.</p>
-      <div class="enlaces-footer"><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a><a href="https://www.instagram.com/braa_mod/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+      <div class="enlaces-footer">
+        <a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a
+        ><a href="#contacto">Contacto</a
+        ><a
+          href="https://www.instagram.com/braa_mod/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram</a
+        >
+      </div>
       <p class="copyright">© 2026 BRAAMOD. Todos los derechos reservados.</p>
     </footer>
 
@@ -392,9 +879,11 @@
     ===================================================== -->
     <script src="productos.js"></script>
     <script src="app.js"></script>
-  <script>
+    <script>
       (function () {
-        const b = document.body, c = document.getElementById("cargador"), h = document.querySelector("header");
+        const b = document.body,
+          c = document.getElementById("cargador"),
+          h = document.querySelector("header");
         let listo = false;
         function abrir() {
           if (listo) return;
@@ -405,9 +894,16 @@
           setTimeout(() => c.remove(), 1200);
         }
         let visto = null;
-        try { visto = sessionStorage.getItem("bv"); sessionStorage.setItem("bv", "1"); } catch (e) {}
+        try {
+          visto = sessionStorage.getItem("bv");
+          sessionStorage.setItem("bv", "1");
+        } catch (e) {}
         const minimo = new Promise((r) => setTimeout(r, visto ? 0 : 1200));
-        const cargada = new Promise((r) => (document.readyState === "complete" ? r() : addEventListener("load", r)));
+        const cargada = new Promise((r) =>
+          document.readyState === "complete"
+            ? r()
+            : addEventListener("load", r),
+        );
         Promise.all([minimo, cargada]).then(abrir);
         setTimeout(abrir, 3500);
         const f = () => h.classList.toggle("solido", scrollY > 40);
